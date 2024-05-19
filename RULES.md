@@ -54,11 +54,7 @@ be 0.
 
 ### Read me
 
-- You can add some additional files if you need to (i.e., to split your code). As these assignments are not verified by a program, feel free to do so as long as you turn in
-the mandatory files.
-- Sometimes, the guidelines of an exercise look short but the examples can show
-requirements that are not explicitly written in the instructions.
+- You can add some additional files if you need to (i.e., to split your code). As these assignments are not verified by a program, feel free to do so as long as you turn in the mandatory files.
+- Sometimes, the guidelines of an exercise look short but the examples can show requirements that are not explicitly written in the instructions.
 - Read each module completely before starting! Really, do it.
 - By Odin, by Thor! Use your brain!!!
-
-

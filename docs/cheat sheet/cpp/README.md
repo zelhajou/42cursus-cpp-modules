@@ -1,5 +1,7 @@
 # C++ Programming Language cheat sheet
 
+C++ is a general-purpose programming language that was developed as an extension of the C programming language. It is known for its efficiency, flexibility, and performance, making it a popular choice for system programming, game development, and high-performance applications.
+
 <table>
 <tr>
 <td> <b>Category</b> </td>
@@ -57,28 +59,26 @@
 <td>Uses</td>
 <td>
 <ul>
-  <li>Application software</li>
-  <li>Systems software</li>
-  <li>Device drivers</li>
-  <li>Client-server applications</li>
-  <li>Embedded firmware</li>
+<li>Application software</li>
+<li>Systems software</li>
+<li>Device drivers</li>
+<li>Client-server applications</li>
+<li>Embedded firmware</li>
 </ul>
 </td>
 </tr>
-
 <tr>
 <td>Advantages</td>
 <td>
 <ul>
-  <li>Highly versatile</li>
-  <li>Performance efficiency</li>
-  <li>Rich standard library</li>
-  <li>Strong abstraction capabilities</li>
-  <li>Compatibility with C</li>
+<li>Highly versatile</li>
+<li>Performance efficiency</li>
+<li>Rich standard library</li>
+<li>Strong abstraction capabilities</li>
+<li>Compatibility with C</li>
 </ul>
 </td>
 </tr>
-
 <tr>
 <td>Key Features</td>
 <td>
@@ -99,28 +99,32 @@ Object-oriented, Generic programming, Metaprogramming, Exception handling, Stand
   D, Objective-C++, Java, C#, Swift, Rust, PHP, Perl, Python, JavaScript, Go
 </td>
 </tr>
-
 </table>
 
 ## Table of Contents
 
 - [C++ Programming Language cheat sheet](#c-programming-language-cheat-sheet) 
-  - [Table of Contents](#table-of-contents)
-  - [Code Example](#code-example)
-  - [Installation and Setup](#installation-and-setup)
-  - [Process of C++ Program execution](#process-of-c-program-execution)
-  - [Hello World Program](#hello-world-program)
-    - [Header Files and Preprocessor Directives](#header-files-and-preprocessor-directives)
-    - [Comments](#comments)
-    - [Main Function](#main-function)
-    - [Output Statement](#output-statement)
-    - [Return Statement](#return-statement)
-  - [keywords](#keywords)
-  - [Operators](#operators)
-  - [Control Structures](#control-structures)
-  - [Functions](#functions)
-  - [Data Types](#data-types)
-  - [Resources](#resources)
+   - [Table of Contents](#table-of-contents)
+   - [Code Example](#code-example)
+   - [Installation and Setup](#installation-and-setup)
+   - [Hello World Program](#hello-world-program)
+      - [Header Files and Preprocessor Directives](#header-files-and-preprocessor-directives)
+      - [Comments](#comments)
+      - [Main Function](#main-function)
+      - [Output Statement](#output-statement)
+      - [Return Statement](#return-statement)
+   - [keywords](#keywords)
+   - [Data Types](#data-types)
+      - [Static and Dynamic Data Types](#static-and-dynamic-data-types)
+      - [Type Casting](#type-casting)
+   - [Operators](#operators)
+   - [Control Structures](#control-structures)
+      - [Conditional Statements](#conditional-statements)
+      - [Switch Statement](#switch-statement)
+      - [Loops](#loops)
+      - [Jump Statements](#jump-statements)
+      - [Conditional Operator](#conditional-operator)
+
 
 
 ## Code Example
@@ -314,88 +318,88 @@ Type casting in C++ is the process of converting a variable from one data type t
 
 - **Implicit Type Casting**: Automatic conversion of data types by the compiler when compatible.
 
-	```cpp
-	int x = 5;
-	double y = x; // Implicit type casting from int to double
-	```
+    ```cpp
+    int x = 5;
+    double y = x; // Implicit type casting from int to double
+    ```
 
 - **Explicit Type Casting**: Manual conversion of data types using casting operators.
 
-	```cpp
-	double x = 3.14;
-	int y = static_cast<int>(x); // Explicit type casting from double to int
-	```
+    ```cpp
+    double x = 3.14;
+    int y = static_cast<int>(x); // Explicit type casting from double to int
+    ```
 
 - **C++ Casting Operators**: `static_cast`, `dynamic_cast`, `const_cast`, `reinterpret_cast`.
 
-	`satic_cast` : It is used to convert one data type to another. It is similar to the C-style cast but provides more type safety.
+    `satic_cast` : It is used to convert one data type to another. It is similar to the C-style cast but provides more type safety.
 
-	```cpp
-	double x = 3.14;
-	int y = static_cast<int>(x); // Convert double to int
-	```
+    ```cpp
+    double x = 3.14;
+    int y = static_cast<int>(x); // Convert double to int
+    ```
 
-	`dynamic_cast` : It is used for safe downcasting of pointers and references in polymorphic classes.
+    `dynamic_cast` : It is used for safe downcasting of pointers and references in polymorphic classes.
 
-	```cpp
-	class Base {
-	public:
-		virtual void foo() {}
-	};
+    ```cpp
+    class Base {
+    public:
+        virtual void foo() {}
+    };
 
-	class Derived : public Base {};
+    class Derived : public Base {};
 
-	int main() {
-		Base *base = new Derived;
-		Derived *derived = dynamic_cast<Derived*>(base);
-		if (derived) {
-			derived->foo();
-		}
-		delete base;
-		return 0;
-	}
-	```
+    int main() {
+        Base *base = new Derived;
+        Derived *derived = dynamic_cast<Derived*>(base);
+        if (derived) {
+            derived->foo();
+        }
+        delete base;
+        return 0;
+    }
+    ```
 
-	`const_cast` : It is used to add or remove const or volatile qualifiers from a variable.
+    `const_cast` : It is used to add or remove const or volatile qualifiers from a variable.
 
-	```cpp
-	const int x = 42;
-	int y = const_cast<int>(x); // Remove const qualifier
-	```
+    ```cpp
+    const int x = 42;
+    int y = const_cast<int>(x); // Remove const qualifier
+    ```
 
-	`reinterpret_cast` : It is used to convert one pointer type to another pointer type or to convert a pointer to an integer type.
+    `reinterpret_cast` : It is used to convert one pointer type to another pointer type or to convert a pointer to an integer type.
 
-	```cpp
-	#include <iostream>
-	int main() {
-		int num = 42;
-		int *num_ptr = &num;
+    ```cpp
+    #include <iostream>
+    int main() {
+        int num = 42;
+        int *num_ptr = &num;
 
-		// Disguise the integer pointer as a char pointer
-		char *char_ptr = reinterpret_cast<char *>(num_ptr);
+        // Disguise the integer pointer as a char pointer
+        char *char_ptr = reinterpret_cast<char *>(num_ptr);
 
-		for (size_t i = 0; i < sizeof(int); ++i) {
-			// Print the individual bytes of the integer as characters
-			std::cout << "Byte " << i << ": " << char_ptr[i] << std::endl;
-		}
+        for (size_t i = 0; i < sizeof(int); ++i) {
+            // Print the individual bytes of the integer as characters
+            std::cout << "Byte " << i << ": " << char_ptr[i] << std::endl;
+        }
 
-		return 0;
-	}
-	```
+        return 0;
+    }
+    ```
 
 - **C-Style Casting**: Traditional casting method that can be used to convert between data types.
 
-	```cpp
-	double x = 3.14;
-	int y = (int)x; // C-style casting from double to int
-	```
+    ```cpp
+    double x = 3.14;
+    int y = (int)x; // C-style casting from double to int
+    ```
 
 - **Type Conversion Functions**: Functions provided by the standard library to convert between data types.
 
-	```cpp
-	std::string str = std::to_string(42); // Convert int to string
-	int num = std::stoi("42"); // Convert string to int
-	```
+    ```cpp
+    std::string str = std::to_string(42); // Convert int to string
+    int num = std::stoi("42"); // Convert string to int
+    ```
 
 ## Operators
 
@@ -441,10 +445,36 @@ Control structures in C++ are used to alter the flow of a program based on certa
 
 ### Conditional Statements
 
-- **if Statement**: `if (condition) { /* code */ }`
-- **if-else Statement**: `if (condition) { /* code */ } else { /* code */ }`
-- **Nested if Statements**: `if (condition1) { if (condition2) { /* code */ } }`
+- **if Statement**: Executes a block of code if a specified condition is true.
 
+    ```cpp
+    int x = 5;
+    if (x > 0) {
+        std::cout << "Positive number" << std::endl;
+    }
+    ```
+- **if-else Statement**: Executes one block of code if a condition is true and another block if it is false.
+
+    ```cpp 
+    int x = -5;
+    if (x > 0) {
+        std::cout << "Positive number" << std::endl;
+    } else {
+        std::cout << "Negative number" << std::endl;
+    }
+    ```
+- **Nested if Statements**: Using if statements inside other if statements to create complex conditions.
+
+    ```cpp
+    int x = 5;
+    if (x > 0) {
+        if (x % 2 == 0) {
+            std::cout << "Positive even number" << std::endl;
+        } else {
+            std::cout << "Positive odd number" << std::endl;
+        }
+    }
+    ```
 ### Switch Statement
 
 - **Switch Case**: `switch (expression) { case value1: /* code */ break; case value2: /* code */ break; default: /* code */ }`
@@ -457,9 +487,9 @@ Control structures in C++ are used to alter the flow of a program based on certa
 
 ### Jump Statements
 
-- **break Statement**: Exits loop or switch statement.
-- **continue Statement**: Skips current iteration of loop.
-- **return Statement**: Exits function and optionally returns a value.
+- **break Statement**: Exits loop or switch statement. `break;`
+- **continue Statement**: Skips current iteration of loop. `continue;`
+- **return Statement**: Exits function and optionally returns a value. `return value;`
 
 ### Conditional Operator
 
@@ -574,6 +604,86 @@ int main() {
 
 - **Functions with Variable Number of Arguments**: `void variadicFunc(int arg1, ...);`
 
+
+## Memory Model
+
+The memory model in C++ defines how the program stores and accesses data in computer memory. It consists of different segments, such as the Stack, Heap, Data and Code segments. Each of these segments is used to store different types of data and has specific characteristics.
+
+### Stack
+
+- **LIFO Data Structure**: Last In, First Out.
+- **Automatic Memory Management**: Memory is allocated and deallocated automatically.
+- **Local Variables**: Function parameters and local variables are stored on the stack.
+- **Fixed Size**: Stack size is limited and determined at compile time.
+- **Faster Access**: Faster access compared to the heap.
+
+```cpp
+void foo() {
+    int x = 42; // Stored on the stack
+}
+```
+
+### Heap
+
+- **Dynamic Memory Allocation**: Memory is allocated and deallocated manually.
+- **Unlimited Size**: Heap size is limited by available memory.
+- **Slower Access**: Slower access compared to the stack.
+- **Data Structures**: Objects, arrays, and data structures are stored on the heap.
+
+```cpp
+int *ptr = new int; // Allocated on the heap
+delete ptr; // Deallocated manually
+```
+
+### Data Segment
+
+- **Global and Static Variables**: Global variables and static variables are stored in the data segment.
+- **Initialized Data**: Data with static or constant values is stored in this segment.
+- **Read-Only Memory**: Data in this segment is read-only and cannot be modified.
+
+```cpp
+int globalVar = 42; // Stored in the data segment
+static int staticVar = 42; // Stored in the data segment
+```
+
+### Code Segment
+
+- **Executable Code**: Machine instructions and program code are stored in the code segment.
+- **Read-Only Memory**: Code in this segment is read-only and cannot be modified.
+- **Program Instructions**: Instructions for the program execution are stored in this segment.
+
+```cpp
+int main() {
+    return 0; // Executable code in the code segment
+}
+```
+
+## Memory Management
+
+Memory management in C++ is the process of allocating and deallocating memory for program data. It involves managing memory segments, dynamic memory allocation, and avoiding memory leaks and memory corruption.
+
+### Static Memory Allocation
+
+- **Compile-Time Allocation**: Memory is allocated at compile time.
+- **Automatic Variables**: Local variables and function parameters are allocated on the stack.
+- **Fixed Size**: Stack size is determined at compile time.
+
+```cpp
+void foo() {
+    int x = 42; // Allocated on the stack
+}
+```
+
+### Dynamic Memory Allocation
+
+- **Run-Time Allocation**: Memory is allocated at run time using the heap.
+- **Manual Management**: Memory must be deallocated manually to avoid memory leaks.
+
+```cpp
+int *ptr = new int; // Allocated on the heap
+delete ptr; // Deallocated manually
+```
+
 ## Pointers and References
 
 Pointers and references are used in C++ to store memory addresses and access data indirectly. They are essential for dynamic memory allocation, function calls, and efficient data manipulation.
@@ -643,79 +753,104 @@ Pointers and references are used in C++ to store memory addresses and access dat
 - **Shared Pointer**: `std::shared_ptr<type> ptr;`.
 - **Weak Pointer**: `std::weak_ptr<type> ptr;`.
 
-## Memory Model
+## Structuring Codebase
 
-The memory model in C++ defines how the program stores and accesses data in computer memory. It consists of different segments, such as the Stack, Heap, Data and Code segments. Each of these segments is used to store different types of data and has specific characteristics.
+Structuring the codebase in C++ involves organizing code into modules, files, and directories to improve readability, maintainability, and reusability. It includes using header files, namespaces, classes, and libraries effectively.
 
-### Stack
+### Header Files
 
-- **LIFO Data Structure**: Last In, First Out.
-- **Automatic Memory Management**: Memory is allocated and deallocated automatically.
-- **Local Variables**: Function parameters and local variables are stored on the stack.
-- **Fixed Size**: Stack size is limited and determined at compile time.
-- **Faster Access**: Faster access compared to the heap.
+Separating declarations and definitions in C++ is a common practice to improve code organization and modularity. Header files contain declarations of classes, functions, and variables, while source files contain their definitions.
+
+- **Declaration and Definition Separation**: Header files contain declarations, while source files contain definitions.
+- **Include Guards**: Prevent multiple inclusions of the same header file.
+- **Forward Declarations**: Declare classes and functions before using them.
 
 ```cpp
-void foo() {
-	int x = 42; // Stored on the stack
+// header.h
+#ifndef HEADER_H
+#define HEADER_H
+
+void foo(); // Function declaration
+
+#endif
+```
+
+### Namespaces
+
+Namespaces in C++ are used to group related code into a named scope. They help avoid naming conflicts and improve code organization by providing a hierarchical structure.
+
+- **Namespace Declaration**: `namespace name { /* code */ }`
+- **Namespace Usage**: `using namespace name;` or `name::identifier`
+
+```cpp
+namespace math {
+    int add(int a, int b) { return a + b; }
 }
-```
 
-### Heap
-
-- **Dynamic Memory Allocation**: Memory is allocated and deallocated manually.
-- **Unlimited Size**: Heap size is limited by available memory.
-- **Slower Access**: Slower access compared to the stack.
-- **Data Structures**: Objects, arrays, and data structures are stored on the heap.
-
-```cpp
-int *ptr = new int; // Allocated on the heap
-delete ptr; // Deallocated manually
-```
-
-### Data Segment
-
-- **Global and Static Variables**: Global variables and static variables are stored in the data segment.
-- **Initialized Data**: Data with static or constant values is stored in this segment.
-- **Read-Only Memory**: Data in this segment is read-only and cannot be modified.
-
-```cpp
-int globalVar = 42; // Stored in the data segment
-static int staticVar = 42; // Stored in the data segment
-```
-
-### Code Segment
-
-- **Executable Code**: Machine instructions and program code are stored in the code segment.
-- **Read-Only Memory**: Code in this segment is read-only and cannot be modified.
-- **Program Instructions**: Instructions for the program execution are stored in this segment.
-
-```cpp
 int main() {
-	return 0; // Executable code in the code segment
+    int sum = math::add(5, 3);
+    return 0;
 }
 ```
 
-## Memory Management
+`using namespace math;` allows using the `add` function without the `math::` prefix.
+```cpp
+using namespace math;
+int sum = add(5, 3);
+```
 
-Memory management in C++ is the process of allocating and deallocating memory for program data. It involves managing memory segments, dynamic memory allocation, and avoiding memory leaks and memory corruption.
+### Scope
 
-### Static Memory Allocation
+Scope in C++ defines the visibility and lifetime of variables and functions in a program. It determines where a variable or function can be accessed and how long it exists during program execution.
 
-- **Compile-Time Allocation**: Memory is allocated at compile time.
-- **Automatic Variables**: Local variables and function parameters are allocated on the stack.
-- **Fixed Size**: Stack size is determined at compile time.
+- **Global Scope**: Variables declared outside functions have global scope.
+- **Local Scope**: Variables declared inside functions have local scope.
+- **Block Scope**: Variables declared inside blocks have block scope.
+- **Namespace Scope**: Variables declared inside namespaces have namespace scope.
+- **Class Scope**: Variables declared inside classes have class scope.
 
 ```cpp
+int globalVar = 42; // Global scope
+
 void foo() {
-	int x = 42; // Allocated on the stack
+    int localVar = 42; // Local scope
+    {
+        int blockVar = 42; // Block scope
+    }
 }
+
+namespace math {
+    int pi = 3.14159; // Namespace scope
+}
+
+class Circle {
+public:
+    double radius; // Class scope
+};
 ```
 
-### Dynamic Memory Allocation
+### Forward Declarations
 
-- **Run-Time Allocation**: Memory is allocated at run time using the heap.
-- **Manual Management**: Memory must be deallocated manually to avoid memory leaks.
+Forward declarations in C++ are used to declare classes, functions, and variables before they are defined. They allow using entities before their definitions are available.
+
+- **Class Forward Declaration**: `class ClassName;`
+- **Function Forward Declaration**: `returnType functionName(parameters);`
+
+```cpp
+class Circle; // Forward declaration of class Circle
+
+void foo(); // Forward declaration of function foo
+
+class Circle {
+public:
+    double radius;
+    double area();
+};
+
+double Circle::area() {
+    return 3.14159 * radius * radius;
+}
+```
 
 
 ## Input and Output
@@ -995,11 +1130,11 @@ Data structures in C++ are used to store and organize data in memory. They inclu
 ```cpp
 #include <iostream>
 int main() {
-	int arr[5] = {1, 2, 3, 4, 5};
-	for (int i = 0; i < 5; i++) {
-		std::cout << arr[i] << std::endl;
-	}
-	return 0;
+    int arr[5] = {1, 2, 3, 4, 5};
+    for (int i = 0; i < 5; i++) {
+        std::cout << arr[i] << std::endl;
+    }
+    return 0;
 }
 ```
 
@@ -1014,10 +1149,10 @@ int main() {
 #include <string>
 
 int main() {
-	std::string str = "Hello, world!";
-	std::cout << "Length: " << str.length() << std::endl;
-	std::cout << "Substring: " << str.substr(0, 5) << std::endl;
-	return 0;
+    std::string str = "Hello, world!";
+    std::cout << "Length: " << str.length() << std::endl;
+    std::cout << "Substring: " << str.substr(0, 5) << std::endl;
+    return 0;
 }
 ```
 
@@ -1033,12 +1168,12 @@ int main() {
 #include <vector>
 
 int main() {
-	std::vector<int> vec = {1, 2, 3, 4, 5};
-	vec.push_back(6);
-	for (int i = 0; i < vec.size(); i++) {
-		std::cout << vec[i] << std::endl;
-	}
-	return 0;
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+    vec.push_back(6);
+    for (int i = 0; i < vec.size(); i++) {
+        std::cout << vec[i] << std::endl;
+    }
+    return 0;
 }
 ```
 
@@ -1052,19 +1187,19 @@ int main() {
 #include <iostream>
 
 struct Node {
-	int data;
-	Node* next;
+    int data;
+    Node* next;
 };
 
 int main() {
-	Node* head = nullptr;
-	Node* node1 = new Node{1, nullptr};
-	Node* node2 = new Node{2, nullptr};
-	head = node1;
-	node1->next = node2;
-	std::cout << head->data << std::endl;
-	std::cout << head->next->data << std::endl;
-	return 0;
+    Node* head = nullptr;
+    Node* node1 = new Node{1, nullptr};
+    Node* node2 = new Node{2, nullptr};
+    head = node1;
+    node1->next = node2;
+    std::cout << head->data << std::endl;
+    std::cout << head->next->data << std::endl;
+    return 0;
 }
 ```
 
@@ -1079,15 +1214,15 @@ int main() {
 #include <stack>
 
 int main() {
-	std::stack<int> s;
-	s.push(1);
-	s.push(2);
-	s.push(3);
-	while (!s.empty()) {
-		std::cout << s.top() << std::endl;
-		s.pop();
-	}
-	return 0;
+    std::stack<int> s;
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    while (!s.empty()) {
+        std::cout << s.top() << std::endl;
+        s.pop();
+    }
+    return 0;
 }
 ```
 
@@ -1102,15 +1237,15 @@ int main() {
 #include <queue>
 
 int main() {
-	std::queue<int> q;
-	q.push(1);
-	q.push(2);
-	q.push(3);
-	while (!q.empty()) {
-		std::cout << q.front() << std::endl;
-		q.pop();
-	}
-	return 0;
+    std::queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    while (!q.empty()) {
+        std::cout << q.front() << std::endl;
+        q.pop();
+    }
+    return 0;
 }
 ```
 
@@ -1124,21 +1259,21 @@ int main() {
 #include <iostream>
 
 struct Node {
-	int data;
-	Node* left;
-	Node* right;
+    int data;
+    Node* left;
+    Node* right;
 };
 
 int main() {
-	Node* root = new Node{1, nullptr, nullptr};
-	Node* left = new Node{2, nullptr, nullptr};
-	Node* right = new Node{3, nullptr, nullptr};
-	root->left = left;
-	root->right = right;
-	std::cout << root->data << std::endl;
-	std::cout << root->left->data << std::endl;
-	std::cout << root->right->data << std::endl;
-	return 0;
+    Node* root = new Node{1, nullptr, nullptr};
+    Node* left = new Node{2, nullptr, nullptr};
+    Node* right = new Node{3, nullptr, nullptr};
+    root->left = left;
+    root->right = right;
+    std::cout << root->data << std::endl;
+    std::cout << root->left->data << std::endl;
+    std::cout << root->right->data << std::endl;
+    return 0;
 }
 ```
 
@@ -1153,19 +1288,19 @@ int main() {
 #include <vector>
 
 int main() {
-	std::vector<std::vector<int>> graph = {
-		{0, 1, 1, 0},
-		{1, 0, 1, 1},
-		{1, 1, 0, 1},
-		{0, 1, 1, 0}
-	};
-	for (int i = 0; i < graph.size(); i++) {
-		for (int j = 0; j < graph[i].size(); j++) {
-			std::cout << graph[i][j] << " ";
-		}
-		std::cout << std::endl;
-	}
-	return 0;
+    std::vector<std::vector<int>> graph = {
+        {0, 1, 1, 0},
+        {1, 0, 1, 1},
+        {1, 1, 0, 1},
+        {0, 1, 1, 0}
+    };
+    for (int i = 0; i < graph.size(); i++) {
+        for (int j = 0; j < graph[i].size(); j++) {
+            std::cout << graph[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    return 0;
 }
 ```
 
@@ -1185,14 +1320,14 @@ Algorithms in C++ are step-by-step procedures for solving problems or performing
 #include <algorithm>
 
 int main() {
-	std::vector<int> vec = {1, 2, 3, 4, 5};
-	auto it = std::find(vec.begin(), vec.end(), 3);
-	if (it != vec.end()) {
-		std::cout << "Element found at index: " << it - vec.begin() << std::endl;
-	} else {
-		std::cout << "Element not found." << std::endl;
-	}
-	return 0;
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+    auto it = std::find(vec.begin(), vec.end(), 3);
+    if (it != vec.end()) {
+        std::cout << "Element found at index: " << it - vec.begin() << std::endl;
+    } else {
+        std::cout << "Element not found." << std::endl;
+    }
+    return 0;
 }
 ```
 
@@ -1208,13 +1343,13 @@ int main() {
 #include <algorithm>
 
 int main() {
-	std::vector<int> vec = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
-	std::sort(vec.begin(), vec.end());
-	for (int num : vec) {
-		std::cout << num << " ";
-	}
-	std::cout << std::endl;
-	return 0;
+    std::vector<int> vec = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
+    std::sort(vec.begin(), vec.end());
+    for (int num : vec) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+    return 0;
 }
 ```
 
@@ -1232,33 +1367,33 @@ int main() {
 #include <queue>
 
 void bfs(std::vector<std::vector<int>>& graph, int start) {
-	std::vector<bool> visited(graph.size(), false);
-	std::queue<int> q;
-	q.push(start);
-	visited[start] = true;
-	while (!q.empty()) {
-		int node = q.front();
-		q.pop();
-		std::cout << node << " ";
-		for (int neighbor : graph[node]) {
-			if (!visited[neighbor]) {
-				q.push(neighbor);
-				visited[neighbor] = true;
-			}
-		}
-	}
+    std::vector<bool> visited(graph.size(), false);
+    std::queue<int> q;
+    q.push(start);
+    visited[start] = true;
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        std::cout << node << " ";
+        for (int neighbor : graph[node]) {
+            if (!visited[neighbor]) {
+                q.push(neighbor);
+                visited[neighbor] = true;
+            }
+        }
+    }
 }
 
 int main() {
-	std::vector<std::vector<int>> graph = {
-		{1, 2},
-		{0, 2, 3},
-		{0, 1, 3},
-		{1, 2}
-	};
-	bfs(graph, 0);
-	std::cout << std::endl;
-	return 0;
+    std::vector<std::vector<int>> graph = {
+        {1, 2},
+        {0, 2, 3},
+        {0, 1, 3},
+        {1, 2}
+    };
+    bfs(graph, 0);
+    std::cout << std::endl;
+    return 0;
 }
 ```
 
@@ -1273,78 +1408,18 @@ int main() {
 #include <vector>
 
 int fibonacci(int n) {
-	std::vector<int> dp(n + 1, 0);
-	dp[1] = 1;
-	for (int i = 2; i <= n; i++) {
-		dp[i] = dp[i - 1] + dp[i - 2];
-	}
-	return dp[n];
+    std::vector<int> dp(n + 1, 0);
+    dp[1] = 1;
+    for (int i = 2; i <= n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];
+    }
+    return dp[n];
 }
 
 int main() {
-	int n = 10;
-	std::cout << "Fibonacci(" << n << ") = " << fibonacci(n) << std::endl;
-	return 0;
-}
-```
-
-### Backtracking
-
-- **Recursive Approach**: Generate all possible solutions.
-- **Pruning**: Eliminate invalid solutions early.
-- **State Space Tree**: Representing all possible states.
-
-```cpp
-#include <iostream>
-#include <vector>
-
-void generateSubsets(std::vector<int>& nums, std::vector<int>& subset, int index) {
-	if (index == nums.size()) {
-		for (int num : subset) {
-			std::cout << num << " ";
-		}
-		std::cout << std::endl;
-		return;
-	}
-	subset.push_back(nums[index]);
-	generateSubsets(nums, subset, index + 1);
-	subset.pop_back();
-	generateSubsets(nums, subset, index + 1);
-}
-
-int main() {
-	std::vector<int> nums = {1, 2, 3};
-	std::vector<int> subset;
-	generateSubsets(nums, subset, 0);
-	return 0;
-}
-```
-
-### Greedy Algorithms
-
-- **Greedy Choice Property**: Make the locally optimal choice.
-- **Optimal Substructure**: Decompose problem into subproblems.
-
-```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-int coinChange(std::vector<int>& coins, int amount) {
-	std::sort(coins.begin(), coins.end(), std::greater<int>());
-	int count = 0;
-	for (int coin : coins) {
-		count += amount / coin;
-		amount %= coin;
-	}
-	return amount == 0 ? count : -1;
-}
-
-int main() {
-	std::vector<int> coins = {1, 2, 5};
-	int amount = 11;
-	std::cout << "Minimum coins: " << coinChange(coins, amount) << std::endl;
-	return 0;
+    int n = 10;
+    std::cout << "Fibonacci(" << n << ") = " << fibonacci(n) << std::endl;
+    return 0;
 }
 ```
 
@@ -1359,76 +1434,28 @@ int main() {
 #include <vector>
 
 int binarySearch(std::vector<int>& nums, int target) {
-	int left = 0, right = nums.size() - 1;
-	while (left <= right) {
-		int mid = left + (right - left) / 2;
-		if (nums[mid] == target) {
-			return mid;
-		} else if (nums[mid] < target) {
-			left = mid + 1;
-		} else {
-			right = mid - 1;
-		}
-	}
-	return -1;
+    int left = 0, right = nums.size() - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
 }
 
 int main() {
-	std::vector<int> nums = {1, 2, 3, 4, 5};
-	int target = 3;
-	std::cout << "Index: " << binarySearch(nums, target) << std::endl;
-	return 0;
+    std::vector<int> nums = {1, 2, 3, 4, 5};
+    int target = 3;
+    std::cout << "Index: " << binarySearch(nums, target) << std::endl;
+    return 0;
 }
 ```
 
-### Randomized Algorithms
-
-- **Randomized Choices**: Make random decisions.
-- **Monte Carlo Algorithms**: Use random sampling.
-- **Las Vegas Algorithms**: Randomized with deterministic guarantees.
-
-```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <random>
-
-int randomPartition(std::vector<int>& nums, int left, int right) {
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int> dis(left, right);
-	int pivotIndex = dis(gen);
-	int pivotValue = nums[pivotIndex];
-	std::swap(nums[pivotIndex], nums[right]);
-	int i = left;
-	for (int j = left; j < right; j++) {
-		if (nums[j] < pivotValue) {
-			std::swap(nums[i], nums[j]);
-			i++;
-		}
-	}
-	std::swap(nums[i], nums[right]);
-	return i;
-}
-
-void quickSort(std::vector<int>& nums, int left, int right) {
-	if (left < right) {
-		int pivot = randomPartition(nums, left, right);
-		quickSort(nums, left, pivot - 1);
-		quickSort(nums, pivot + 1, right);
-	}
-}
-
-int main() {
-	std::vector<int> nums = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
-	quickSort(nums, 0, nums.size() - 1);
-	for (int num : nums) {
-		std::cout << num << " ";
-	}
-	std::cout << std::endl;
-	return 0;
-}
-```
 
 ## Exception Handling
 
@@ -1507,9 +1534,117 @@ int main() {
 
 ### Custom Exceptions
 
+You can define custom exception classes by deriving from `std::exception` or other standard exception classes.
+
+```cpp
+#include <iostream>
+
+class CustomException : public std::exception {
+public:
+    const char* what() const noexcept override {
+        return "Custom exception occurred!";
+    }
+};
+
+int divide(int a, int b) {
+    if (b == 0) {
+        throw CustomException();
+    }
+    return a / b;
+}
+
+int main() {
+    int num1, num2;
+
+    std::cout << "Enter two numbers for division: ";
+    std::cin >> num1 >> num2;
+
+    try {
+        int result = divide(num1, num2);
+        std::cout << "The result is: " << result << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
+```
+
+### Access Violations
+
+Access violations, such as null pointer dereferences and out-of-bounds memory access, can lead to runtime errors and crashes. You can use exception handling to catch and handle access violations in C++.
+
+- **Null Pointer Dereference**: Accessing a null pointer.
+- **Out-of-Bounds Access**: Accessing memory outside the bounds of an array.
+- **Reading/Writing to freed memory**: Accessing memory that has been deallocated.
+
+```cpp
+#include <iostream>
+
+int main() {
+    int* ptr = nullptr;
+
+    try {
+        *ptr = 42;
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
+```
 
 
+## Code Splitting
 
+Code splitting in C++ involves dividing a program into multiple files and modules to improve code organization, readability, and maintainability. It includes using header files, source files, and libraries to separate declarations and definitions.
+
+### Header Files
+
+Header files in C++ contain declarations of classes, functions, and variables that are used in multiple source files. They are included in source files to provide information about the entities defined in the program.
+
+- **Declaration**: Contains function prototypes, class declarations, and global variables.
+- **Include Guards**: Prevent multiple inclusions of the same header file.
+- **Forward Declarations**: Declare classes and functions before using them.
+
+```cpp
+// header.h
+#ifndef HEADER_H
+#define HEADER_H
+
+void foo(); // Function declaration
+
+#endif
+```
+
+### Source Files
+
+Source files contain the implementation of functions and classes declared in header files. They are compiled separately and linked together to create an executable file.
+
+- **Definition**: Contains function implementations and class member definitions.
+- **Include Header Files**: Include necessary header files for declarations.
+
+```cpp
+// source.cpp
+#include "header.h"
+
+void foo() {
+    // Function implementation
+}
+```
+
+### Separate Compilation
+
+C++ programs can be compiled in multiple steps using separate compilation to speed up the build process and manage dependencies.
+
+```bash
+# Compile each source file into an object file
+g++ -c main.cpp -o main.o
+g++ -c example.cpp -o example.o
+
+# Link object files together to create the executable
+g++ main.o example.o -o my_program
+```
 
 
 ## Compilers
@@ -1616,19 +1751,72 @@ EXE = my_program
 
 # Rules
 $(EXE): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(EXE) $(OBJ)
+    $(CXX) $(CXXFLAGS) -o $(EXE) $(OBJ)
 
 $(OBJ): $(SRC)
-	$(CXX) $(CXXFLAGS) -c $(SRC)
+    $(CXX) $(CXXFLAGS) -c $(SRC)
 
 # Phony targets
 .PHONY: clean
 clean:
-	rm -f $(OBJ) $(EXE)
+    rm -f $(OBJ) $(EXE)
 ```
 
 
 ## languge Concepts
+
+### auto (Automatic Type Deduction)
+
+The `auto` keyword in C++ is used for automatic type deduction. It allows the compiler to determine the type of a variable based on its initializer. This feature was introduced in C++11 to simplify code and improve readability.
+
+#### Syntax
+
+```cpp
+auto variable = value;
+```
+
+#### Example
+
+```cpp
+
+#include <iostream>
+
+int main() {
+    auto x = 42; // x is of type int
+    auto y = 3.14; // y is of type double
+    auto z = "Hello"; // z is of type const char*
+    std::cout << x << " " << y << " " << z << std::endl;
+    return 0;
+}
+```
+
+### Range-based For Loop
+
+The range-based for loop in C++ is a convenient way to iterate over elements in a container, such as an array, vector, or string. It simplifies the process of iterating over elements and accessing them without using iterators or indices.
+
+#### Syntax
+
+```cpp
+for (auto& element : container) {
+    // Process element
+}
+```
+
+#### Example
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+    for (auto& num : vec) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+    return 0;
+}
+```
 
 ### Undefine Behaviour
 
@@ -1665,10 +1853,10 @@ Macros in C++ are preprocessor directives that define symbolic constants, functi
 #define SQUARE(x) ((x) * (x))
 
 int main() {
-	double radius = 5.0;
-	double area = PI * SQUARE(radius);
-	std::cout << "Area: " << area << std::endl;
-	return 0;
+    double radius = 5.0;
+    double area = PI * SQUARE(radius);
+    std::cout << "Area: " << area << std::endl;
+    return 0;
 }
 ```
 #### Macros vs. Constants
@@ -1688,35 +1876,18 @@ Argument-dependent lookup (ADL) in C++ is a mechanism that allows functions and 
 #include <iostream>
 
 namespace my_namespace {
-	struct MyType {};
-	void foo(MyType) {
-		std::cout << "ADL: foo(MyType)" << std::endl;
-	}
+    struct MyType {};
+    void foo(MyType) {
+        std::cout << "ADL: foo(MyType)" << std::endl;
+    }
 }
 
 int main() {
-	my_namespace::MyType obj;
-	foo(obj); // ADL: foo(MyType)
-	return 0;
+    my_namespace::MyType obj;
+    foo(obj); // ADL: foo(MyType)
+    return 0;
 }
 ```
-
-### Inline Functions
-
-Inline functions in C++ are functions that are expanded in place at the call site instead of being called through a function call. They are used to reduce function call overhead and improve performance by eliminating the function call stack.
-
-#### Defining Inline Functions
-
-- **Inline Functions**: `inline return_type function_name(parameters) { /* code */ }`
-- **Header-Only Libraries**: Define functions in header files to allow inlining.
-- **Benefits of Inlining**: Reduced function call overhead, improved performance, reduced code size.
-- **Drawbacks of Inlining**: Increased code size, reduced cache locality, longer compile times.
-
-```cpp
-#include <iostream>
-inline int add(int a, int b) {
-	return a + b;
-}
 
 
 ## Resources

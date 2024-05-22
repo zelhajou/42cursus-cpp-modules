@@ -104,26 +104,50 @@ Object-oriented, Generic programming, Metaprogramming, Exception handling, Stand
 ## Table of Contents
 
 - [C++ Programming Language cheat sheet](#c-programming-language-cheat-sheet) 
-   - [Table of Contents](#table-of-contents)
-   - [Code Example](#code-example)
-   - [Installation and Setup](#installation-and-setup)
-   - [Hello World Program](#hello-world-program)
-      - [Header Files and Preprocessor Directives](#header-files-and-preprocessor-directives)
-      - [Comments](#comments)
-      - [Main Function](#main-function)
-      - [Output Statement](#output-statement)
-      - [Return Statement](#return-statement)
-   - [keywords](#keywords)
-   - [Data Types](#data-types)
-      - [Static and Dynamic Data Types](#static-and-dynamic-data-types)
-      - [Type Casting](#type-casting)
-   - [Operators](#operators)
-   - [Control Structures](#control-structures)
-      - [Conditional Statements](#conditional-statements)
-      - [Switch Statement](#switch-statement)
-      - [Loops](#loops)
-      - [Jump Statements](#jump-statements)
-      - [Conditional Operator](#conditional-operator)
+    - [Table of Contents](#table-of-contents)
+    - [Code Example](#code-example)
+    - [Installation and Setup](#installation-and-setup)
+    - [Hello World Program](#hello-world-program)
+       - [Header Files and Preprocessor Directives](#header-files-and-preprocessor-directives)
+       - [Comments](#comments)
+       - [Main Function](#main-function)
+       - [Output Statement](#output-statement)
+       - [Return Statement](#return-statement)
+    - [keywords](#keywords)
+    - [Data Types](#data-types)
+       - [Static and Dynamic Data Types](#static-and-dynamic-data-types)
+       - [Type Casting](#type-casting)
+    - [Operators](#operators)
+    - [Control Structures](#control-structures)
+       - [Conditional Statements](#conditional-statements)
+       - [Loops](#loops)
+       - [Jump Statements](#jump-statements)
+       - [Conditional Operator](#conditional-operator)
+       - [Control Flow](#control-flow)
+       - [Exception Handling](#exception-handling)
+       - [Conditional Compilation](#conditional-compilation)
+    - [Command Line Arguments](#command-line-arguments)
+    - [Functions](#functions)
+       - [Function Declaration](#function-declaration)
+       - [Function Definition](#function-definition)
+       - [Function Call](#function-call)
+       - [Function Parameters](#function-parameters)
+       - [Return Statement](#return-statement)
+       - [Function Overloading](#function-overloading)
+       - [Default Arguments](#default-arguments)
+       - [Function Prototypes](#function-prototypes)
+       - [Recursive Functions](#recursive-functions)
+       - [Inline Functions](#inline-functions)
+       - [Lambda Functions (C++11)](#lambda-functions-c11)
+       - [Function Pointers](#function-pointers)
+       - [Function Objects](#function-objects)
+       - [Variadic Functions](#variadic-functions)
+       - [Function Templates](#function-templates)
+    - 
+
+
+   
+
 
 
 
@@ -310,8 +334,6 @@ Example:
 int *ptr = new int; // Dynamic data type (int*)
 ```
 
-
-
 ### Type Casting
 
 Type casting in C++ is the process of converting a variable from one data type to another. It can be done implicitly by the compiler or explicitly by the programmer using casting operators.
@@ -405,45 +427,66 @@ Type casting in C++ is the process of converting a variable from one data type t
 
 Operators in C++ are symbols that perform specific operations on one or more operands. They can be classified into various categories based on their functionality and usage.
 
-- **Arithmetic Operators**: `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), `%` (modulus)
+- **Arithmetic Operators**: Perform mathematical operations on numeric operands.
+    - **Addition (+)**: Adds two operands.
+    - **Subtraction (-)**: Subtracts the second operand from the first.
+    - **Multiplication (*)**: Multiplies two operands.
+    - **Division (/)**: Divides the first operand by the second.
+    - **Modulus (%)**: Returns the remainder of the division.
 
-- **Assignment Operators**: `=` (assignment), `+=` (addition assignment), `-=` (subtraction assignment), `*=` (multiplication assignment), `/=` (division assignment), `%=` (modulus assignment)
+- **Relational Operators**: Compare two operands and return a boolean value.
+        - **Equal to (==)**: Checks if two operands are equal.
+        - **Not equal to (!=)**: Checks if two operands are not equal.
+        - **Greater than (>)**: Checks if the first operand is greater than the second.
+        - **Less than (<)**: Checks if the first operand is less than the second.
+        - **Greater than or equal to (>=)**: Checks if the first operand is greater than or equal to the second.
+        - **Less than or equal to (<=)**: Checks if the first operand is less than or equal to the second.
 
-- **Comparison Operators**: `==` (equal to), `!=` (not equal to), `<` (less than), `>` (greater than), `<=` (less than or equal to), `>=` (greater than or equal to)
+- **Logical Operators**: Combine multiple conditions and return a boolean value.
+        - **Logical AND (&&)**: Returns true if both operands are true.
+        - **Logical OR (||)**: Returns true if at least one operand is true.
+        - **Logical NOT (!)**: Returns the opposite of the operand's value.
 
-- **Logical Operators**: `&&` (logical AND), `||` (logical OR), `!` (logical NOT)
+- **Assignment Operators**: Assign a value to a variable and perform an operation on it.
+        - **Assignment (=)**: Assigns the value of the right operand to the left operand.
+        - **Addition assignment (+=)**: Adds the right operand to the left operand and assigns the result.
+        - **Subtraction assignment (-=)**: Subtracts the right operand from the left operand and assigns the result.
+        - **Multiplication assignment (*=)**: Multiplies the left operand by the right operand and assigns the result.
+        - **Division assignment (/=)**: Divides the left operand by the right operand and assigns the result.
+        - **Modulus assignment (%=)**: Calculates the modulus of the left operand by the right operand and assigns the result.
 
-- **Bitwise Operators**: `&` (bitwise AND), `|` (bitwise OR), `^` (bitwise XOR), `~` (bitwise NOT), `<<` (left shift), `>>` (right shift)
+- **Increment and Decrement Operators**: Increase or decrease the value of a variable by one.
+        - **Increment (++)**: Increases the value of the operand by one.
+        - **Decrement (--)**: Decreases the value of the operand by one.
 
-- **Increment and Decrement Operators**: `++` (increment), `--` (decrement)
+- **Bitwise Operators**: Perform bitwise operations on integer operands.
+        - **Bitwise AND (&)**: Performs a bitwise AND operation.
+        - **Bitwise OR (|)**: Performs a bitwise OR operation.
+        - **Bitwise XOR (^)**: Performs a bitwise XOR (exclusive OR) operation.
+        - **Bitwise NOT (~)**: Performs a bitwise NOT (complement) operation.
+        - **Left shift (<<)**: Shifts the bits of the left operand to the left by the number of positions specified by the right operand.
+        - **Right shift (>>)**: Shifts the bits of the left operand to the right by the number of positions specified by the right operand.
 
-- **Conditional Operator**: `? :` (ternary operator)
+- **Ternary Operator**: A conditional operator that evaluates a condition and returns one of two values based on the result.
+        - **Ternary Operator (condition ? value1 : value2)**: Returns value1 if the condition is true, and value2 if the condition is false.
 
-- **Comma Operator**: `,` (comma operator)
+- **Comma Operator**: Evaluates multiple expressions and returns the value of the last expression.
+        - **Comma Operator (expr1, expr2, expr3, ...)**: Evaluates expr1, expr2, expr3, and so on, and returns the value of the last expression.
 
-- **Member Access Operators**: `.` (dot operator), `->` (arrow operator)
+- **Member Access Operators**: Access members of a class or structure.
+        - **Dot Operator (.)**: Accesses members of an object using the object name.
+        - **Arrow Operator (->)**: Accesses members of an object using a pointer to the object.
 
-- **Sizeof Operator**: `sizeof` (size of an object or data type)
-
-- **Pointer Operators**: `*` (dereference operator), `&` (address-of operator)
-
-- **Scope Resolution Operator**: `::` (scope resolution operator)
-
-- **Type Cast Operators**: `static_cast`, `dynamic_cast`, `const_cast`, `reinterpret_cast`
-
-- **New and Delete Operators**: `new` (allocate memory), `delete` (deallocate memory)
-
-- **Function Call Operator**: `()` (function call operator)
-
-- **Array Subscript Operator**: `[]` (array subscript operator)
-
-- **Reference Operator**: `&` (reference operator)
+- **Scope Resolution Operator**: Specifies the scope of a function or variable.
+        - **Scope Resolution Operator (::)**: Specifies the scope of a function or variable in a namespace or class.
 
 ## Control Structures
 
 Control structures in C++ are used to alter the flow of a program based on certain conditions or loops. They include if-else statements, switch statements, loops, and jump statements.
 
 ### Conditional Statements
+
+Conditional statements in C++ are used to execute different blocks of code based on specified conditions. They include if statements, if-else statements, nested if statements, and switch statements.
 
 - **if Statement**: Executes a block of code if a specified condition is true.
 
@@ -475,42 +518,261 @@ Control structures in C++ are used to alter the flow of a program based on certa
         }
     }
     ```
-### Switch Statement
+- **switch Statement**: Executes different code blocks based on the value of an expression.
 
-- **Switch Case**: `switch (expression) { case value1: /* code */ break; case value2: /* code */ break; default: /* code */ }`
+    ```cpp
+    int day = 3;
+    switch (day) {
+        case 1:
+            std::cout << "Monday" << std::endl;
+            break;
+        case 2:
+            std::cout << "Tuesday" << std::endl;
+            break;
+        case 3:
+            std::cout << "Wednesday" << std::endl;
+            break;
+        default:
+            std::cout << "Invalid day" << std::endl;
+    }
+    ```
 
 ### Loops
 
-- **for Loop**: `for (initialization; condition; update) { /* code */ }`
-- **while Loop**: `while (condition) { /* code */ }`
-- **do-while Loop**: `do { /* code */ } while (condition);`
+Loops in C++ are used to execute a block of code repeatedly based on a specified condition. They include while loops, do-while loops, for loops, and range-based for loops.
+
+- **while Loop**: Executes a block of code as long as a specified condition is true.
+
+    ```cpp
+    int i = 0;
+    while (i < 5) {
+        std::cout << i << std::endl;
+        i++;
+    }
+    ```
+
+- **do-while Loop**: Executes a block of code at least once and then repeats it as long as a specified condition is true.
+
+    ```cpp
+    int i = 0;
+    do {
+        std::cout << i << std::endl;
+        i++;
+    } while (i < 5);
+    ```
+
+- **for Loop**: Executes a block of code a specified number of times.
+
+    ```cpp
+    for (int i = 0; i < 5; i++) {
+        std::cout << i << std::endl;
+    }
+    ```
+
+- **Range-based for Loop (C++11)**: Iterates over the elements of a range-based container.
+
+    ```cpp
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+    for (int x : vec) {
+        std::cout << x << std::endl;
+    }
+    ```
+
+- **Nested Loops**: Using loops inside other loops to create complex patterns or iterate over multi-dimensional arrays.
+
+    ```cpp
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            std::cout << i << "," << j << std::endl;
+        }
+    }
+    ```
 
 ### Jump Statements
 
-- **break Statement**: Exits loop or switch statement. `break;`
-- **continue Statement**: Skips current iteration of loop. `continue;`
-- **return Statement**: Exits function and optionally returns a value. `return value;`
+Jump statements in C++ are used to alter the flow of a program by transferring control to a different part of the program. They include break, continue, return, and goto statements.
+
+- **break Statement**: Exits the innermost loop or switch statement.
+
+    ```cpp
+    for (int i = 0; i < 5; i++) {
+        if (i == 3) {
+            break;
+        }
+        std::cout << i << std::endl;
+    }
+    ```
+
+- **continue Statement**: Skips the current iteration of a loop and continues with the next iteration.
+
+    ```cpp
+    for (int i = 0; i < 5; i++) {
+        if (i == 3) {
+            continue;
+        }
+        std::cout << i << std::endl;
+    }
+    ```
+
+- **return Statement**: Exits a function and returns a value to the caller.
+
+    ```cpp
+    int add(int a, int b) {
+        return a + b;
+    }
+    ```
+
+- **goto Statement**: Transfers control to a labeled statement in the program. (use sparingly, can lead to spaghetti code)
+
+    ```cpp
+    goto label;
+    // Code
+    label:
+    // Statement
+    ```
 
 ### Conditional Operator
 
-- **Ternary Operator**: `condition ? expression1 : expression2`
+The conditional operator in C++ is a ternary operator that evaluates a condition and returns one of two values based on the result. It is a shorthand way of writing if-else statements.
 
-### Control Flow
+- **Conditional Operator**: `condition ? value1 : value2`
 
-- **Goto Statement**: `goto label;` (use sparingly, can lead to spaghetti code)
+    ```cpp
+    int x = 5;
+    std::string result = (x > 0) ? "Positive" : "Negative";
+    std::cout << result << std::endl;
+    ```
+- **Multiple Conditional Operators**: Nesting conditional operators to handle multiple conditions.
+
+    ```cpp
+    int x = 5;
+    std::string result = (x > 0) ? "Positive" : (x < 0) ? "Negative" : "Zero";
+    std::cout << result << std::endl;
+    ```
+- **Conditional Operator vs. if-else**: Using the conditional operator for simple conditions and if-else for more complex conditions.
+
+    ```cpp
+    int x = 5;
+    std::string result = (x > 0) ? "Positive" : "Non-positive";
+    if (x == 0) {
+        result = "Zero";
+    }
+    std::cout << result << std::endl;
+    ```
 
 ### Exception Handling
 
-- **try-catch Block**: `try { /* code */ } catch (exceptionType e) { /* handler code */ }`
+Exception handling in C++ is a mechanism to handle runtime errors and abnormal conditions that occur during program execution. It allows you to catch and handle exceptions, preventing the program from crashing.
+
+- **try-catch Block**: A try block is used to enclose code that may throw an exception, and a catch block is used to handle the exception.
+
+    ```cpp
+    try {
+        int x = 5;
+        int y = 0;
+        if (y == 0) {
+            throw std::runtime_error("Division by zero");
+        }
+        int result = x / y;
+        std::cout << "Result: " << result << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+    ```
+- **throw Statement**: Used to throw an exception when an error condition is encountered.
+
+    ```cpp
+    int x = 5;
+    int y = 0;
+    if (y == 0) {
+        throw std::runtime_error("Division by zero");
+    }
+    int result = x / y;
+    std::cout << "Result: " << result << std::endl;
+    ```
+- **Exception Classes**: Standard exception classes provided by the C++ standard library.
+    
+        - **std::exception**: Base class for all standard exceptions.
+        - **std::runtime_error**: Exception class for runtime errors.
+        - **std::logic_error**: Exception class for logical errors.
+        - **std::invalid_argument**: Exception class for invalid arguments.
+        - **std::out_of_range**: Exception class for out-of-range errors.
+
+- **Custom Exceptions**: Defining custom exception classes to handle specific error conditions.
+    
+        ```cpp
+        class MyException : public std::exception {
+        public:
+            const char* what() const noexcept override {
+                return "My custom exception";
+            }
+        };
+    
+        int x = 5;
+        int y = 0;
+        if (y == 0) {
+            throw MyException();
+        }
+        int result = x / y;
+        std::cout << "Result: " << result << std::endl;
+        ```
+- **Exception Specifications**: Specifying the types of exceptions that a function can throw.
+
+        ```cpp
+        void foo() throw(std::runtime_error) {
+            throw std::runtime_error("Error in foo");
+        }
+        ```
+
 
 ### Conditional Compilation
 
+Conditional compilation in C++ allows you to include or exclude code based on preprocessor directives. It is used to create different versions of a program for different platforms or configurations.
+
 - **Conditional Compilation**: `#ifdef`, `#ifndef`, `#endif`, `#if`, `#else`, `#elif`
 
-### Macros
+    ```cpp
+    #define DEBUG
+    #ifdef DEBUG
+    std::cout << "Debug mode" << std::endl;
+    #else
+    std::cout << "Release mode" << std::endl;
+    #endif
+    ```
+- **Preprocessor Directives**: Special commands that are processed by the preprocessor before compilation.
 
-- **Define Macro**: `#define NAME value`
-- **Conditional Macro**: `#ifdef`, `#ifndef`, `#endif`
+    ```cpp
+    #define PI 3.14159
+    #define MAX(x, y) ((x) > (y) ? (x) : (y))
+
+    double area = PI * radius * radius;
+    int max = MAX(a, b);
+    ```
+- **Conditional Compilation with Macros**: Using macros to define conditional compilation directives.
+
+    ```cpp
+    #define DEBUG
+    #ifdef DEBUG
+    std::cout << "Debug mode" << std::endl;
+    #else
+    std::cout << "Release mode" << std::endl;
+    #endif
+    ```
+- **Conditional Compilation with Command-Line Arguments**: Specifying conditional compilation directives using command-line arguments.
+
+    ```bash
+    g++ -DDEBUG -o program program.cpp
+    ```
+- **Conditional Compilation with Macros**: Using macros to define conditional compilation directives.
+
+    ```cpp
+    #define DEBUG
+    #ifdef DEBUG
+    std::cout << "Debug mode" << std::endl;
+    #else
+    std::cout << "Release mode" << std::endl;
+    #endif
+    ```
 
 ## Command Line Arguments
 
@@ -529,80 +791,258 @@ the `argc` parameter is an integer that represents the number of command-line ar
 
 ## Functions
 
-Functions in C++ are blocks of code that perform a specific task. They are defined using a return type, name, parameters, and a body of code. Functions can be standalone or part of a class (member functions).
+Functions in C++ are blocks of code that perform a specific task. They are used to modularize code, improve code reusability, and simplify program structure.
 
-### Function Basics
+- **Function Declaration**: `returnType functionName(parameters);`
 
-- **Declaration**: `returnType functionName(parameters);`
-- **Definition**: `returnType functionName(parameters) { /* body */ }`
-- **Invocation**: `functionName(arguments);`
+    ```cpp
+    int add(int a, int b);
+    void printMessage(std::string message);
+    ```
+- **Function Definition**: `returnType functionName(parameters) { body }`
 
-### Function Parameters
-
-- **Pass by Value**: `void foo(int x);`
-- **Pass by Reference**: `void foo(int &x);`
-- **Pass by Pointer**: `void foo(int *x);`
-
-### Return Types
-
-- **Returning Value**: `return value;`
-- **Returning Void**: `return;`
-
-### Return Multiple Values
-
-- **Using References**: `void foo(int &result1, int &result2);`
-
-### Function Overloading
-
-- **Multiple Functions with Same Name**: `void foo(int x);` `void foo(double x);`
-
-### Default Arguments
-
-- **Specifying Default Values**: `void foo(int x, int y = 0);`
-
-### Inline Functions
-
-- **Inlining**: `inline returnType functionName(parameters) { /* body */ }`
-
-### Recursion
-
-- **Function Calling Itself**: `void recursiveFunc(int n) { if (n > 0) recursiveFunc(n-1); }`
-
-### Function Pointers
-
-- **Pointer to Function**: `returnType (*ptrName)(parameters);`
-
-### Lambda Expressions (C++11)
-
-- **Anonymous Functions**: `[capture](parameters) { /* body */ }`
-
-### Function Templates
-
-- **Generic Functions**: `template <typename T> void swap(T &a, T &b) { T temp = a; a = b; b = temp; }`
-
-### Function Objects
-
-A function object is an object that can be called like a function. It is a class that overloads the function call operator `operator()`. Function objects are also known as functors.
-
-```cpp
-class Add {
-public:
-    int operator()(int a, int b) {
+    ```cpp
+    int add(int a, int b) {
         return a + b;
     }
-};
+    void printMessage(std::string message) {
+        std::cout << message << std::endl;
+    }
+    ```
+- **Function Call**: `functionName(arguments);`
 
-int main() {
+    ```cpp
+    int sum = add(3, 5);
+    printMessage("Hello, World!");
+    ```
+- **Function Parameters**: Input values passed to a function when it is called.
+
+    ```cpp
+    int add(int a, int b) {
+        return a + b;
+    }
+    ```
+- **Return Statement**: Value returned by a function to the caller.
+
+    ```cpp
+    int add(int a, int b) {
+        return a + b;
+    }
+    ```
+- **Function Overloading**: Defining multiple functions with the same name but different parameters.
+
+    ```cpp
+    int add(int a, int b) {
+        return a + b;
+    }
+    double add(double a, double b) {
+        return a + b;
+    }
+    ```
+- **Default Arguments**: Providing default values for function parameters.
+
+    ```cpp
+    void printMessage(std::string message, int count = 1) {
+        for (int i = 0; i < count; i++) {
+            std::cout << message << std::endl;
+        }
+    }
+    ```
+- **Function Prototypes**: Forward declaration of a function before its actual definition.
+
+    ```cpp
+    int add(int a, int b); // Function prototype
+    int main() {
+        int sum = add(3, 5);
+        return 0;
+    }
+    int add(int a, int b) { // Function definition
+        return a + b;
+    }
+    ```
+- **Recursive Functions**: Functions that call themselves to solve a problem.
+
+    ```cpp
+    int factorial(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+    ```
+- **Inline Functions**: Functions that are expanded in place at the call site to improve performance.
+
+    ```cpp
+    inline int add(int a, int b) {
+        return a + b;
+    }
+    ```
+- **Lambda Functions (C++11)**: Anonymous functions that can capture variables from their enclosing scope.
+
+    ```cpp
+    auto add = [](int a, int b) { return a + b; };
+    int sum = add(3, 5);
+    ```
+- **Function Pointers**: Pointers that store the address of a function.
+
+    ```cpp
+    int add(int a, int b) {
+        return a + b;
+    }
+    int (*ptr)(int, int) = add;
+    int sum = ptr(3, 5);
+    ```
+- **Function Objects**: Objects that behave like functions by overloading the function call operator.
+
+    ```cpp
+    class Add {
+    public:
+        int operator()(int a, int b) {
+            return a + b;
+        }
+    };
     Add add;
-    int sum = add(5, 3);
-    std::cout << "Sum: " << sum << std::endl;
-    return 0;
-}
-```
+    int sum = add(3, 5);
+    ```
+- **Variadic Functions**: Functions that accept a variable number of arguments.
 
-### Variadic Functions (C++11)
+    ```cpp
+    void printValues(int count, ...) {
+        va_list args;
+        va_start(args, count);
+        for (int i = 0; i < count; i++) {
+            int value = va_arg(args, int);
+            std::cout << value << std::endl;
+        }
+        va_end(args);
+    }
 
-- **Functions with Variable Number of Arguments**: `void variadicFunc(int arg1, ...);`
+    printValues(3, 1, 2, 3);
+    ```
+- **Function Templates**: Generic functions that can operate on different data types.
+
+    ```cpp
+    template <typename T>
+    T add(T a, T b) {
+        return a + b;
+    }
+    int sum = add(3, 5);
+    double total = add(3.14, 2.71);
+    ```
+## Classes and Objects
+
+Classes in C++ are user-defined data types that encapsulate data and functions into a single entity. They are used to model real-world entities, define data structures, and implement object-oriented programming concepts.
+
+**Definition**
+- **Class**: A blueprint for creating objects that defines data members and member functions.
+
+    ```cpp
+    class Rectangle {
+    public:
+        int width;
+        int height;
+        int area() {
+            return width * height;
+        }
+    };
+    ```
+- **Object**: An instance of a class that represents a specific entity.
+
+    ```cpp
+    Rectangle rect;
+    rect.width = 5;
+    rect.height = 3;
+    int area = rect.area();
+    ```
+
+### Access Modifiers
+
+Access modifiers in C++ control the visibility and accessibility of class members. They include public, private, and protected modifiers.
+
+- **Public**: Members are accessible from outside the class.
+
+    ```cpp
+    class Rectangle {
+    public:
+        int width;
+        int height;
+        int area() {
+            return width * height;
+        }
+    };
+    ```
+- **Private**: Members are accessible only from within the class.
+
+    ```cpp
+    class Rectangle {
+    private:
+        int width;
+        int height;
+    public:
+        int area() {
+            return width * height;
+        }
+    };
+    ```
+- **Protected**: Members are accessible from derived classes.
+
+    ```cpp
+    class Shape {
+    protected:
+        int width;
+        int height;
+    public:
+        int area() {
+            return width * height;
+        }
+    };
+    class Rectangle : public Shape {
+    public:
+        void setDimensions(int w, int h) {
+            width = w;
+            height = h;
+        }
+    };
+    ```
+### Member Functions
+
+Member functions in C++ are functions that are defined inside a class and operate on class objects. They can access class data members and provide behavior to the class.
+
+- **Member Function Definition**: `returnType functionName(parameters) { body }`
+
+    ```cpp
+    class Rectangle {
+    public:
+        int width;
+        int height;
+        int area() {
+            return width * height;
+        }
+    };
+    ```
+- **Member Function Declaration**: `returnType functionName(parameters);`
+
+    ```cpp
+    class Rectangle {
+    public:
+        int width;
+        int height;
+        int area();
+    };
+    int Rectangle::area() {
+        return width * height;
+    }
+    ```
+- **Member Function Call**: `objectName.functionName(arguments);`
+
+    ```cpp
+    Rectangle rect;
+    rect.width = 5;
+    rect.height = 3;
+    int area = rect.area();
+    ```
+
 
 
 ## Memory Model

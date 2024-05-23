@@ -300,7 +300,7 @@ Data types in C++ specify the type of data that a variable can hold. They define
 
 - **User-Defined Literals**: Custom data types that can be defined by the user to extend the language's syntax and functionality.
 
-  - **User-Defined Literals**: `42s`, `3.14f`, `100ms`, `2h`
+- **User-Defined Literals**: `42s`, `3.14f`, `100ms`, `2h`
 
 - **Type Modifiers**: Keywords that modify the properties of data types, such as signedness, size, and volatility.
 
@@ -930,11 +930,103 @@ Functions in C++ are blocks of code that perform a specific task. They are used 
     int sum = add(3, 5);
     double total = add(3.14, 2.71);
     ```
-## Classes and Objects
 
-Classes in C++ are user-defined data types that encapsulate data and functions into a single entity. They are used to model real-world entities, define data structures, and implement object-oriented programming concepts.
+## Structures and Classes
 
-**Definition**
+Structures and classes are user-defined data types in C++ that allow for the grouping of variables of different data types under a single name. They make it easier to manage and organize complex data by creating objects that have particular attributes and behaviors. The main difference between a structure and a class is their default access specifier: members of a structure are public by default, while members of a class are private.
+
+### Structures
+
+Structures in C++ are used to group related data items of different data types under a single name. They are defined using the `struct` keyword and can contain variables, functions, and constructors. To create an object of a structure, you use the structure name followed by the object name.
+
+- **Structure Definition**: `struct structName { members };`
+
+	```cpp
+	struct Rectangle {
+		int width;
+		int height;
+		int area() {
+			return width * height;
+		}
+	};
+	```
+
+- **Structure Declaration**: `structName objectName;`
+
+	```cpp
+	Rectangle rect;
+	rect.width = 5;
+	rect.height = 3;
+	int area = rect.area();
+	```
+
+- **Structure Initialization**: Initializing structure members when creating an object.
+
+	```cpp
+	Rectangle rect = {5, 3};
+	int area = rect.area();
+	```
+
+- **Structure Pointers**: Using pointers to access structure members.
+
+	```cpp
+	Rectangle rect = {5, 3};
+	Rectangle *ptr = &rect;
+	int area = ptr->area();
+	```
+
+### Classes
+
+Classes in C++ are used to create user-defined data types that encapsulate data and functions into a single entity. They are defined using the `class` keyword and can contain private, protected, and public members. To create an object of a class, you use the class name followed by the object name.
+
+- **Class Definition**: `class className { members };`
+
+	```cpp
+	class student {
+	public:
+		std::string name;
+		int age;
+		void display() {
+			std::cout << "Name: " << name << ", Age: " << age << std::endl;
+		}
+	};
+	```
+
+- **Class Declaration
+
+	```cpp
+	student s;
+	s.name = "Alice";
+	s.age = 20;
+	s.display();
+	```
+
+- **Class Initialization**: Initializing class members when creating an object.
+
+	```cpp
+	student s = {"Alice", 20};
+	s.display();
+	```
+
+##  Object-Oriented Programming
+
+Object-oriented programming (OOP) is a programming paradigm that uses objects and classes to model real-world entities and concepts. It focuses on data abstraction, encapsulation, inheritance, and polymorphism to create modular and reusable code.
+
+### Basics of OOP
+
+- **Class**: A blueprint for creating objects.
+- **Object**: An instance of a class.
+- **Encapsulation**: Bundling data and methods that operate on the data within one unit (class).
+- **Inheritance**: Mechanism by which one class can inherit traits from another class.
+- **Polymorphism**: Ability to process objects differently based on their data type or class.
+- **Abstraction**: Hiding complex implementation details and showing only the necessary features.
+
+
+### Classes and Objects
+
+Classes and objects are fundamental concepts in object-oriented programming that allow you to model real-world entities as software objects. A class is a blueprint for creating objects, while an object is an instance of a class that represents a specific entity.
+
+#### Defining Classes and Objects
 - **Class**: A blueprint for creating objects that defines data members and member functions.
 
     ```cpp
@@ -956,7 +1048,7 @@ Classes in C++ are user-defined data types that encapsulate data and functions i
     int area = rect.area();
     ```
 
-### Access Modifiers
+#### Access Modifiers
 
 Access modifiers in C++ control the visibility and accessibility of class members. They include public, private, and protected modifiers.
 
@@ -1005,7 +1097,8 @@ Access modifiers in C++ control the visibility and accessibility of class member
         }
     };
     ```
-### Member Functions
+
+#### Member Functions
 
 Member functions in C++ are functions that are defined inside a class and operate on class objects. They can access class data members and provide behavior to the class.
 
@@ -1042,6 +1135,179 @@ Member functions in C++ are functions that are defined inside a class and operat
     rect.height = 3;
     int area = rect.area();
     ```
+
+#### Constructors and Destructors
+
+Constructors and destructors in C++ are special member functions of a class that are used to initialize and destroy class objects. They are automatically called when an object is created and destroyed.
+
+- **Constructor**: Special function called when an object is instantiated. No return type.
+
+```cpp
+class MyClass {
+public:
+    MyClass() { // Constructor
+        // Initialization code
+    }
+};
+
+- **Default Constructor**: Constructor with no parameters.
+
+```cpp
+class Dog {
+public:
+	Dog() : name("Unknown"), age(0) {} // Default constructor
+	Dog(std::string n, int a) : name(n), age(a) {} // Parameterized constructor
+};
+```
+
+- **Destructor**: Special function called when an object is destroyed. No parameters or return type.
+
+```cpp
+class MyClass {
+public:
+	~MyClass() { // Destructor
+		// Cleanup code
+	}
+};
+```
+
+- **Default Destructor**: Destructor that is automatically generated if not defined.
+
+```cpp
+class MyClass {
+public:
+	~MyClass() = default; // Default destructor
+};
+```
+
+- **Virtual Destructor**: Destructor that is declared as virtual in the base class to ensure proper cleanup in derived classes.
+
+```cpp
+class Base {
+public:
+	virtual ~Base() {} // Virtual destructor
+};
+
+class Derived : public Base {
+public:
+	~Derived() {} // Derived class destructor
+};
+```
+
+- **Overloading Constructors**: Defining multiple constructors with different parameters.
+
+```cpp
+class Rectangle {
+public:
+	int width;
+	int height;
+	Rectangle() : width(0), height(0) {} // Default constructor
+	Rectangle(int w, int h) : width(w), height(h) {} // Parameterized constructor
+};
+```
+
+- **Member Initialization List**: Initializing class members in the constructor using the member initialization list.
+
+```cpp
+class Rectangle {
+public:
+	int width;
+	int height;
+	Rectangle(int w, int h) : width(w), height(h) {} // Member initialization list
+};
+```
+
+#### Copy Constructor and Copy Assignment Operator
+
+- **Copy Constructor**: Constructor that initializes an object as a copy of another object.
+
+```cpp
+class Rectangle {
+public:
+	int width;
+	int height;
+	Rectangle(const Rectangle& other) : width(other.width), height(other.height) {} // Copy constructor
+};
+```
+
+- **Copy Assignment Operator**: Operator that assigns the value of one object to another object.
+
+```cpp
+class Rectangle {
+public:
+	int width;
+	int height;
+	Rectangle& operator=(const Rectangle& other) { // Copy assignment operator
+		if (this != &other) {
+			width = other.width;
+			height = other.height;
+		}
+		return *this;
+	}
+};
+```
+
+### Encapsulation
+
+Encapsulation is the concept of bundling data and functions that operate on that data within a single unit, such as a class. It helps to hide the internal implementation details of a class and expose only the necessary information and functionalities. In C++, you can use access specifiers like `public`, `private`, and `protected` to control the visibility and accessibility of class members.
+
+- **Public Access Modifier**: Members are accessible from outside the class.
+
+```cpp
+class Rectangle {
+public:
+	int width;
+	int height;
+	int area() {
+		return width * height;
+	}
+};
+```
+
+- **Private Access Modifier**: Members are accessible only from within the class.
+
+```cpp
+class Rectangle {
+private:
+	int width;
+	int height;
+public:
+	int area() {
+		return width * height;
+	}
+};
+```
+
+- **Protected Access Modifier**: Members are accessible from derived classes.
+
+```cpp
+class Shape {
+protected:
+	int width;
+	int height;
+public:
+	int area() {
+		return width * height;
+	}
+};
+
+class Rectangle : public Shape {
+public:
+	void setDimensions(int w, int h) {
+		width = w;
+		height = h;
+	}
+};
+```
+
+### Inheritance
+
+
+
+
+
+
+
 
 
 

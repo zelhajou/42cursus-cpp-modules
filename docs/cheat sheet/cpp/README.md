@@ -1247,6 +1247,68 @@ public:
 };
 ```
 
+## Rule of Zero, Rule of Three, Rule of Five
+
+The Rule of Zero, Rule of Three, and Rule of Five are guidelines for managing resources in C++ classes. They help ensure proper resource management, prevent memory leaks, and avoid undefined behavior.
+
+- **Rule of Zero**: Classes that do not manage resources should not define custom destructors, copy constructors, or copy assignment operators.
+
+```cpp
+class MyClass {
+public:
+	// No custom destructor, copy constructor, or copy assignment operator
+};
+```
+
+- **Rule of Three**: Classes that manage resources should define custom destructors, copy constructors, and copy assignment operators.
+
+```cpp
+class MyClass {
+public:
+	MyClass() : data(new int) {}
+	~MyClass() { delete data; }
+	MyClass(const MyClass& other) : data(new int(*other.data)) {}
+	MyClass& operator=(const MyClass& other) {
+		if (this != &other) {
+			*data = *other.data;
+		}
+		return *this;
+	}
+private:
+	int* data;
+};
+```
+
+- **Rule of Five**: Classes that manage resources should define custom destructors, copy constructors, copy assignment operators, move constructors, and move assignment operators.
+
+```cpp
+class MyClass {
+public:
+	MyClass() : data(new int) {}
+	~MyClass() { delete data; }
+	MyClass(const MyClass& other) : data(new int(*other.data)) {}
+	MyClass& operator=(const MyClass& other) {
+		if (this != &other) {
+			*data = *other.data;
+		}
+		return *this;
+	}
+	MyClass(MyClass&& other) noexcept : data(other.data) {
+		other.data = nullptr;
+	}
+	MyClass& operator=(MyClass&& other) noexcept {
+		if (this != &other) {
+			delete data;
+			data = other.data;
+			other.data = nullptr;
+		}
+		return *this;
+	}
+private:
+	int* data;
+};
+```
+
 ### Encapsulation
 
 Encapsulation is the concept of bundling data and functions that operate on that data within a single unit, such as a class. It helps to hide the internal implementation details of a class and expose only the necessary information and functionalities. In C++, you can use access specifiers like `public`, `private`, and `protected` to control the visibility and accessibility of class members.
@@ -1302,8 +1364,597 @@ public:
 
 ### Inheritance
 
+Inheritance is a mechanism in object-oriented programming that allows a class to inherit properties and behavior from another class. The class that inherits from another class is called a derived class, and the class that is inherited from is called a base class. In C++, you can use the `public`, `protected`, and `private` access specifiers to control the visibility of inherited members. Inheritance is achieved using the `class` keyword followed by a colon `:` and the access specifier.
+
+- **Single Inheritance**: A derived class inherits from a single base class.
+
+```cpp
+class Animal {
+public:
+	void eat() {
+		std::cout << "Eating..." << std::endl;
+	}
+};
+
+class Dog : public Animal {
+public:
+	void bark() {
+		std::cout << "Barking..." << std::endl;
+	}
+};
+
+Dog dog;
+dog.eat();
+dog.bark();
+```
+
+- **Multilevel Inheritance**: A derived class inherits from another derived class.
+
+```cpp
+class Animal {
+public:
+	void eat() {
+		std::cout << "Eating..." << std::endl;
+	}
+};
+
+class Dog : public Animal {
+public:
+	void bark() {
+		std::cout << "Barking..." << std::endl;
+	}
+};
+
+class Labrador : public Dog {
+public:
+	void play() {
+		std::cout << "Playing..." << std::endl;
+	}
+};
+
+Labrador lab;
+lab.eat();
+lab.bark();
+lab.play();
+```
+
+- **Hierarchical Inheritance**: Multiple derived classes inherit from a single base class.
+
+```cpp
+class Animal {
+public:
+	void eat() {
+		std::cout << "Eating..." << std::endl;
+	}
+};
+
+class Dog : public Animal {
+public:
+	void bark() {
+		std::cout << "Barking..." << std::endl;
+	}
+};
+
+class Cat : public Animal {
+public:
+	void meow() {
+		std::cout << "Meowing..." << std::endl;
+	}
+};
+
+Dog dog;
+dog.eat();
+dog.bark();
+```
+
+- **Multiple Inheritance**: A derived class inherits from multiple base classes.
+
+```cpp
+class Animal {
+public:
+	void eat() {
+		std::cout << "Eating..." << std::endl;
+	}
+};
+
+class Pet {
+public:
+	void play() {
+		std::cout << "Playing..." << std::endl;
+	}
+};
+
+class Dog : public Animal, public Pet {
+public:
+	void bark() {
+		std::cout << "Barking..." << std::endl;
+	}
+};
+
+Dog dog;
+dog.eat();
+dog.play();
+dog.bark();
+```
+
+- **Hybrid Inheritance**: Combination of multiple inheritance types.
+
+```cpp
+class Animal {
+public:
+	void eat() {
+		std::cout << "Eating..." << std::endl;
+	}
+};
+
+class Pet {
+public:
+	void play() {
+		std::cout << "Playing..." << std::endl;
+	}
+};
+
+class Dog : public Animal, public Pet {
+public:
+	void bark() {
+		std::cout << "Barking..." << std::endl;
+	}
+};
+
+class Labrador : public Dog {
+public:
+	void swim() {
+		std::cout << "Swimming..." << std::endl;
+	}
+};
+
+Labrador lab;
+lab.eat();
+lab.play();
+lab.bark();
+```
+
+- **Virtual Inheritance**: Prevents multiple instances of a base class in a diamond-shaped inheritance hierarchy.
+
+```cpp
+class Animal {
+public:
+	void eat() {
+		std::cout << "Eating..." << std::endl;
+	}
+};
+
+class Pet : virtual public Animal {
+public:
+	void play() {
+		std::cout << "Playing..." << std::endl;
+	}
+};
+
+class Dog : virtual public Animal, public Pet {
+public:
+	void bark() {
+		std::cout << "Barking..." << std::endl;
+	}
+};
+
+```
+
+#### Agrergation
+
+Aggregation is a type of association in which one class contains an object of another class. It represents a "has-a" relationship between classes, where one class has a member that is an object of another class. Aggregation is used to model relationships between classes that are not part of the same inheritance hierarchy.
+
+- **Aggregation**: A class contains an object of another class.
+
+```cpp
+class Address {
+public:
+	std::string street;
+	std::string city;
+	std::string state;
+	std::string zip;
+};
+
+class Person {
+public:
+	std::string name;
+	Address address;
+};
+```
+
+- **Composition**: A class contains an object of another class and is responsible for its creation and destruction.
+
+```cpp
+class Address {
+public:
+	std::string street;
+	std::string city;
+	std::string state;
+	std::string zip;
+};
+
+class Person {
+public:
+	std::string name;
+	Address* address;
+	Person(Address* addr) : address(addr) {}
+	~Person() {
+		delete address;
+	}
+};
+```
+
+- **Association**: A relationship between classes where one class is related to another class.
+
+```cpp
+class Person {
+public:
+	std::string name;
+};
+
+class Address {
+public:
+	std::string street;
+	std::string city;
+	std::string state;
+	std::string zip;
+	Person* person;
+};
+```
+
+- **Dependency**: A relationship between classes where one class depends on another class.
+
+```cpp
+class Logger {
+public:
+	void log(std::string message) {
+		std::cout << message << std::endl;
+	}
+};
+
+class Service {
+public:
+	void doSomething() {
+		Logger logger;
+		logger.log("Doing something...");
+	}
+};
+```
+
+### Polymorphism
+
+Polymorphism is the ability of objects to take on different forms based on their data type or class. It allows you to process objects differently based on their class or data type. In C++, polymorphism is achieved through virtual functions, function overloading, and function overriding.
+
+- **Function Overloading**: Defining multiple functions with the same name but different parameters.
+
+```cpp
+class Math {
+public:
+	int add(int a, int b) {
+		return a + b;
+	}
+	double add(double a, double b) {
+		return a + b;
+	}
+};
+```
+
+- **Function Overriding**: Redefining a base class function in a derived class.
+
+```cpp
+class Animal {
+public:
+	virtual void speak() {
+		std::cout << "Animal speaks..." << std::endl;
+	}
+};
+
+class Dog : public Animal {
+public:
+	void speak() override {
+		std::cout << "Dog barks..." << std::endl;
+	}
+};
+
+class Cat : public Animal {
+public:
+	void speak() override {
+		std::cout << "Cat meows..." << std::endl;
+	}
+};
+
+Animal* animal = new Dog();
+animal->speak();
+
+animal = new Cat();
+animal->speak();
+```
+
+- **Virtual Functions**: Functions that are declared as virtual in the base class and can be overridden in derived classes.
+
+```cpp
+class Animal {
+public:
+	virtual void speak() {
+		std::cout << "Animal speaks..." << std::endl;
+	}
+};
+
+class Dog : public Animal {
+public:
+	void speak() override {
+		std::cout << "Dog barks..." << std::endl;
+	}
+};
+
+class Cat : public Animal {
+public:
+	void speak() override {
+		std::cout << "Cat meows..." << std::endl;
+	}
+};
+
+Animal* animal = new Dog();
+animal->speak();
+
+animal = new Cat();
+animal->speak();
+```
+
+output:
+```
+Dog barks...
+Cat meows...
+```
+
+### Abstraction
+
+Abstraction is the process of hiding complex implementation details and showing only the necessary features of an object. It allows you to focus on what an object does rather than how it does it. In C++, you can achieve abstraction through classes, access specifiers, and interfaces.
+
+- **Abstract Class**: A class that cannot
+be instantiated and is used as a base class for other classes.
+
+```cpp
+class Shape {
+public:
+	virtual void draw() = 0; // Pure virtual function
+};
+
+class Circle : public Shape {
+public:
+	void draw() override {
+		std::cout << "Drawing a circle..." << std::endl;
+	}
+};
+
+class Rectangle : public Shape {
+public:
+	void draw() override {
+		std::cout << "Drawing a rectangle..." << std::endl;
+	}
+};
+```
+
+- **Interface**: A class that contains only pure virtual functions and no data members.
+
+```cpp
+class Drawable {
+public:
+	virtual void draw() = 0; // Pure virtual function
+};
+
+class Circle : public Drawable {
+public:
+	void draw() override {
+		std::cout << "Drawing a circle..." << std::endl;
+	}
+};
+
+class Rectangle : public Drawable {
+public:
+	void draw() override {
+		std::cout << "Drawing a rectangle..." << std::endl;
+	}
+};
+
+void drawShapes(Drawable* shapes[], int count) {
+	for (int i = 0; i < count; i++) {
+		shapes[i]->draw();
+	}
+}
+
+Circle circle;
+Rectangle rectangle;
+
+Drawable* shapes[] = {&circle, &rectangle};
+drawShapes(shapes, 2);
+```
+
+output:
+```
+Drawing a circle...
+Drawing a rectangle...
+```
+
+## Standard Library Components
+
+The C++ Standard Library provides a collection of classes, functions, and algorithms that are part of the C++ language specification. It includes containers, iterators, algorithms, and utilities that help you write efficient and reusable code.
+
+### I/O Streams
+
+I/O streams in C++ are used to read and write data from and to different sources, such as the console, files, and network sockets. They provide a high-level interface for input and output operations and support various data types.
+
+- Header: `#include <iostream>`
+	- **Standard Streams**: `std::cin`, `std::cout`, `std::cerr`, `std::clog`
+
+	```cpp
+	int x;
+	std::cin >> x;
+	std::cout << "Value: " << x << std::endl;
+	std::cerr << "Error message" << std::endl;
+	std::clog << "Log message" << std::endl;
+	```
+
+	- **Formatted Output**: `std::setw`, `std::setprecision`, `std::fixed`, `std::scientific`
+
+	```cpp
+	#include <iomanip>
+	std::cout << std::setw(10) << std::setfill('*') << 42 << std::endl;
+	std::cout << std::setprecision(2) << std::fixed << 3.14159 << std::endl;
+	```
+
+- Header: `#include <fstream>`
+	- **File Streams**: `std::ifstream`, `std::ofstream`, `std::fstream`
+
+	```cpp
+	std::ofstream file("data.txt");
+	file << "Hello, World!" << std::endl;
+	file.close();
+
+	std::ifstream input("data.txt");
+	std::string line;
+	while (std::getline(input, line)) {
+		std::cout << line << std::endl;
+	}
+	input.close();
+	```
+
+- Header: `#include <sstream>`
+	- **String Streams**: `std::istringstream`, `std::ostringstream`, `std::stringstream`
+
+	```cpp
+	std::stringstream ss;
+	ss << "Hello, " << "World!";
+	std::string message = ss.str();
+	std::cout << message << std::endl;
+	```
+
+### Containers
+
+Containers in C++ are data structures that store and organize data elements. They provide different ways to access, insert, and remove elements and are used to manage collections of objects efficiently.
+
+##### Vector
+
+A vector is a dynamic array that can grow and shrink in size. It provides random access to elements and supports efficient insertion and deletion at the end. Vectors are part of the Standard Template Library (STL) and are defined in the `<vector>` header.
 
 
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm> // For std::sort and std::reverse
+
+int main() {
+    // 1. Initialization
+    std::vector<int> vec1;                          // Empty vector
+    std::vector<int> vec2(5, 10);                   // Vector of size 5, all elements initialized to 10
+    std::vector<int> vec3 = {1, 2, 3, 4, 5};        // List initialization
+
+    // 2. Adding elements
+    vec1.push_back(1);
+    vec1.push_back(2);
+    vec1.push_back(3);
+
+    // 3. Accessing elements
+    std::cout << "vec1[0]: " << vec1[0] << std::endl;  // Using operator[]
+    std::cout << "vec1 at index 1: " << vec1.at(1) << std::endl; // Using at() method
+
+    // 4. Iterating through the vector
+    std::cout << "Elements in vec1: ";
+    for (int i = 0; i < vec1.size(); ++i) {
+        std::cout << vec1[i] << " ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Elements in vec2: ";
+    for (const auto& elem : vec2) {  // Using range-based for loop
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 5. Common operations
+    vec3.push_back(6); // Add element at the end
+    vec3.pop_back();   // Remove last element
+    vec3.insert(vec3.begin() + 2, 99); // Insert 99 at index 2
+    vec3.erase(vec3.begin() + 2); // Erase element at index 2
+
+    std::sort(vec3.begin(), vec3.end()); // Sort the vector
+    std::reverse(vec3.begin(), vec3.end()); // Reverse the vector
+
+    std::cout << "Elements in vec3 after operations: ";
+    for (const auto& elem : vec3) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 6. Clearing and resizing the vector
+    vec3.clear(); // Remove all elements
+    std::cout << "Size of vec3 after clear: " << vec3.size() << std::endl;
+
+    vec3.resize(5, 7); // Resize to 5 elements, new elements initialized to 7
+    std::cout << "Elements in vec3 after resize: ";
+    for (const auto& elem : vec3) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
+- [Member Functions](https://www.cplusplus.com/reference/vector/vector/)
+
+##### List
+
+A list is a doubly linked list that allows for efficient insertion and deletion of elements at any position. It provides bidirectional iterators and supports constant time insertion and deletion operations. Lists are part of the Standard Template Library (STL) and are defined in the `<list>` header.
+
+```cpp
+#include <iostream>
+#include <list>
+
+int main() {
+	// 1. Initialization
+	std::list<int> list1;                          // Empty list
+	std::list<int> list2(5, 10);                   // List of size 5, all elements initialized to 10
+	std::list<int> list3 = {1, 2, 3, 4, 5};        // List initialization
+
+	// 2. Adding elements
+	list1.push_back(1);
+	list1.push_front(2);
+	list1.insert(list1.begin(), 3);
+
+	// 3. Accessing elements
+	std::cout << "list1 front: " << list1.front() << std::endl;
+	std::cout << "list1 back: " << list1.back() << std::endl;
+
+	// 4. Iterating through the list
+	std::cout << "Elements in list1: ";
+	for (const auto& elem : list1) {
+		std::cout << elem << " ";
+	}
+	std::cout << std::endl;
+
+	// 5. Common operations
+	list1.pop_back(); // Remove last element
+	list1.pop_front(); // Remove first element
+	list1.erase(list1.begin()); // Erase element at the beginning
+
+	list1.reverse(); // Reverse the list
+	list1.sort(); // Sort the list
+
+	std::cout << "Elements in list1 after operations: ";
+	for (const auto& elem : list1) {
+		std::cout << elem << " ";
+	}
+	std::cout << std::endl;
+
+	// 6. Clearing the list
+	list1.clear(); // Remove all elements
+	std::cout << "Size of list1 after clear: " << list1.size() << std::endl;
+
+	return 0;
+}
+```
+
+- [Member Functions](https://www.cplusplus.com/reference/list/list/)
 
 
 
@@ -2162,7 +2813,6 @@ int main() {
 }
 ```
 
-
 ## Exception Handling
 
 Exception handling in C++ is a mechanism for handling runtime errors and abnormal conditions. It allows you to catch and handle exceptions, propagate errors, and clean up resources in case of failures.
@@ -2426,7 +3076,7 @@ Debugging is the process of identifying and fixing errors in a program. C++ prov
 - **Review Code**: Review code for logical errors and common mistakes.
 - **Use Version Control**: Use version control systems to track changes and revert to previous versions.
 
-## Build Systems
+## Build Systems 
 
 Build systems are tools that automate the process of compiling, linking, and packaging software projects. They manage dependencies, build configurations, and target platforms to generate executable files from source code.
 
@@ -2437,7 +3087,7 @@ Build systems are tools that automate the process of compiling, linking, and pac
 - **Ninja**: A fast and lightweight build tool that can be used with CMake.
 - **Bazel**: A build system from Google that supports large-scale projects and multiple languages.
 
-### GNU Make
+#### GNU Make
 
 A Makefile is a file that specifies build rules and dependencies for a project. It contains targets, dependencies, variables, and phony targets that define how to build specific files or executables.
 
@@ -2466,6 +3116,25 @@ $(OBJ): $(SRC)
 .PHONY: clean
 clean:
     rm -f $(OBJ) $(EXE)
+```
+
+#### CMake
+
+CMake is a cross-platform build system generator that uses CMakeLists.txt files to define build configurations and dependencies. It generates build files for various platforms and build tools, such as Makefiles, Visual Studio projects, and Xcode projects.
+
+- **CMakeLists.txt**: A file that specifies build configurations and dependencies for a CMake project.
+- **Targets**: Executables, libraries, and custom targets defined in CMakeLists.txt.
+- **Variables**: CMake variables that control build settings and options.
+- **Commands**: CMake commands that define build rules and actions.
+
+```cmake
+# CMakeLists.txt
+cmake_minimum_required(VERSION 3.10)
+project(my_project)
+
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(my_program src/main.cpp)
 ```
 
 

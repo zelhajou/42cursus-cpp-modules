@@ -428,6 +428,7 @@ Type casting in C++ is the process of converting a variable from one data type t
 Operators in C++ are symbols that perform specific operations on one or more operands. They can be classified into various categories based on their functionality and usage.
 
 - **Arithmetic Operators**: Perform mathematical operations on numeric operands.
+
     - **Addition (+)**: Adds two operands.
     - **Subtraction (-)**: Subtracts the second operand from the first.
     - **Multiplication (*)**: Multiplies two operands.
@@ -435,50 +436,50 @@ Operators in C++ are symbols that perform specific operations on one or more ope
     - **Modulus (%)**: Returns the remainder of the division.
 
 - **Relational Operators**: Compare two operands and return a boolean value.
-        - **Equal to (==)**: Checks if two operands are equal.
-        - **Not equal to (!=)**: Checks if two operands are not equal.
-        - **Greater than (>)**: Checks if the first operand is greater than the second.
-        - **Less than (<)**: Checks if the first operand is less than the second.
-        - **Greater than or equal to (>=)**: Checks if the first operand is greater than or equal to the second.
-        - **Less than or equal to (<=)**: Checks if the first operand is less than or equal to the second.
+	- **Equal to (==)**: Checks if two operands are equal.
+	- **Not equal to (!=)**: Checks if two operands are not equal.
+	- **Greater than (>)**: Checks if the first operand is greater than the second.
+	- **Less than (<)**: Checks if the first operand is less than the second.
+	- **Greater than or equal to (>=)**: Checks if the first operand is greater than or equal to the second.
+	- **Less than or equal to (<=)**: Checks if the first operand is less than or equal to the second.
 
 - **Logical Operators**: Combine multiple conditions and return a boolean value.
-        - **Logical AND (&&)**: Returns true if both operands are true.
-        - **Logical OR (||)**: Returns true if at least one operand is true.
-        - **Logical NOT (!)**: Returns the opposite of the operand's value.
+	- **Logical AND (&&)**: Returns true if both operands are true.
+	- **Logical OR (||)**: Returns true if at least one operand is true.
+	- **Logical NOT (!)**: Returns the opposite of the operand's value.
 
 - **Assignment Operators**: Assign a value to a variable and perform an operation on it.
-        - **Assignment (=)**: Assigns the value of the right operand to the left operand.
-        - **Addition assignment (+=)**: Adds the right operand to the left operand and assigns the result.
-        - **Subtraction assignment (-=)**: Subtracts the right operand from the left operand and assigns the result.
-        - **Multiplication assignment (*=)**: Multiplies the left operand by the right operand and assigns the result.
-        - **Division assignment (/=)**: Divides the left operand by the right operand and assigns the result.
-        - **Modulus assignment (%=)**: Calculates the modulus of the left operand by the right operand and assigns the result.
+	- **Assignment (=)**: Assigns the value of the right operand to the left operand.
+	- **Addition assignment (+=)**: Adds the right operand to the left operand and assigns the result.
+	- **Subtraction assignment (-=)**: Subtracts the right operand from the left operand and assigns the result.
+	- **Multiplication assignment (*=)**: Multiplies the left operand by the right operand and assigns the result.
+	- **Division assignment (/=)**: Divides the left operand by the right operand and assigns the result.
+	- **Modulus assignment (%=)**: Calculates the modulus of the left operand by the right operand and assigns the result.
 
 - **Increment and Decrement Operators**: Increase or decrease the value of a variable by one.
-        - **Increment (++)**: Increases the value of the operand by one.
-        - **Decrement (--)**: Decreases the value of the operand by one.
+	- **Increment (++)**: Increases the value of the operand by one.
+	- **Decrement (--)**: Decreases the value of the operand by one.
 
 - **Bitwise Operators**: Perform bitwise operations on integer operands.
-        - **Bitwise AND (&)**: Performs a bitwise AND operation.
-        - **Bitwise OR (|)**: Performs a bitwise OR operation.
-        - **Bitwise XOR (^)**: Performs a bitwise XOR (exclusive OR) operation.
-        - **Bitwise NOT (~)**: Performs a bitwise NOT (complement) operation.
-        - **Left shift (<<)**: Shifts the bits of the left operand to the left by the number of positions specified by the right operand.
-        - **Right shift (>>)**: Shifts the bits of the left operand to the right by the number of positions specified by the right operand.
+	- **Bitwise AND (&)**: Performs a bitwise AND operation.
+	- **Bitwise OR (|)**: Performs a bitwise OR operation.
+	- **Bitwise XOR (^)**: Performs a bitwise XOR (exclusive OR) operation.
+	- **Bitwise NOT (~)**: Performs a bitwise NOT (complement) operation.
+	- **Left shift (<<)**: Shifts the bits of the left operand to the left by the number of positions specified by the right operand.
+	- **Right shift (>>)**: Shifts the bits of the left operand to the right by the number of positions specified by the right operand.
 
 - **Ternary Operator**: A conditional operator that evaluates a condition and returns one of two values based on the result.
-        - **Ternary Operator (condition ? value1 : value2)**: Returns value1 if the condition is true, and value2 if the condition is false.
+	- **Ternary Operator (condition ? value1 : value2)**: Returns value1 if the condition is true, and value2 if the condition is false.
 
 - **Comma Operator**: Evaluates multiple expressions and returns the value of the last expression.
-        - **Comma Operator (expr1, expr2, expr3, ...)**: Evaluates expr1, expr2, expr3, and so on, and returns the value of the last expression.
+	- **Comma Operator (expr1, expr2, expr3, ...)**: Evaluates expr1, expr2, expr3, and so on, and returns the value of the last expression.
 
 - **Member Access Operators**: Access members of a class or structure.
-        - **Dot Operator (.)**: Accesses members of an object using the object name.
-        - **Arrow Operator (->)**: Accesses members of an object using a pointer to the object.
+	- **Dot Operator (.)**: Accesses members of an object using the object name.
+	- **Arrow Operator (->)**: Accesses members of an object using a pointer to the object.
 
 - **Scope Resolution Operator**: Specifies the scope of a function or variable.
-        - **Scope Resolution Operator (::)**: Specifies the scope of a function or variable in a namespace or class.
+	- **Scope Resolution Operator (::)**: Specifies the scope of a function or variable in a namespace or class.
 
 ## Control Structures
 

@@ -1,5 +1,6 @@
 # Module 00
 
+This module introduces the basics of C++ programming. You'll learn about the syntax, data types, and control structures in C++. You'll also get familiar with the standard library and how to use it in your programs.
 
 ## Exercise 00: Megaphone
 

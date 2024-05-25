@@ -1,190 +1,144 @@
-# C++ Programming Language cheat sheet
+# C++ Cheat Sheet
 
-C++ is a general-purpose programming language that was developed as an extension of the C programming language. It is known for its efficiency, flexibility, and performance, making it a popular choice for system programming, game development, and high-performance applications.
+C++ is a powerful and versatile programming language that is used to develop a wide range of software applications, from system software and device drivers to high-performance games and interactive websites. It combines the features of both procedural and object-oriented programming paradigms, making it a popular choice for software development.
 
-<table>
-<tr>
-<td> <b>Category</b> </td>
-<td> <b>Information</b> </td>
-</tr>
-<tr>
-<td>Name</td>
-<td>C++ Programming Language</td>
-</tr>
-<tr>
-<td>Paradigm</td>
-<td>Multi-paradigm: procedural, functional, object-oriented, generic</td>
-</tr>
-<tr>
-<td>Designed by</td>
-<td>Bjarne Stroustrup</td>
-</tr>
-<tr>
-<td>Developer</td>
-<td>Bjarne Stroustrup and various contributors</td>
-</tr>
-<tr>
-<td>Standardization</td>
-<td>ISO/IEC 14882:1998 (C++98), ISO/IEC 14882:2003 (C++03), ISO/IEC 14882:2011 (C++11), ISO/IEC 14882:2014 (C++14), ISO/IEC 14882:2017 (C++17), ISO/IEC 14882:2020 (C++20)</td>
-</tr>
-<tr>
-<td>First appeared</td>
-<td>1985</td>
-</tr>
-<tr>
-<td>Stable release</td>
-<td>C++20 / December 2020</td>
-</tr>
-<tr>
-<td>Typing discipline</td>
-<td>Static, nominative, partially inferred</td>
-</tr>
-<tr>
-<td>OS</td>
-<td>Cross-platform</td>
-</tr>
-<tr>
-<td>Syntax Style</td>
-<td>C-like</td>
-</tr>
-<tr>
-<td>File Extension</td>
-<td>.C, .cc, .cpp, .cxx, .c++, .h, .hh, .hpp, .hxx, .h++</td>
-</tr>
-<tr>
-<td>Compilation</td>
-<td>Compiled language</td>
-</tr>
-<tr>
-<td>Uses</td>
-<td>
-<ul>
-<li>Application software</li>
-<li>Systems software</li>
-<li>Device drivers</li>
-<li>Client-server applications</li>
-<li>Embedded firmware</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>Advantages</td>
-<td>
-<ul>
-<li>Highly versatile</li>
-<li>Performance efficiency</li>
-<li>Rich standard library</li>
-<li>Strong abstraction capabilities</li>
-<li>Compatibility with C</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>Key Features</td>
-<td>
-Object-oriented, Generic programming, Metaprogramming, Exception handling, Standard Template Library (STL), Standardization, Smart pointers, Multi-threading support, Lambda expressions, Move semantics, Rvalue references, Strong typing
-</td>
-</tr>
-<tr>
-<td>Major implementations</td>
-<td>GNU Compiler Collection (GCC), Clang, Microsoft Visual C++, Intel C++ Compiler</td>
-</tr>
-<tr>
-<td>Influenced by</td>
-<td>C, Simula 67, Algol 68, Ada, ML</td>
-</tr>
-<tr>
-<td>Influenced</td>
-<td>
-  D, Objective-C++, Java, C#, Swift, Rust, PHP, Perl, Python, JavaScript, Go
-</td>
-</tr>
-</table>
+This cheat sheet provides an overview of the key concepts, syntax, and features of C++ programming. It covers topics such as data types, operators, control structures, functions, structures, classes, and object-oriented programming principles. Whether you are a beginner learning C++ for the first time or an experienced programmer looking for a quick reference, this cheat sheet will help you understand and use the essential elements of the C++ language.
+
+## Introduction
+
+C++ is a general-purpose programming language that was developed by Bjarne Stroustrup in 1979 at Bell Labs. It is an extension of the C programming language and adds support for object-oriented programming, generic programming, and exception handling. C++ is widely used for developing system software, application software, device drivers, embedded software, and high-performance software applications.
+
+### Key Features of C++
+
+- **Object-Oriented Programming**: C++ supports object-oriented programming (OOP) concepts such as classes, objects, inheritance, polymorphism, and encapsulation.
+
+- **Generic Programming**: C++ provides support for generic programming through templates, allowing you to write generic algorithms and data structures.
+
+- **Standard Library**: C++ includes a rich standard library that provides a wide range of functions and classes for common programming tasks.
+
+- **Performance**: C++ is known for its high performance and efficiency, making it suitable for low-level programming and performance-critical applications.
+
+- **Portability**: C++ code can be compiled and run on a wide range of platforms, including Windows, macOS, Linux, and embedded systems.
+
+- **Compatibility with C**: C++ is compatible with C code, allowing you to use existing C libraries and code in C++ programs.
+
+- **Memory Management**: C++ provides manual memory management through features such as pointers, dynamic memory allocation, and deallocation.
+
+- **Exception Handling**: C++ supports exception handling to manage runtime errors and abnormal conditions that may occur during program execution.
+
+- **Multi-Paradigm Language**: C++ supports multiple programming paradigms, including procedural programming, object-oriented programming, and generic programming.
+
+### C++ vs. C
+
+C++ is an extension of the C programming language and shares many features with C. However, there are some key differences between the two languages that set them apart.
+
+| **C++** | **C** |
+| --- | --- |
+| C++ is a high-level programming language that supports object-oriented programming, generic programming, and procedural programming paradigms. | C is a procedural programming language that is widely used for system programming, embedded programming, and low-level programming. |
+| C++ is a superset of C, meaning that most C programs can be compiled using a C++ compiler. | C++ is a superset of C, meaning that most C programs can be compiled using a C++ compiler. |
+| C++ introduces new features such as classes, objects, inheritance, polymorphism, and templates for generic programming. | C does not support object-oriented programming features such as classes, objects, and inheritance. |
+| C++ provides a rich standard library that includes containers, algorithms, input/output streams, and other utilities. | C provides a standard library with basic functions for input/output, string manipulation, and memory management. |
+| C++ supports exception handling to manage runtime errors and abnormal conditions that may occur during program execution. | C does not provide built-in support for exception handling, making error handling more challenging. |
+| C++ is known for its high performance and efficiency, making it suitable for performance-critical applications. | C is known for its simplicity and portability, making it suitable for system programming and embedded systems. |
+
+
 
 ## Table of Contents
 
-- [C++ Programming Language cheat sheet](#c-programming-language-cheat-sheet) 
-    - [Table of Contents](#table-of-contents)
-    - [Code Example](#code-example)
-    - [Installation and Setup](#installation-and-setup)
-    - [Hello World Program](#hello-world-program)
-       - [Header Files and Preprocessor Directives](#header-files-and-preprocessor-directives)
-       - [Comments](#comments)
-       - [Main Function](#main-function)
-       - [Output Statement](#output-statement)
-       - [Return Statement](#return-statement)
-    - [keywords](#keywords)
-    - [Data Types](#data-types)
-       - [Static and Dynamic Data Types](#static-and-dynamic-data-types)
-       - [Type Casting](#type-casting)
-    - [Operators](#operators)
-    - [Control Structures](#control-structures)
-       - [Conditional Statements](#conditional-statements)
-       - [Loops](#loops)
-       - [Jump Statements](#jump-statements)
-       - [Conditional Operator](#conditional-operator)
-       - [Control Flow](#control-flow)
-       - [Exception Handling](#exception-handling)
-       - [Conditional Compilation](#conditional-compilation)
-    - [Command Line Arguments](#command-line-arguments)
-    - [Functions](#functions)
-       - [Function Declaration](#function-declaration)
-       - [Function Definition](#function-definition)
-       - [Function Call](#function-call)
-       - [Function Parameters](#function-parameters)
-       - [Return Statement](#return-statement)
-       - [Function Overloading](#function-overloading)
-       - [Default Arguments](#default-arguments)
-       - [Function Prototypes](#function-prototypes)
-       - [Recursive Functions](#recursive-functions)
-       - [Inline Functions](#inline-functions)
-       - [Lambda Functions (C++11)](#lambda-functions-c11)
-       - [Function Pointers](#function-pointers)
-       - [Function Objects](#function-objects)
-       - [Variadic Functions](#variadic-functions)
-       - [Function Templates](#function-templates)
-    - 
+- [Introduction](#introduction)
+  - [Key Features of C++](#key-features-of-c)
+  - [C++ vs. C](#c-vs-c)
+- [Table of Contents](#table-of-contents)
+- [Installation and Setup](#installation-and-setup)
+- [Hello World Program](#hello-world-program)
+  - [Header Files and Preprocessor Directives](#header-files-and-preprocessor-directives)
+  - [Comments](#comments)
+  - [Main Function](#main-function)
+  - [Output Statement](#output-statement)
+  - [Return Statement](#return-statement)
+- [Keywords](#keywords)
+- [Command Line Arguments](#command-line-arguments)
+- [Data Types](#data-types)
+  - [Static and Dynamic Data Types](#static-and-dynamic-data-types)
+  - [Type Casting](#type-casting)
+- [Operators](#operators)
+- [Control Structures](#control-structures)
+  - [Conditional Statements](#conditional-statements)
+  - [Loops](#loops)
+  - [Jump Statements](#jump-statements)
+  - [Conditional Operator](#conditional-operator)
+  - [Exception Handling](#exception-handling)
+  - [Conditional Compilation](#conditional-compilation)
+- [Functions](#functions)
+- [Structures and Classes](#structures-and-classes)
+  - [Structures](#structures)
+  - [Classes](#classes)
+- [Object-Oriented Programming](#object-oriented-programming)
+  - [Basic Concepts](#basic-concepts)
+  - [Classes and Objects](#classes-and-objects)
+	  - [Defining Classes and Objects](#defining-classes-and-objects)
+	  - [Access Modifiers](#access-modifiers)
+	  - [Member Functions](#member-functions)
+	  - [Constructors and Destructors](#constructors-and-destructors)
+	  - [Copy Constructors](#copy-constructors)
+  - [Rule of Zero, Three, and Five](#rule-of-zero-three-and-five)
+  - [Encapsulation](#encapsulation)
+    - [Access Modifiers](#access-modifiers)
+	- [Getters and Setters](#getters-and-setters)
+  - [Inheritance](#inheritance)
+    - [Single Inheritance](#single-inheritance)
+	- [Multiple Inheritance](#multiple-inheritance)
+	- [Multilevel Inheritance](#multilevel-inheritance)
+	- [Hierarchical Inheritance](#hierarchical-inheritance)
+	- [Hybrid Inheritance](#hybrid-inheritance)
+	- [Virtual Inheritance](#virtual-inheritance)
+	- [Agregation](#agregation)
+  - [Polymorphism](#polymorphism)
+	- [Function Overloading](#function-overloading)
+	- [Function Overriding](#function-overriding)
+	- [Virtual Functions](#virtual-functions)
+  - [Abstraction](#abstraction)
+- [Standard Template Library (STL)](#standard-template-library-stl)
+  - [Containers](#containers)
+	- [Sequence Containers](#sequence-containers)
+		- [Array](#array)
+		- [Vector](#vector)
+		- [Deque](#deque)
+		- [List](#list)
+		- [Forward List](#forward-list)
+	- [Associative Containers](#associative-containers)
+		- [Set](#set)
+		- [Map](#map)
+		- [Multiset](#multiset)
+		- [Multimap](#multimap)
+	- [Unordered Associative Containers](#unordered-associative-containers)
+		- [Unordered Set](#unordered-set)
+		- [Unordered Map](#unordered-map)
+		- [Unordered Multiset](#unordered-multiset)
+		- [Unordered Multimap](#unordered-multimap)
+	- [Container Adapters](#container-adapters)
+		- [Stack](#stack)
+		- [Queue](#queue)
+		- [Priority Queue](#priority-queue)
+  - [Iterators](#iterators)
+	- [Input Iterators](#input-iterators)
+	- [Output Iterators](#output-iterators)
+	- [Forward Iterators](#forward-iterators)
+	- [Bidirectional Iterators](#bidirectional-iterators)
+	- [Random Access Iterators](#random-access-iterators)
+  - [Algorithms](#algorithms)
+	- [Non-modifying Algorithms](#non-modifying-algorithms)
+	- [Modifying Algorithms](#modifying-algorithms)
+	- [Sorting Algorithms](#sorting-algorithms)
+	- [Numeric Algorithms](#numeric-algorithms)
+- [Memory Management](#memory-management)
+  - [Stack vs. Heap](#stack-vs-heap)
+  - [Static Memory Allocation](#static-memory-allocation)
+  - [Dynamic Memory Allocation](#dynamic-memory-allocation)
+	- [new and delete Operators](#new-and-delete-operators)
+	- [malloc and free Functions](#malloc-and-free-functions)
+	- [Smart Pointers](#smart-pointers)
 
-
-   
-
-
-
-
-## Code Example
-
-```cpp
-#include <iostream>
-
-// A simple function to add two numbers
-int add(int a, int b) {
-    return a + b;
-}
-
-class Calculator {
-public:
-    // A member function to multiply two numbers
-    int multiply(int a, int b) {
-        return a * b;
-    }
-};
-
-int main() {
-    int x = 5;
-    int y = 3;
-
-    // Using the standalone function 'add'
-    int sum = add(x, y);
-    std::cout << "Sum: " << sum << std::endl;
-
-    // Using a class and member function
-    Calculator calc;
-    int product = calc.multiply(x, y);
-    std::cout << "Product: " << product << std::endl;
-
-    return 0;
-}
-```
 
 ## Installation and Setup
 
@@ -266,6 +220,31 @@ Comments in C++ are used to document code and improve its readability. They are 
 C++ has a set of reserved keywords that have special meanings and cannot be used as identifiers (such as variable names, function names, or class names). These keywords are used to define the syntax and structure of the language and should not be used for other purposes.
 
 [Keywords in C++ | List of all keywords in C++ ( Full Explanation )](https://www.scholarhat.com/tutorial/cpp/keywords-in-cpp)
+
+
+## Command Line Arguments
+
+Command-line arguments are parameters passed to a program when it is executed from the command line. In C++, the `main()` function can accept command-line arguments as arguments.
+
+```cpp
+int main(int argc, char* argv[]) {
+    for (int i = 0; i < argc; i++) {
+        std::cout << "Argument " << i << ": " << argv[i] << std::endl;
+    }
+    return 0;
+}
+```
+the `argc` parameter is an integer that represents the number of command-line arguments passed to the program, and `argv` is an array of strings that contains the actual arguments.
+
+```bash
+./program arg1 arg2 arg3
+```
+```bash
+Argument 0: ./program
+Argument 1: arg1
+Argument 2: arg2
+Argument 3: arg3
+```
 
 ## Data Types
 
@@ -725,7 +704,6 @@ Exception handling in C++ is a mechanism to handle runtime errors and abnormal c
         }
         ```
 
-
 ### Conditional Compilation
 
 Conditional compilation in C++ allows you to include or exclude code based on preprocessor directives. It is used to create different versions of a program for different platforms or configurations.
@@ -774,21 +752,6 @@ Conditional compilation in C++ allows you to include or exclude code based on pr
     std::cout << "Release mode" << std::endl;
     #endif
     ```
-
-## Command Line Arguments
-
-Command-line arguments are parameters passed to a program when it is executed from the command line. In C++, the `main()` function can accept command-line arguments as arguments.
-
-```cpp
-int main(int argc, char* argv[]) {
-    for (int i = 0; i < argc; i++) {
-        std::cout << "Argument " << i << ": " << argv[i] << std::endl;
-    }
-    return 0;
-}
-```
-the `argc` parameter is an integer that represents the number of command-line arguments passed to the program, and `argv` is an array of strings that contains the actual arguments.
-
 
 ## Functions
 
@@ -1013,7 +976,7 @@ Classes in C++ are used to create user-defined data types that encapsulate data 
 
 Object-oriented programming (OOP) is a programming paradigm that uses objects and classes to model real-world entities and concepts. It focuses on data abstraction, encapsulation, inheritance, and polymorphism to create modular and reusable code.
 
-### Basics of OOP
+### Basics Concepts
 
 - **Class**: A blueprint for creating objects.
 - **Object**: An instance of a class.
@@ -1054,50 +1017,8 @@ Classes and objects are fundamental concepts in object-oriented programming that
 Access modifiers in C++ control the visibility and accessibility of class members. They include public, private, and protected modifiers.
 
 - **Public**: Members are accessible from outside the class.
-
-    ```cpp
-    class Rectangle {
-    public:
-        int width;
-        int height;
-        int area() {
-            return width * height;
-        }
-    };
-    ```
 - **Private**: Members are accessible only from within the class.
-
-    ```cpp
-    class Rectangle {
-    private:
-        int width;
-        int height;
-    public:
-        int area() {
-            return width * height;
-        }
-    };
-    ```
 - **Protected**: Members are accessible from derived classes.
-
-    ```cpp
-    class Shape {
-    protected:
-        int width;
-        int height;
-    public:
-        int area() {
-            return width * height;
-        }
-    };
-    class Rectangle : public Shape {
-    public:
-        void setDimensions(int w, int h) {
-            width = w;
-            height = h;
-        }
-    };
-    ```
 
 #### Member Functions
 
@@ -1248,7 +1169,7 @@ public:
 };
 ```
 
-## Rule of Zero, Rule of Three, Rule of Five
+## Rule of Zero, Three, and Five
 
 The Rule of Zero, Rule of Three, and Rule of Five are guidelines for managing resources in C++ classes. They help ensure proper resource management, prevent memory leaks, and avoid undefined behavior.
 
@@ -1312,9 +1233,13 @@ private:
 
 ### Encapsulation
 
-Encapsulation is the concept of bundling data and functions that operate on that data within a single unit, such as a class. It helps to hide the internal implementation details of a class and expose only the necessary information and functionalities. In C++, you can use access specifiers like `public`, `private`, and `protected` to control the visibility and accessibility of class members.
+Encapsulation is a fundamental concept in object-oriented programming (OOP) that involves bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class. It also involves restricting direct access to some of the object's components, which is a means of preventing unintended interference and misuse of the data.
 
-- **Public Access Modifier**: Members are accessible from outside the class.
+#### Access Modifiers
+
+Access modifiers in C++ are keywords that control the visibility and accessibility of class members. They include public, protected, and private modifiers.
+
+- **Public**: Members are accessible from outside the class.
 
 ```cpp
 class Rectangle {
@@ -1327,7 +1252,7 @@ public:
 };
 ```
 
-- **Private Access Modifier**: Members are accessible only from within the class.
+- **Private**: Members are accessible only from within the class.
 
 ```cpp
 class Rectangle {
@@ -1341,7 +1266,7 @@ public:
 };
 ```
 
-- **Protected Access Modifier**: Members are accessible from derived classes.
+- **Protected**: Members are accessible from derived classes.
 
 ```cpp
 class Shape {
@@ -1363,11 +1288,117 @@ public:
 };
 ```
 
+#### Getters and Setters
+
+Getters and setters are methods used to access and modify the private data members of a class. They provide controlled access to the class attributes and allow for data validation and encapsulation.
+
+- **Getters**: Methods used to access the value of a private data member.
+- **Setters**: Methods used to modify the value of a private data member.
+
+```cpp
+class Rectangle {
+private:
+	int width;
+	int height;
+public:
+	int getWidth() {
+		return width;
+	}
+	void setWidth(int w) {
+		width = w;
+	}
+	int getHeight() {
+		return height;
+	}
+	void setHeight(int h) {
+		height = h;
+	}
+	void calculateArea() {
+		int area = width * height;
+		std::cout << "Area: " << area << std::endl;
+	}
+};
+```
+
+```cpp
+Rectangle rect;
+rect.setWidth(5);
+rect.setHeight(3);
+int width = rect.getWidth();
+int height = rect.getHeight();
+rect.calculateArea();
+```
+
+**Advantages of Encapsulation**
+
+- **Data Hiding**: Prevents direct access to class members, ensuring data integrity and security.
+- **Abstraction**: Hides complex implementation details and exposes only the necessary features.
+- **Modularity**: Encapsulated classes are modular and can be easily reused and maintained.
+- **Flexibility**: Allows for easy modification of the class implementation without affecting the external code.
+
+
+**Advanced Encapsulation Concepts**
+
+1. **Const Member Functions**: Methods that do not modify any member variables of the class should be declared as const.
+```cpp
+class MyClass {
+private:
+	int myAttribute;
+
+public:
+	int getMyAttribute() const {
+		return myAttribute;
+	}
+};
+```
+2. **Immutable Classes**: Classes designed so that objects, once created, cannot be modified.
+
+```cpp
+class ImmutableClass {
+private:
+	const int myAttribute;
+
+public:
+	ImmutableClass(int value) : myAttribute(value) {}
+
+	int getMyAttribute() const {
+		return myAttribute;
+	}
+};
+```
+3. **Encapsulation in Inheritance**: Private members of a base class are not accessible directly in the derived class, promoting encapsulation.
+
+```cpp
+class Base {
+private:
+	int privateAttribute;
+
+protected:
+	int protectedAttribute;
+
+public:
+	int publicAttribute;
+};
+
+class Derived : public Base {
+public:
+	void accessAttributes() {
+		// privateAttribute is not accessible
+		// protectedAttribute and publicAttribute are accessible
+		protectedAttribute = 10;
+		publicAttribute = 20;
+	}
+};
+
+```
+
 ### Inheritance
 
 Inheritance is a mechanism in object-oriented programming that allows a class to inherit properties and behavior from another class. The class that inherits from another class is called a derived class, and the class that is inherited from is called a base class. In C++, you can use the `public`, `protected`, and `private` access specifiers to control the visibility of inherited members. Inheritance is achieved using the `class` keyword followed by a colon `:` and the access specifier.
 
-- **Single Inheritance**: A derived class inherits from a single base class.
+#### Single Inheritance
+
+Single inheritance is a type of inheritance in which a derived class inherits from a single base class.
 
 ```cpp
 class Animal {
@@ -1389,66 +1420,9 @@ dog.eat();
 dog.bark();
 ```
 
-- **Multilevel Inheritance**: A derived class inherits from another derived class.
+#### Multiple Inheritance
 
-```cpp
-class Animal {
-public:
-	void eat() {
-		std::cout << "Eating..." << std::endl;
-	}
-};
-
-class Dog : public Animal {
-public:
-	void bark() {
-		std::cout << "Barking..." << std::endl;
-	}
-};
-
-class Labrador : public Dog {
-public:
-	void play() {
-		std::cout << "Playing..." << std::endl;
-	}
-};
-
-Labrador lab;
-lab.eat();
-lab.bark();
-lab.play();
-```
-
-- **Hierarchical Inheritance**: Multiple derived classes inherit from a single base class.
-
-```cpp
-class Animal {
-public:
-	void eat() {
-		std::cout << "Eating..." << std::endl;
-	}
-};
-
-class Dog : public Animal {
-public:
-	void bark() {
-		std::cout << "Barking..." << std::endl;
-	}
-};
-
-class Cat : public Animal {
-public:
-	void meow() {
-		std::cout << "Meowing..." << std::endl;
-	}
-};
-
-Dog dog;
-dog.eat();
-dog.bark();
-```
-
-- **Multiple Inheritance**: A derived class inherits from multiple base classes.
+Multiple inheritance is a type of inheritance in which a derived class inherits from multiple base classes.
 
 ```cpp
 class Animal {
@@ -1478,7 +1452,72 @@ dog.play();
 dog.bark();
 ```
 
-- **Hybrid Inheritance**: Combination of multiple inheritance types.
+#### Multilevel Inheritance
+
+Multilevel inheritance is a type of inheritance in which a derived class inherits from another derived class.
+
+```cpp
+class Animal {
+public:
+	void eat() {
+		std::cout << "Eating..." << std::endl;
+	}
+};
+
+class Dog : public Animal {
+public:
+	void bark() {
+		std::cout << "Barking..." << std::endl;
+	}
+};
+
+class Labrador : public Dog {
+public:
+	void play() {
+		std::cout << "Playing..." << std::endl;
+	}
+};
+
+Labrador lab;
+lab.eat();
+lab.bark();
+lab.play();
+```
+
+#### Hierarchical Inheritance
+
+Hierarchical inheritance is a type of inheritance in which multiple derived classes inherit from a single base class.
+
+```cpp
+class Animal {
+public:
+	void eat() {
+		std::cout << "Eating..." << std::endl;
+	}
+};
+
+class Dog : public Animal {
+public:
+	void bark() {
+		std::cout << "Barking..." << std::endl;
+	}
+};
+
+class Cat : public Animal {
+public:
+	void meow() {
+		std::cout << "Meowing..." << std::endl;
+	}
+};
+
+Dog dog;
+dog.eat();
+dog.bark();
+```
+
+#### Hybrid Inheritance
+
+Hybrid inheritance is a combination of multiple inheritance and hierarchical inheritance.
 
 ```cpp
 class Animal {
@@ -1515,8 +1554,7 @@ lab.play();
 lab.bark();
 ```
 
-- **Virtual Inheritance**: Prevents multiple instances of a base class in a diamond-shaped inheritance hierarchy.
-
+#### Virtual Inheritance
 ```cpp
 class Animal {
 public:
@@ -1626,7 +1664,9 @@ public:
 
 Polymorphism is the ability of objects to take on different forms based on their data type or class. It allows you to process objects differently based on their class or data type. In C++, polymorphism is achieved through virtual functions, function overloading, and function overriding.
 
-- **Function Overloading**: Defining multiple functions with the same name but different parameters.
+#### Function Overloading
+
+Function overloading in C++ allows you to define multiple functions with the same name but different parameters. The compiler determines which function to call based on the number and types of arguments passed to the function.
 
 ```cpp
 class Math {
@@ -1640,7 +1680,9 @@ public:
 };
 ```
 
-- **Function Overriding**: Redefining a base class function in a derived class.
+#### Function Overriding
+
+Function overriding in C++ allows you to define a function in a derived class with the same name and signature as a function in the base class. The function in the derived class overrides the function in the base class.
 
 ```cpp
 class Animal {
@@ -1671,7 +1713,9 @@ animal = new Cat();
 animal->speak();
 ```
 
-- **Virtual Functions**: Functions that are declared as virtual in the base class and can be overridden in derived classes.
+#### Virtual Functions
+
+Virtual functions in C++ are functions that are declared in a base class and can be overridden in derived classes. They allow you to achieve runtime polymorphism by calling the appropriate function based on the object's actual type.
 
 ```cpp
 class Animal {
@@ -1777,62 +1821,27 @@ Drawing a circle...
 Drawing a rectangle...
 ```
 
-## Standard Library Components
+## Standard Template Library (STL)
 
-The C++ Standard Library provides a collection of classes, functions, and algorithms that are part of the C++ language specification. It includes containers, iterators, algorithms, and utilities that help you write efficient and reusable code.
-
-### I/O Streams
-
-I/O streams in C++ are used to read and write data from and to different sources, such as the console, files, and network sockets. They provide a high-level interface for input and output operations and support various data types.
-
-- Header: `#include <iostream>`
-	- **Standard Streams**: `std::cin`, `std::cout`, `std::cerr`, `std::clog`
-
-	```cpp
-	int x;
-	std::cin >> x;
-	std::cout << "Value: " << x << std::endl;
-	std::cerr << "Error message" << std::endl;
-	std::clog << "Log message" << std::endl;
-	```
-
-	- **Formatted Output**: `std::setw`, `std::setprecision`, `std::fixed`, `std::scientific`
-
-	```cpp
-	#include <iomanip>
-	std::cout << std::setw(10) << std::setfill('*') << 42 << std::endl;
-	std::cout << std::setprecision(2) << std::fixed << 3.14159 << std::endl;
-	```
-
-- Header: `#include <fstream>`
-	- **File Streams**: `std::ifstream`, `std::ofstream`, `std::fstream`
-
-	```cpp
-	std::ofstream file("data.txt");
-	file << "Hello, World!" << std::endl;
-	file.close();
-
-	std::ifstream input("data.txt");
-	std::string line;
-	while (std::getline(input, line)) {
-		std::cout << line << std::endl;
-	}
-	input.close();
-	```
-
-- Header: `#include <sstream>`
-	- **String Streams**: `std::istringstream`, `std::ostringstream`, `std::stringstream`
-
-	```cpp
-	std::stringstream ss;
-	ss << "Hello, " << "World!";
-	std::string message = ss.str();
-	std::cout << message << std::endl;
-	```
+The Standard Template Library (STL) is a collection of generic data structures and algorithms that are part of the C++ Standard Library. It provides a set of common classes and functions that can be used to perform various operations on data structures efficiently. The STL includes containers, algorithms, iterators, and functors.
 
 ### Containers
 
 Containers in C++ are data structures that store and organize data elements. They provide different ways to access, insert, and remove elements and are used to manage collections of objects efficiently.
+
+
+#### Sequence Containers
+
+Sequence containers in C++ are data structures that store elements in a linear sequence. They provide random access to elements and support efficient insertion and deletion operations.
+
+##### Array
+
+An array is a fixed-size collection of elements of the same data type. It provides random access to elements and is defined using a contiguous block of memory.
+
+```cpp
+int arr[5] = {1, 2, 3, 4, 5};
+std::cout << "arr[0]: " << arr[0] << std::endl;
+```
 
 ##### Vector
 
@@ -1901,7 +1910,85 @@ int main() {
     return 0;
 }
 ```
-- [Member Functions](https://www.cplusplus.com/reference/vector/vector/)
+
+##### deque
+
+A deque (double-ended queue) is a sequence container that allows for efficient insertion and deletion of elements at both ends. It provides random access to elements and supports constant time insertion and deletion operations at the beginning and end. Deques are part of the Standard Template Library (STL) and are defined in the `<deque>` header.
+
+```cpp
+#include <iostream>
+#include <deque>
+#include <algorithm> // For std::sort and std::reverse
+
+int main() {
+    // 1. Initialization
+    std::deque<int> deq1;                          // Empty deque
+    std::deque<int> deq2(5, 10);                   // Deque of size 5, all elements initialized to 10
+    std::deque<int> deq3 = {1, 2, 3, 4, 5};        // List initialization
+
+    // 2. Adding elements
+    deq1.push_back(1);
+    deq1.push_back(2);
+    deq1.push_back(3);
+    deq1.push_front(0);                           // Adding element at the front
+
+    // 3. Accessing elements
+    std::cout << "deq1[0]: " << deq1[0] << std::endl;  // Using operator[]
+    std::cout << "deq1 at index 1: " << deq1.at(1) << std::endl; // Using at() method
+    std::cout << "First element in deq1: " << deq1.front() << std::endl;
+    std::cout << "Last element in deq1: " << deq1.back() << std::endl;
+
+    // 4. Iterating through the deque
+    std::cout << "Elements in deq1: ";
+    for (int i = 0; i < deq1.size(); ++i) {
+        std::cout << deq1[i] << " ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Elements in deq2: ";
+    for (const auto& elem : deq2) {  // Using range-based for loop
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 5. Common operations
+    deq3.push_back(6); // Add element at the end
+    deq3.pop_back();   // Remove last element
+    deq3.push_front(0); // Add element at the front
+    deq3.pop_front(); // Remove first element
+
+    auto it = std::find(deq3.begin(), deq3.end(), 3);
+    if (it != deq3.end()) {
+        deq3.insert(it, 99); // Insert 99 before element 3
+    }
+    it = std::find(deq3.begin(), deq3.end(), 3);
+    if (it != deq3.end()) {
+        deq3.erase(it); // Erase element 3
+    }
+
+    std::sort(deq3.begin(), deq3.end()); // Sort the deque
+    std::reverse(deq3.begin(), deq3.end()); // Reverse the deque
+
+    std::cout << "Elements in deq3 after operations: ";
+    for (const auto& elem : deq3) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 6. Clearing and resizing the deque
+    deq3.clear(); // Remove all elements
+    std::cout << "Size of deq3 after clear: " << deq3.size() << std::endl;
+
+    deq3.resize(5, 7); // Resize to 5 elements, new elements initialized to 7
+    std::cout << "Elements in deq3 after resize: ";
+    for (const auto& elem : deq3) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
 
 ##### List
 
@@ -1955,12 +2042,742 @@ int main() {
 }
 ```
 
-- [Member Functions](https://www.cplusplus.com/reference/list/list/)
+
+##### Forward List
+
+A forward list is a singly linked list that allows for efficient insertion and deletion of elements at the beginning and end. It provides forward iterators and supports constant time insertion and deletion operations. Forward lists are part of the Standard Template Library (STL) and are defined in the `<forward_list>` header.
+
+```cpp
+#include <iostream>
+#include <forward_list>
+#include <algorithm> // For std::find
+
+int main() {
+    // 1. Initialization
+    std::forward_list<int> flist1;                          // Empty forward_list
+    std::forward_list<int> flist2(5, 10);                   // Forward_list of size 5, all elements initialized to 10
+    std::forward_list<int> flist3 = {1, 2, 3, 4, 5};        // List initialization
+
+    // 2. Adding elements
+    flist1.push_front(1);
+    flist1.push_front(2);
+    flist1.push_front(3);  // Elements are added to the front
+    flist1.push_front(0);  // Adding element at the front
+
+    // 3. Accessing elements
+    std::cout << "First element in flist1: " << flist1.front() << std::endl;
+
+    // 4. Iterating through the forward_list
+    std::cout << "Elements in flist1: ";
+    for (const auto& elem : flist1) {               // Using range-based for loop
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Elements in flist2: ";
+    for (auto it = flist2.begin(); it != flist2.end(); ++it) { // Using iterator
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+
+    // 5. Common operations
+    flist3.push_front(0);                           // Add element at the front
+    flist3.pop_front();                             // Remove first element
+
+    auto it = std::find(flist3.begin(), flist3.end(), 3);
+    if (it != flist3.end()) {
+        flist3.insert_after(it, 99);                // Insert 99 after element 3
+    }
+    it = std::find(flist3.begin(), flist3.end(), 3);
+    if (it != flist3.end()) {
+        flist3.erase_after(it);                     // Erase element after 3
+    }
+
+    flist3.sort();                                  // Sort the forward_list
+    flist3.reverse();                               // Reverse the forward_list
+
+    std::cout << "Elements in flist3 after operations: ";
+    for (const auto& elem : flist3) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 6. Clearing and resizing the forward_list
+    flist3.clear();                                 // Remove all elements
+    std::cout << "Is flist3 empty after clear? " << (flist3.empty() ? "Yes" : "No") << std::endl;
+
+    flist3.assign(5, 7);                            // Resize to 5 elements, all initialized to 7
+    std::cout << "Elements in flist3 after assign: ";
+    for (const auto& elem : flist3) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
 
 
+#### Associative Containers
+
+Associative containers in C++ are data structures that store elements in a sorted order based on keys. They provide fast search, insertion, and deletion operations and are used to manage key-value pairs efficiently.
+
+##### Set
+
+A set is an associative container that stores unique elements in a sorted order. It provides fast search, insertion, and deletion operations and is implemented using a balanced binary search tree. Sets are part of the Standard Template Library (STL) and are defined in the `<set>` header.
+
+```cpp
+#include <iostream>
+#include <set>
+#include <algorithm> // For std::find
+
+int main() {
+    // 1. Initialization
+    std::set<int> set1;                          // Empty set
+    std::set<int> set2 = {5, 1, 3, 2, 4};        // Set initialization with elements
+
+    // 2. Adding elements
+    set1.insert(3);
+    set1.insert(1);
+    set1.insert(2);
+    set1.insert(4);
+    set1.insert(5); // Duplicates will be ignored automatically
+
+    // 3. Accessing elements
+    std::cout << "Set1 contains: ";
+    for (const auto& elem : set1) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 4. Iterating through the set
+    std::cout << "Set2 contains: ";
+    for (auto it = set2.begin(); it != set2.end(); ++it) { // Using iterator
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+
+    // 5. Common operations
+    auto it = set1.find(3); // Find element
+    if (it != set1.end()) {
+        std::cout << "Element 3 found in set1" << std::endl;
+    } else {
+        std::cout << "Element 3 not found in set1" << std::endl;
+    }
+
+    set1.erase(3); // Erase element
+    it = set1.find(3);
+    if (it == set1.end()) {
+        std::cout << "Element 3 erased from set1" << std::endl;
+    }
+
+    std::cout << "Set1 contains after erase: ";
+    for (const auto& elem : set1) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 6. Clearing and checking size
+    set1.clear(); // Remove all elements
+    std::cout << "Is set1 empty after clear? " << (set1.empty() ? "Yes" : "No") << std::endl;
+    std::cout << "Size of set2: " << set2.size() << std::endl;
+
+    return 0;
+}
+```
+
+##### Map
+
+A map is an associative container that stores key-value pairs in a sorted order based on the keys. It provides fast search, insertion, and deletion operations and is implemented using a balanced binary search tree. Maps are part of the Standard Template Library (STL) and are defined in the `<map>` header.
+
+```cpp
+#include <iostream>
+#include <map>
+
+int main() {
+    // 1. Initialization
+    std::map<char, int> myMap; // Empty map
+    std::map<char, int> anotherMap = { {'a', 1}, {'b', 2}, {'c', 3} }; // Map initialization with elements
+
+    // 2. Adding elements
+    myMap['a'] = 10; // Inserting or updating value for key 'a'
+    myMap.insert(std::make_pair('b', 20)); // Inserting using insert function
+    myMap.emplace('c', 30); // Emplace: constructs element in-place
+
+    // 3. Accessing elements
+    std::cout << "Value of key 'a': " << myMap['a'] << std::endl;
+
+    // 4. Iterating through the map
+    std::cout << "Contents of myMap:" << std::endl;
+    for (const auto& pair : myMap) {
+        std::cout << "Key: " << pair.first << ", Value: " << pair.second << std::endl;
+    }
+
+    // 5. Common operations
+    auto it = myMap.find('b'); // Find element by key
+    if (it != myMap.end()) {
+        std::cout << "Element with key 'b' found. Value: " << it->second << std::endl;
+    }
+
+    myMap.erase('c'); // Erase element by key
+
+    std::cout << "Size of myMap after erasing 'c': " << myMap.size() << std::endl;
+
+    // 6. Clearing and checking size
+    myMap.clear(); // Clear all elements
+    std::cout << "Is myMap empty after clear? " << (myMap.empty() ? "Yes" : "No") << std::endl;
+    std::cout << "Size of anotherMap: " << anotherMap.size() << std::endl;
+
+    return 0;
+}
+```
+
+##### Multiset
+
+A multiset is an associative container that stores multiple elements with the same key in a sorted order. It provides fast search, insertion, and deletion operations and is implemented using a balanced binary search tree. Multisets are part of the Standard Template Library (STL) and are defined in the `<set>` header.
+
+```cpp
+#include <iostream>
+#include <set>
+
+int main() {
+	// 1. Initialization
+	std::multiset<int> multiSet; // Empty multiset
+	std::multiset<int> anotherSet = {1, 2, 3, 4, 5}; // Multiset initialization with elements
+
+	// 2. Adding elements
+	multiSet.insert(10); // Inserting elements
+	multiSet.insert(20);
+	multiSet.insert(10); // Duplicates are allowed in multiset
+
+	// 3. Accessing elements
+	std::cout << "Contents of multiSet:" << std::endl;
+	for (const auto& elem : multiSet) {
+		std::cout << elem << std::endl;
+	}
+
+	// 4. Checking if an element exists
+	int target = 20;
+	if (multiSet.find(target) != multiSet.end()) {
+		std::cout << target << " exists in the multiset." << std::endl;
+	} else {
+		std::cout << target << " does not exist in the multiset." << std::endl;
+	}
+
+	// 5. Removing elements
+	multiSet.erase(20); // Removing element
+
+	// 6. Clearing and checking size
+	multiSet.clear(); // Clear all elements
+	std::cout << "Is multiSet empty after clear? " << (multiSet.empty() ? "Yes" : "No") << std::endl;
+	std::cout << "Size of anotherSet: " << anotherSet.size() << std::endl;
+
+	return 0;
+}
+```
+
+##### Multimap
+
+A multimap is an associative container that stores multiple key-value pairs with the same key in a sorted order. It provides fast search, insertion, and deletion operations and is implemented using a balanced binary search tree. Multimaps are part of the Standard Template Library (STL) and are defined in the `<map>` header.
+
+```cpp
+#include <iostream>
+#include <map>
+
+int main() {
+	// 1. Initialization
+	std::multimap<char, int> myMultiMap; // Empty multimap
+	std::multimap<char, int> anotherMultiMap = { {'a', 1}, {'b', 2}, {'c', 3} }; // Multimap initialization with elements
+
+	// 2. Adding elements
+	myMultiMap.insert(std::make_pair('a', 10)); // Inserting elements
+	myMultiMap.insert(std::make_pair('b', 20));
+	myMultiMap.insert(std::make_pair('a', 30)); // Duplicates are allowed in multimap
+
+	// 3. Accessing elements
+	std::cout << "Contents of myMultiMap:" << std::endl;
+	for (const auto& pair : myMultiMap) {
+		std::cout << "Key: " << pair.first << ", Value: " << pair.second << std::endl;
+	}
+
+	// 4. Checking if a key exists
+	char target = 'b';
+	auto range = myMultiMap.equal_range(target);
+	if (range.first != myMultiMap.end()) {
+		std::cout << "Key '" << target << "' exists in the multimap." << std::endl;
+	} else {
+		std::cout << "Key '" << target << "' does not exist in the multimap." << std::endl;
+	}
+
+	// 5. Removing elements
+	myMultiMap.erase('b'); // Removing element by key
+
+	// 6. Clearing and checking size
+	myMultiMap.clear(); // Clear all elements
+	std::cout << "Is myMultiMap empty after clear? " << (myMultiMap.empty() ? "Yes" : "No") << std::endl;
+	std::cout << "Size of anotherMultiMap: " << anotherMultiMap.size() << std::endl;
+
+	return 0;
+}
+```
+
+#### Unordered Associative Containers
+
+Unordered associative containers in C++ are data structures that store elements in an unordered manner based on keys. They provide fast search, insertion, and deletion operations and are implemented using a hash table.
+
+##### Unordered Set
+
+An unordered set is an associative container that stores unique elements in an unordered manner. It provides fast search, insertion, and deletion operations and is implemented using a hash table. Unordered sets are part of the Standard Template Library (STL) and are defined in the `<unordered_set>` header.
+
+```cpp
+#include <iostream>
+#include <unordered_set>
+
+int main() {
+    // 1. Initialization
+    std::unordered_set<int> mySet; // Empty unordered_set
+    std::unordered_set<int> anotherSet = {1, 2, 3, 4, 5}; // Set initialization with elements
+
+    // 2. Adding elements
+    mySet.insert(10); // Inserting elements
+    mySet.insert(20);
+    mySet.insert(30);
+
+    // 3. Accessing elements
+    std::cout << "Contents of mySet:" << std::endl;
+    for (const auto& elem : mySet) {
+        std::cout << elem << std::endl;
+    }
+
+    // 4. Checking if an element exists
+    int target = 20;
+    if (mySet.find(target) != mySet.end()) {
+        std::cout << target << " exists in the set." << std::endl;
+    } else {
+        std::cout << target << " does not exist in the set." << std::endl;
+    }
+
+    // 5. Removing elements
+    mySet.erase(20); // Removing element
+
+    // 6. Clearing and checking size
+    mySet.clear(); // Clear all elements
+    std::cout << "Is mySet empty after clear? " << (mySet.empty() ? "Yes" : "No") << std::endl;
+    std::cout << "Size of anotherSet: " << anotherSet.size() << std::endl;
+
+    return 0;
+}
+```
+
+##### Unordered Map
+
+An unordered map is an associative container that stores key-value pairs in an unordered manner. It provides fast search, insertion, and deletion operations and is implemented using a hash table. Unordered maps are part of the Standard Template Library (STL) and are defined in the `<unordered_map>` header.
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+
+int main() {
+    // 1. Initialization
+    std::unordered_map<std::string, int> myMap; // Empty unordered_map
+    std::unordered_map<std::string, int> anotherMap = { {"one", 1}, {"two", 2}, {"three", 3} }; // Map initialization with elements
+
+    // 2. Adding elements
+    myMap["apple"] = 10; // Inserting or updating value for key "apple"
+    myMap.insert(std::make_pair("banana", 20)); // Inserting using insert function
+    myMap.emplace("orange", 30); // Emplace: constructs element in-place
+
+    // 3. Accessing elements
+    std::cout << "Value of key 'apple': " << myMap["apple"] << std::endl;
+
+    // 4. Iterating through the map
+    std::cout << "Contents of myMap:" << std::endl;
+    for (const auto& pair : myMap) {
+        std::cout << "Key: " << pair.first << ", Value: " << pair.second << std::endl;
+    }
+
+    // 5. Common operations
+    auto it = myMap.find("banana"); // Find element by key
+    if (it != myMap.end()) {
+        std::cout << "Element with key 'banana' found. Value: " << it->second << std::endl;
+    }
+
+    myMap.erase("orange"); // Erase element by key
+
+    std::cout << "Size of myMap after erasing 'orange': " << myMap.size() << std::endl;
+
+    // 6. Clearing and checking size
+    myMap.clear(); // Clear all elements
+    std::cout << "Is myMap empty after clear? " << (myMap.empty() ? "Yes" : "No") << std::endl;
+    std::cout << "Size of anotherMap: " << anotherMap.size() << std::endl;
+
+    return 0;
+}
+```
+
+##### Unordered Multiset
+
+An unordered multiset is an associative container that stores multiple elements with the same key in an unordered manner. It provides fast search, insertion, and deletion operations and is implemented using a hash table. Unordered multisets are part of the Standard Template Library (STL) and are defined in the `<unordered_set>` header.
+
+```cpp
+#include <iostream>
+#include <unordered_set>
+
+int main() {
+	// 1. Initialization
+	std::unordered_multiset<int> multiSet; // Empty unordered_multiset
+	std::unordered_multiset<int> anotherSet = {1, 2, 3, 4, 5}; // Multiset initialization with elements
+
+	// 2. Adding elements
+	multiSet.insert(10); // Inserting elements
+	multiSet.insert(20);
+	multiSet.insert(10); // Duplicates are allowed in unordered_multiset
+
+	// 3. Accessing elements
+	std::cout << "Contents of multiSet:" << std::endl;
+	for (const auto& elem : multiSet) {
+		std::cout << elem << std::endl;
+	}
+
+	// 4. Checking if an element exists
+	int target = 20;
+	if (multiSet.find(target) != multiSet.end()) {
+		std::cout << target << " exists in the multiset." << std::endl;
+	} else {
+		std::cout << target << " does not exist in the multiset." << std::endl;
+	}
+
+	// 5. Removing elements
+	multiSet.erase(20); // Removing element
+
+	// 6. Clearing and checking size
+	multiSet.clear(); // Clear all elements
+	std::cout << "Is multiSet empty after clear? " << (multiSet.empty() ? "Yes" : "No") << std::endl;
+	std::cout << "Size of anotherSet: " << anotherSet.size() << std::endl;
+
+	return 0;
+}
+```
+
+##### Unordered Multimap
+
+An unordered multimap is an associative container that stores multiple key-value pairs with the same key in an unordered manner. It provides fast search, insertion, and deletion operations and is implemented using a hash table. Unordered multimaps are part of the Standard Template Library (STL) and are defined in the `<unordered_map>` header.
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+
+int main() {
+	// 1. Initialization
+	std::unordered_multimap<char, int> myMultiMap; // Empty unordered_multimap
+	std::unordered_multimap<char, int> anotherMultiMap = { {'a', 1}, {'b', 2}, {'c', 3} }; // Multimap initialization with elements
+
+	// 2. Adding elements
+	myMultiMap.insert(std::make_pair('a', 10)); // Inserting elements
+	myMultiMap.insert(std::make_pair('b', 20));
+	myMultiMap.insert(std::make_pair('a', 30)); // Duplicates are allowed in unordered_multimap
+
+	// 3. Accessing elements
+	std::cout << "Contents of myMultiMap:" << std::endl;
+	for (const auto& pair : myMultiMap) {
+		std::cout << "Key: " << pair.first << ", Value: " << pair.second << std::endl;
+	}
+
+	// 4. Checking if a key exists
+	char target = 'b';
+	auto range = myMultiMap.equal_range(target);
+	if (range.first != myMultiMap.end()) {
+		std::cout << "Key '" << target << "' exists in the multimap." << std::endl;
+	} else {
+		std::cout << "Key '" << target << "' does not exist in the multimap." << std::endl;
+	}
+
+	// 5. Removing elements
+	myMultiMap.erase('b'); // Removing element by key
+
+	// 6. Clearing and checking size
+	myMultiMap.clear(); // Clear all elements
+	std::cout << "Is myMultiMap empty after clear? " << (myMultiMap.empty() ? "Yes" : "No") << std::endl;
+	std::cout << "Size of anotherMultiMap: " << anotherMultiMap.size() << std::endl;
+
+	return 0;
+}
+```
+
+#### Container Adapters
+
+Container adapters in C++ are data structures that provide a specific interface for accessing elements. They are implemented using other containers and provide a simplified way to work with data.
+
+##### Stack
+
+A stack is a container that provides LIFO (Last In, First Out) access to elements. It supports two main operations: push (insert element at the top) and pop (remove element from the top). Stacks are part of the Standard Template Library (STL) and are defined in the `<stack>` header.
+
+```cpp
+#include <iostream>
+#include <stack>
+
+int main() {
+    // 1. Initialization
+    std::stack<int> myStack;
+
+    // 2. Pushing elements
+    myStack.push(10); // Pushing elements onto the stack
+    myStack.push(20);
+    myStack.push(30);
+
+    // 3. Accessing elements
+    std::cout << "Top element of the stack: " << myStack.top() << std::endl;
+
+    // 4. Popping elements
+    myStack.pop(); // Popping the top element
+
+    // 5. Checking if the stack is empty
+    std::cout << "Is the stack empty? " << (myStack.empty() ? "Yes" : "No") << std::endl;
+
+    // 6. Getting the size of the stack
+    std::cout << "Size of the stack: " << myStack.size() << std::endl;
+
+    return 0;
+}
+```
+
+##### Queue
+
+A queue is a container that provides FIFO (First In, First Out) access to elements. It supports two main operations: push (insert element at the back) and pop (remove element from the front). Queues are part of the Standard Template Library (STL) and are defined in the `<queue>` header.
+
+```cpp
+#include <iostream>
+#include <queue>
+
+int main() {
+    // 1. Initialization
+    std::queue<int> myQueue;
+
+    // 2. Pushing elements
+    myQueue.push(10); // Pushing elements into the queue
+    myQueue.push(20);
+    myQueue.push(30);
+
+    // 3. Accessing elements
+    std::cout << "Front element of the queue: " << myQueue.front() << std::endl;
+    std::cout << "Back element of the queue: " << myQueue.back() << std::endl;
+
+    // 4. Popping elements
+    myQueue.pop(); // Popping the front element
+
+    // 5. Checking if the queue is empty
+    std::cout << "Is the queue empty? " << (myQueue.empty() ? "Yes" : "No") << std::endl;
+
+    // 6. Getting the size of the queue
+    std::cout << "Size of the queue: " << myQueue.size() << std::endl;
+
+    return 0;
+}
+```
+
+##### Priority Queue
+
+A priority queue is a container that provides access to elements based on their priority. It supports two main operations: push (insert element) and pop (remove element with the highest priority). Priority queues are part of the Standard Template Library (STL) and are defined in the `<queue>` header.
+
+```cpp
+#include <iostream>
+#include <queue>
+
+int main() {
+	// 1. Initialization
+	std::priority_queue<int> myPriorityQueue;
+
+	// 2. Pushing elements
+	myPriorityQueue.push(30); // Pushing elements into the priority queue
+	myPriorityQueue.push(10);
+	myPriorityQueue.push(20);
+
+	// 3. Accessing elements
+	std::cout << "Top element of the priority queue: " << myPriorityQueue.top() << std::endl;
+
+	// 4. Popping elements
+	myPriorityQueue.pop(); // Popping the top element
+
+	// 5. Checking if the priority queue is empty
+	std::cout << "Is the priority queue empty? " << (myPriorityQueue.empty() ? "Yes" : "No") << std::endl;
+
+	// 6. Getting the size of the priority queue
+	std::cout << "Size of the priority queue: " << myPriorityQueue.size() << std::endl;
+
+	return 0;
+}
+```
+
+### Iterators
+
+Iterators are objects in the C++ Standard Library (STL) that help us traverse containers like arrays, lists, and vectors. Essentially, they act as a bridge between container classes and algorithms.Iterators behave similar to pointers but provide a more generalized and abstract way of accessing elements in a container.
+
+There are five types of iterators in C++:
+
+##### Input Iterator
+
+Input iterators provide read-only access to elements in a single pass. They can be used to read elements from a container but cannot be used to modify the elements.
+
+```cpp
+std::istream_iterator<int> input(std::cin);
+std::istream_iterator<int> eof;
+while (input != eof) {
+	std::cout << *input << std::endl;
+	++input;
+}
+```
+
+##### Output Iterator
+
+Output iterators provide write-only access to elements in a single pass. They can be used to write elements to a container but cannot be used to read the elements.
+
+```cpp
+std::ostream_iterator<int> output(std::cout, " ");
+for (int i = 0; i < 5; ++i) {
+	*output = i;
+	++output;
+}
+```
+
+##### Forward Iterator
+
+Forward iterators provide read and write access to elements in a single pass. They can be used to read and modify elements in a container in a forward direction.
+
+```cpp
+std::forward_list<int> flist = {1, 2, 3, 4, 5};
+for (auto it = flist.begin(); it != flist.end(); ++it) {
+	std::cout << *it << " ";
+}
+```
+
+##### Bidirectional Iterator
+
+Bidirectional iterators provide read and write access to elements in both forward and backward directions. They can be used to traverse elements in a container in both directions.
+
+```cpp
+std::list<int> list = {1, 2, 3, 4, 5};
+for (auto it = list.rbegin(); it != list.rend(); ++it) {
+	std::cout << *it << " ";
+}
+```
+
+##### Random Access Iterator
+
+Random access iterators provide read and write access to elements with random access. They can be used to access elements at any position in a container with constant time complexity.
+
+```cpp
+std::vector<int> vec = {1, 2, 3, 4, 5};
+for (auto it = vec.begin(); it != vec.end(); ++it) {
+	std::cout << *it << " ";
+}
+```
+
+### Algorithms
+
+Algorithms in C++ are reusable functions that operate on containers like arrays, lists, and vectors. They provide a way to perform common operations such as searching, sorting, and modifying elements in a container. Algorithms are part of the Standard Template Library (STL) and are defined in the `<algorithm>` header.
+
+##### Non-modifying Algorithms
+
+Non-modifying algorithms do not change the elements in the container. They are used to search, count, compare, and perform other operations without modifying the elements.
+
+- `std::find`, `std::count`, `std::all_of`, `std::any_of`, `std::none_of`, `std::equal`, `std::mismatch`, `std::search`, `std::find_end`, `std::find_first_of`, `std::adjacent_find`, `std::count_if`, `std::find_if`, `std::find_if_not`, `std::search_n`, `std::for_each`, `std::none_of`, `std::is_permutation`, `std::lexicographical_compare`, `std::equal_range`, `std::lower_bound`, `std::upper_bound`, `std::binary_search`, `std::includes`, `std::set_difference`, `std::set_intersection`, `std::set_symmetric_difference`, `std::set_union`, `std::merge`, `std::min_element`, `std::max_element`, `std::minmax_element`, `std::is_sorted`, `std::is_sorted_until`, `std::is_partitioned`, `std::partition_point`, `std::adjacent_difference`, `std::inner_product`, `std::partial_sum`, `std::reduce`, `std::transform_reduce`, `std::exclusive_scan`, `std::inclusive_scan`, `std::transform_exclusive_scan`, `std::transform_inclusive_scan`, `std::sample`, `std::random_shuffle`, `std::shuffle`, `std::is_heap`, `std::is_heap_until`, `std::make_heap`, `std::push_heap`, `std::pop_heap`, `std::sort_heap`, `std::nth_element`, `std::partition`, `std::stable_partition`, `std::sort`, `std::stable_sort`, `std::partial_sort`, `std::partial_sort_copy`, `std::is_permutation`, `std::next_permutation`, `std::prev_permutation`, `std::rotate`, `std::rotate_copy`, `std::reverse`, `std::reverse_copy`, `std::copy`, `std::copy_if`, `std::copy_n`, `std::copy_backward`, `std::move`, `std::move_backward`, `std::fill`, `std::fill_n`, `std::generate`, `std::generate_n`, `std::replace`, `std::replace`, `std::replace_copy`, `std::replace_copy_if`, `std::replace_if`, `std::swap`, `std::swap_ranges`, `std::iter_swap`, `std::transform`, `std::unique`, `std::unique_copy`, `std::unique_copy`, `std::unique_copy_if`
+
+##### Modifying Algorithms
+
+Modifying algorithms change the elements in the container. They are used to sort, copy, replace, and perform other operations that modify the elements.
+
+- `std::copy`, `std::copy_backward`, `std::move`, `std::move_backward`, `std::fill`, `std::fill_n`, `std::generate`, `std::generate_n`, `std::replace`, `std::replace_copy`, `std::replace_copy_if`, `std::replace_if`, `std::swap`, `std::swap_ranges`, `std::iter_swap`, `std::transform`, `std::unique`, `std::unique_copy`, `std::unique_copy`, `std::unique_copy_if`
+
+##### Sorting Algorithms
+
+Sorting algorithms are used to sort the elements in the container in a specific order. They are used to arrange the elements in ascending or descending order based on a comparison function.
+
+- `std::is_sorted`, `std::is_sorted_until`, `std::is_partitioned`, `std::partition_point`, `std::adjacent_difference`, `std::inner_product`, `std::partial_sum`, `std::reduce`, `std::transform_reduce`, `std::exclusive_scan`, `std::inclusive_scan`, `std::transform_exclusive_scan`, `std::transform_inclusive_scan`, `std::sample`, `std::random_shuffle`, `std::shuffle`, `std::is_heap`, `std::is_heap_until`, `std::make_heap`, `std::push_heap`, `std::pop_heap`, `std::sort_heap`, `std::nth_element`, `std::partition`, `std::stable_partition`, `std::sort`, `std::stable_sort`, `std::partial_sort`, `std::partial_sort_copy`
 
 
+##### Numeric Algorithms
 
+Numeric algorithms are used to perform numeric operations on elements in the container. They are used to calculate the sum, product, difference, and other operations on numeric values.
+
+- `std::adjacent_difference`, `std::inner_product`, `std::partial_sum`, `std::reduce`, `std::transform_reduce`, `std::exclusive_scan`, `std::inclusive_scan`, `std::transform_exclusive_scan`, `std::transform_inclusive_scan`
+
+##### Heap Algorithms
+
+Heap algorithms are used to perform heap operations on elements in the container. They are used to create, maintain, and manipulate heap data structures.
+
+- `std::is_heap`, `std::is_heap_until`, `std::make_heap`, `std::push_heap`, 
+`std::pop_heap`, `std::sort_heap`
+
+**Example:**
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm> // For algorithms like sort, find, etc.
+
+int main() {
+    // 1. Sorting
+    std::vector<int> vec = {5, 3, 8, 6, 2};
+    std::sort(vec.begin(), vec.end());
+    std::cout << "Sorted vector: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 2. Reversing
+    std::reverse(vec.begin(), vec.end());
+    std::cout << "Reversed vector: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 3. Finding an element
+    auto it = std::find(vec.begin(), vec.end(), 8);
+    if (it != vec.end()) {
+        std::cout << "Element 8 found at position: " << std::distance(vec.begin(), it) << std::endl;
+    } else {
+        std::cout << "Element 8 not found" << std::endl;
+    }
+
+    // 4. Counting occurrences
+    int count = std::count(vec.begin(), vec.end(), 6);
+    std::cout << "Element 6 appears " << count << " times" << std::endl;
+
+    // 5. Removing elements
+    vec.erase(std::remove(vec.begin(), vec.end(), 6), vec.end());
+    std::cout << "Vector after removing 6: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 6. Replacing elements
+    std::replace(vec.begin(), vec.end(), 8, 10);
+    std::cout << "Vector after replacing 8 with 10: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    // 7. Accumulating values
+    int sum = std::accumulate(vec.begin(), vec.end(), 0);
+    std::cout << "Sum of elements in the vector: " << sum << std::endl;
+
+    // 8. Unique elements
+    vec = {1, 2, 2, 3, 3, 4, 4, 5};
+    auto last = std::unique(vec.begin(), vec.end());
+    vec.erase(last, vec.end());
+    std::cout << "Vector after removing duplicates: ";
+    for (const auto& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
 
 
 ## Memory Model
@@ -2022,25 +2839,15 @@ Memory management in C++ is the process of allocating and deallocating memory fo
 
 ### Static Memory Allocation
 
-- **Compile-Time Allocation**: Memory is allocated at compile time.
-- **Automatic Variables**: Local variables and function parameters are allocated on the stack.
-- **Fixed Size**: Stack size is determined at compile time.
+Static memory allocation in C++ involves allocating memory at compile time for variables with fixed sizes. It is used for global variables, static variables, and arrays.
 
 ```cpp
-void foo() {
-    int x = 42; // Allocated on the stack
-}
+int globalVar = 42; // Static memory allocation
+static int staticVar = 42; // Static memory allocation
+int arr[5]; // Static memory allocation
 ```
 
-### Dynamic Memory Allocation
 
-- **Run-Time Allocation**: Memory is allocated at run time using the heap.
-- **Manual Management**: Memory must be deallocated manually to avoid memory leaks.
-
-```cpp
-int *ptr = new int; // Allocated on the heap
-delete ptr; // Deallocated manually
-```
 
 ## Pointers and References
 
@@ -2210,7 +3017,6 @@ double Circle::area() {
 }
 ```
 
-
 ## Input and Output
 
 Input and output operations in C++ are performed using the `iostream` library, which provides classes and objects for reading from and writing to the console, files, and other input/output devices.
@@ -2301,6 +3107,7 @@ Input and output operations in C++ are performed using the `iostream` library, w
             return 0;
         }
         ```
+
 - **Input Validation**: `std::cin.fail()`, `std::cin.clear()`, `std::cin.ignore()`
     - **Description**: Used to handle input errors and clear the input buffer.
     - **Example**:
@@ -2323,7 +3130,6 @@ Input and output operations in C++ are performed using the `iostream` library, w
             return 0;
         }
         ```
-
 
 ## File Handling
 
@@ -2472,7 +3278,6 @@ File handling in C++ is performed using the `fstream` library, which provides cl
             return 0;
         }
         ```
-
 
 ## Data Structures
 
@@ -2662,158 +3467,6 @@ int main() {
 }
 ```
 
-## Algorithms
-
-Algorithms in C++ are step-by-step procedures for solving problems or performing tasks. They include searching, sorting, graph traversal, and other common operations. C++ provides standard algorithms in the `<algorithm>` header and data structures in the `<vector>`, `<list>`, and `<map>` headers.
-
-### Searching Algorithms
-
-- **Linear Search**: `std::find()`
-- **Binary Search**: `std::binary_search()`
-- **Search in Sorted Containers**: `std::lower_bound()`, `std::upper_bound()`
-
-```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-int main() {
-    std::vector<int> vec = {1, 2, 3, 4, 5};
-    auto it = std::find(vec.begin(), vec.end(), 3);
-    if (it != vec.end()) {
-        std::cout << "Element found at index: " << it - vec.begin() << std::endl;
-    } else {
-        std::cout << "Element not found." << std::endl;
-    }
-    return 0;
-}
-```
-
-### Sorting Algorithms
-
-- **Sort Range**: `std::sort()`
-- **Partial Sort**: `std::partial_sort()`
-- **Heap Operations**: `std::make_heap()`, `std::push_heap()`, `std::pop_heap()`
-
-```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-int main() {
-    std::vector<int> vec = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
-    std::sort(vec.begin(), vec.end());
-    for (int num : vec) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
-    return 0;
-}
-```
-
-
-### Graph Algorithms
-
-- **Depth-First Search (DFS)**: Recursive traversal of a graph.
-- **Breadth-First Search (BFS)**: Iterative traversal of a graph.
-- **Shortest Path Algorithms**: Dijkstra's, Bellman-Ford, Floyd
-- **Minimum Spanning Tree**: Prim's, Kruskal's
-
-```cpp
-#include <iostream>
-#include <vector>
-#include <queue>
-
-void bfs(std::vector<std::vector<int>>& graph, int start) {
-    std::vector<bool> visited(graph.size(), false);
-    std::queue<int> q;
-    q.push(start);
-    visited[start] = true;
-    while (!q.empty()) {
-        int node = q.front();
-        q.pop();
-        std::cout << node << " ";
-        for (int neighbor : graph[node]) {
-            if (!visited[neighbor]) {
-                q.push(neighbor);
-                visited[neighbor] = true;
-            }
-        }
-    }
-}
-
-int main() {
-    std::vector<std::vector<int>> graph = {
-        {1, 2},
-        {0, 2, 3},
-        {0, 1, 3},
-        {1, 2}
-    };
-    bfs(graph, 0);
-    std::cout << std::endl;
-    return 0;
-}
-```
-
-### Dynamic Programming
-
-- **Memoization**: Caching results of subproblems.
-- **Tabulation**: Bottom-up approach to dynamic programming.
-- **Optimal Substructure**: Decomposing a problem into subproblems.
-
-```cpp
-#include <iostream>
-#include <vector>
-
-int fibonacci(int n) {
-    std::vector<int> dp(n + 1, 0);
-    dp[1] = 1;
-    for (int i = 2; i <= n; i++) {
-        dp[i] = dp[i - 1] + dp[i - 2];
-    }
-    return dp[n];
-}
-
-int main() {
-    int n = 10;
-    std::cout << "Fibonacci(" << n << ") = " << fibonacci(n) << std::endl;
-    return 0;
-}
-```
-
-### Divide and Conquer
-
-- **Divide**: Break problem into smaller subproblems.
-- **Conquer**: Solve subproblems recursively.
-- **Combine**: Merge solutions of subproblems.
-
-```cpp
-#include <iostream>
-#include <vector>
-
-int binarySearch(std::vector<int>& nums, int target) {
-    int left = 0, right = nums.size() - 1;
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (nums[mid] == target) {
-            return mid;
-        } else if (nums[mid] < target) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return -1;
-}
-
-int main() {
-    std::vector<int> nums = {1, 2, 3, 4, 5};
-    int target = 3;
-    std::cout << "Index: " << binarySearch(nums, target) << std::endl;
-    return 0;
-}
-```
-
 ## Exception Handling
 
 Exception handling in C++ is a mechanism for handling runtime errors and abnormal conditions. It allows you to catch and handle exceptions, propagate errors, and clean up resources in case of failures.
@@ -2951,7 +3604,6 @@ int main() {
 }
 ```
 
-
 ## Code Splitting
 
 Code splitting in C++ involves dividing a program into multiple files and modules to improve code organization, readability, and maintainability. It includes using header files, source files, and libraries to separate declarations and definitions.
@@ -3002,7 +3654,6 @@ g++ -c example.cpp -o example.o
 # Link object files together to create the executable
 g++ main.o example.o -o my_program
 ```
-
 
 ## Compilers
 
@@ -3138,7 +3789,6 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable(my_program src/main.cpp)
 ```
 
-
 ## languge Concepts
 
 ### auto (Automatic Type Deduction)
@@ -3265,6 +3915,232 @@ int main() {
 }
 ```
 
+## C++ Standard Versions
+
+C++ is an evolving language with new features and improvements introduced in each standard version. The C++ standard is maintained by the International Organization for Standardization (ISO) and is updated periodically to add new functionality, improve performance, and fix issues.
+
+### C++ Standards
+
+- **C++98**: The original C++ standard published in 1998.
+- **C++03**: A minor revision of the C++98 standard published in 2003.
+- **C++11**: The first major update to the C++ language published in 2011.
+- **C++14**: A minor update to the C++11 standard published in 2014.
+- **C++17**: The next major update to the C++ language published in 2017.
+- **C++20**: The latest version of the C++ standard published in 2020.
+
+### C++98 Features
+
+- **Standard Template Library (STL)**: Containers, algorithms, iterators, and function objects.
+- **Templates**: Generic programming constructs for creating reusable code.
+- **Exceptions**: Mechanism for handling runtime errors and abnormal conditions.
+- **Namespaces**: Logical grouping of code to prevent naming conflicts.
+- **Standard Input/Output**: `std::cin`, `std::cout`, `std::cerr`, `std::clog`.
+- **Dynamic Memory Allocation**: `new`, `delete`, `malloc`, `free`.
+- **Function Overloading**: Defining multiple functions with the same name but different parameters.
+- **Operator Overloading**: Defining custom behavior for operators.
+- **Inheritance**: Mechanism for creating new classes based on existing classes.
+- **Polymorphism**: Ability to process objects differently based on their data types.
+- **Virtual Functions**: Functions that can be overridden in derived classes.
+- **Friend Functions**: Functions that have access to private and protected members of a class.
+- **References**: Alias to an existing variable.
+- **Const Qualifier**: Indicates that an object is read-only.
+- **Static Keyword**: Indicates that a variable or function is shared among all instances of a class.
+- **Type Casting**: Converting one data type to another.
+- **Preprocessor Directives**: `#include`, `#define`, `#ifdef`, `#endif`.
+
+### C++11 Features
+
+- **Auto**: Automatic type deduction using the `auto` keyword.
+- **Range-based For Loop**: Simplified loop for iterating over elements.
+- **Lambda Expressions**: Inline anonymous functions.
+- **Smart Pointers**: `std::unique_ptr`, `std::shared_ptr`, `std::weak_ptr`.
+- **Move Semantics**: Efficient transfer of resources between objects.
+- **Rvalue References**: References that can bind to temporary objects.
+- **constexpr**: Compile-time evaluation of expressions.
+- **nullptr**: Null pointer constant.
+- **Variadic Templates**: Templates that accept a variable number of arguments.
+- **Static Assertions**: Compile-time assertions using `static_assert`.
+- **Threading Support**: `std::thread`, `std::mutex`, `std::condition_variable`.
+
+### C++14 Features
+
+- **Generic Lambdas**: Lambda functions with auto-typed parameters.
+- **Binary Literals**: Binary integer literals.
+- **decltype(auto)**: Automatic type deduction using decltype.
+- **Variable Templates**: Templates that define variables.
+- **Relaxed `constexpr`**: More flexibility in using `constexpr`.
+- **`std::make_unique`**: Helper function for creating `std::unique_ptr`.
+- **`std::integer_sequence`**: Utility for manipulating sequences of integers.
+- **`std::quoted`**: I/O manipulator for quoted strings.
+- **`std::exchange`**: Atomic exchange operation.
+- **`std::shared_timed_mutex`**: Shared mutex with timed lock operations.
+
+### C++17 Features
+
+- **`if` with Initialization**: Initialization in `if` statements.
+- **`constexpr` Lambda Expressions**: `constexpr` lambdas.
+- **`std::optional`**: Nullable object wrapper.
+- **`std::variant`**: Type-safe union.
+- **`std::any`**: Type-safe container for single values of any type.
+- **`std::string_view`**: Non-owning view of a string.
+- **`std::filesystem`**: Filesystem library.
+- **`std::invoke`**: Invoke callable objects.
+- **`std::apply`**: Invoke a function with a tuple of arguments.
+
+### C++20 Features
+
+- **Concepts**: Constraints on template parameters.
+- **Ranges**: Range-based algorithms and views.
+- **Coroutines**: Lightweight concurrency.
+- **Modules**: Modular programming.
+- **`std::format`**: String formatting.
+- **`std::span`**: Non-owning view of a contiguous sequence.
+- **`std::jthread`**: Joinable thread.
+- **`std::stop_token`**: Token for stopping asynchronous operations.
+- **`std::chrono` Improvements**: Additional features for the chrono library.
+
+
+## Dependency Management
+
+Dependency management in C++ involves handling external libraries, packages, and dependencies required by a project. It includes downloading, installing, and linking libraries to build and run C++ programs.
+
+- **Package Managers**: Tools that automate the process of downloading, installing, and managing dependencies.
+- **Build Systems**: Tools that handle dependencies, build configurations, and target platforms.
+- **Library Directories**: Locations where library files are stored.
+- **Include Directories**: Locations where header files are stored.
+
+### Package Managers
+
+Package managers in C++ are tools that automate the process of downloading, installing, and managing dependencies for a project. They simplify the management of libraries, packages, and external resources required by a program.
+
+- **vcpkg**: A cross-platform package manager for C++ libraries.
+- **Conan**: A decentralized package manager for C and C++ libraries.
+- **Hunter**: A CMake-driven package manager for C++ libraries.
+- **Biicode**: A C++ dependency manager that integrates with CMake.
+
+### Build Systems
+
+Build systems in C++ are tools that automate the process of compiling, linking, and packaging software projects. They manage dependencies, build configurations, and target platforms to generate executable files from source code.
+
+- **CMake**: A cross-platform build system generator that simplifies the process of building C++ projects.
+- **Make**: A build automation tool that uses Makefiles to specify build rules.
+- **Ninja**: A fast and lightweight build tool that can be used with CMake.
+- **Bazel**: A build system from Google that supports large-scale projects and multiple languages.
+
+
+
+### Working with Libraries
+
+Libraries in C++ are collections of precompiled functions, classes, and resources that can be used to extend the functionality of a program. They provide reusable code, encapsulation, and abstraction to simplify development and improve code quality.
+
+### Static Libraries
+
+Static libraries in C++ are collections of object files that are linked directly into an executable at compile time. They provide a way to package and distribute code as a single file that can be included in a project.
+
+- **File Extension**: `.a` (Unix), `.lib` (Windows)
+- **Compilation**: Compiled and linked at compile time.
+- **Usage**: Linked directly into the executable.
+- **Advantages**: Faster startup time, easier distribution.
+- **Disadvantages**: Larger executable size, slower build times.
+
+#### Creating a Static Library
+
+```bash
+# Create object files
+g++ -c library.cpp -o library.o
+
+# Create static library
+ar rcs liblibrary.a library.o
+```
+
+#### Using a Static Library
+
+```bash
+# Compile with static library
+g++ main.cpp -o main -L. -llibrary
+```
+
+### Dynamic Libraries
+
+Dynamic libraries in C++ are collections of object files that are linked at runtime when an executable is loaded. They provide a way to share code among multiple executables and reduce memory usage by loading libraries only when needed.
+
+- **File Extension**: `.so` (Unix), `.dll` (Windows)
+- **Compilation**: Compiled at compile time, linked at runtime.
+- **Usage**: Linked dynamically at runtime.
+
+#### Creating a Dynamic Library
+
+```bash
+# Create object files
+g++ -c -fPIC library.cpp -o library.o
+
+# Create dynamic library
+g++ -shared -o liblibrary.so library.o
+```
+
+#### Using a Dynamic Library
+
+```bash
+# Compile with dynamic library
+g++ main.cpp -o main -L. -llibrary
+```
+
+### Linking Libraries
+
+Linking libraries in C++ involves specifying the location of library files and including them in the build process. Libraries can be linked statically or dynamically, depending on the type of library and the desired behavior.
+
+- **Static Linking**: Linking library code directly into the executable.
+- **Dynamic Linking**: Linking library code at runtime when the executable is loaded.
+
+#### Linking Static Libraries
+
+```bash
+# Compile with static library
+g++ main.cpp -o main -L. -llibrary
+```
+
+#### Linking Dynamic Libraries
+
+```bash
+# Compile with dynamic library
+g++ main.cpp -o main -L. -llibrary
+```
+
+### Using Libraries
+
+Using libraries in C++ involves including header files, linking library files, and calling functions or classes defined in the library. Libraries provide a way to reuse code, encapsulate functionality, and extend the capabilities of a program.
+
+- **Include Header Files**: `#include <library.h>`
+- **Link Library Files**: `-L<path> -llibrary`
+- **Call Library Functions**: `library_function()`
+
+```cpp
+#include <iostream>
+#include "library.h"
+
+int main() {
+	library_function();
+	return 0;
+}
+```
+
+### Library Directories
+
+Library directories in C++ are locations where library files are stored. They can be system directories, user directories, or custom directories specified by the user. Library directories are used by the compiler and linker to locate library files during the build process.
+
+- **System Directories**: Standard locations where system libraries are stored.
+- **User Directories**: Custom locations where user libraries are stored.
+- **Include Directories**: Directories where header files are stored.
+- **Library Directories**: Directories where library files are stored.
+
+```bash
+# Include directory
+g++ -Iinclude main.cpp -o main
+
+# Library directory
+g++ -Llib main.cpp -o main -llibrary
+```
+
 
 ## Resources
 
@@ -3273,3 +4149,251 @@ int main() {
 - [cplusplus](http://www.cplusplus.com/)
 - [cpp-cheat-sheet](https://github.com/gibsjose/cpp-cheat-sheet)
 - [Modern-CPP-Programming](https://github.com/federico-busato/Modern-CPP-Programming)
+
+
+
+
+
+
+### Utility Components
+
+Utility components in C++ are header files that provide additional functionality for programming tasks. They include functions, classes, and templates that help in common programming tasks like pair creation, tuple manipulation, function objects, and memory management.
+
+#### Header `<utility>` Components
+
+The `<utility>` header in C++ provides utility functions that are commonly used in programming. These functions include `std::pair`, `std::make_pair`, `std::swap`, and `std::move`.
+
+- **Pair**: A pair is a simple data structure that holds two values together. It is commonly used to return multiple values from a function or store key-value pairs.
+- **Make Pair**: A utility function that creates a pair from two values.
+- **Swap**: A utility function that swaps the values of two variables.
+- **Move**: A utility function that converts an lvalue to an rvalue reference.
+
+```cpp
+#include <iostream>
+#include <utility> // For std::pair, std::make_pair, std::swap, std::move
+
+int main() {
+    // 1. Pair
+    std::pair<int, std::string> myPair = std::make_pair(42, "Hello");
+    std::cout << "Pair: (" << myPair.first << ", " << myPair.second << ")" << std::endl;
+
+    // 2. Swap
+    int a = 5, b = 10;
+    std::cout << "Before swapping: a = " << a << ", b = " << b << std::endl;
+    std::swap(a, b);
+    std::cout << "After swapping: a = " << a << ", b = " << b << std::endl;
+
+    // 3. Move
+    std::string str = "Hello, world!";
+    std::string str2 = std::move(str);
+    std::cout << "After move: str = \"" << str << "\", str2 = \"" << str2 << "\"" << std::endl;
+
+    return 0;
+}
+```
+
+#### Header `<tuple>` Components
+
+The `<tuple>` header in C++ provides a tuple data structure that can hold multiple values of different types. Tuples are similar to pairs but can store more than two values. They are commonly used to return multiple values from a function or store heterogeneous data.
+
+- **Tuple**: A tuple is a data structure that holds multiple values of different types.
+- **Make Tuple**: A utility function that creates a tuple from multiple values.
+- **Get**: A utility function that retrieves the value at a specific index in the tuple.
+
+```cpp
+#include <iostream>
+#include <tuple>
+
+int main() {
+    // 1. Creating a tuple
+    std::tuple<int, double, std::string> myTuple(42, 3.14, "Hello");
+
+    // 2. Accessing elements
+    std::cout << "First element of the tuple: " << std::get<0>(myTuple) << std::endl;
+    std::cout << "Second element of the tuple: " << std::get<1>(myTuple) << std::endl;
+    std::cout << "Third element of the tuple: " << std::get<2>(myTuple) << std::endl;
+
+    // 3. Modifying elements (Not directly possible as tuples are immutable)
+
+    // 4. Tuple tie
+    int a;
+    double b;
+    std::tie(a, b, std::ignore) = myTuple; // Use std::ignore to ignore a value
+    std::cout << "a: " << a << ", b: " << b << std::endl;
+
+    // 5. Tuple comparison
+    std::tuple<int, double> tuple1(1, 3.14);
+    std::tuple<int, double> tuple2(1, 3.14);
+    std::tuple<int, double> tuple3(2, 3.14);
+
+    if (tuple1 == tuple2) {
+        std::cout << "tuple1 is equal to tuple2" << std::endl;
+    } else {
+        std::cout << "tuple1 is not equal to tuple2" << std::endl;
+    }
+
+    if (tuple1 == tuple3) {
+        std::cout << "tuple1 is equal to tuple3" << std::endl;
+    } else {
+        std::cout << "tuple1 is not equal to tuple3" << std::endl;
+    }
+
+    return 0;
+}
+```
+
+#### Header `<functional>` Components
+
+The `<functional>` header in C++ provides function objects, function adaptors, and utility functions that are commonly used in programming. These components include function objects like `std::function`, `std::bind`, and `std::placeholders`.
+
+- **Function Objects**: Objects that behave like functions and can be called using the function call operator `()`.
+- **Function Adaptors**: Adaptors that modify the behavior of function objects.
+- **Utility Functions**: Functions that provide additional functionality for function objects.
+
+```cpp
+#include <iostream>
+#include <functional>
+
+int add(int a, int b) {
+	return a + b;
+}
+
+int main() {
+	// 1. Function Objects
+	std::function<int(int, int)> func = add;
+	std::cout << "Result of add(2, 3): " << func(2, 3) << std::endl;
+
+	// 2. Function Adaptors
+	auto add5 = std::bind(add, std::placeholders::_1, 5);
+	std::cout << "Result of add5(10): " << add5(10) << std::endl;
+
+	return 0;
+}
+```
+
+#### Header `<memory>` Components
+
+The `<memory>` header in C++ provides smart pointers, memory management utilities, and memory-related functions. These components include smart pointers like `std::unique_ptr`, `std::shared_ptr`, and `std::weak_ptr`, as well as memory management functions like `std::make_unique` and `std::make_shared`.
+
+- **Smart Pointers**: Pointers that manage memory automatically and provide better memory safety.
+- **Memory Management**: Functions that help allocate and deallocate memory safely.
+- **Memory Utilities**: Functions that provide additional memory-related functionality.
+
+```cpp
+#include <iostream>
+#include <memory> // For smart pointers and memory management utilities
+
+// Custom class for demonstration
+class MyClass {
+public:
+    MyClass(int value) : data(value) {}
+    void printData() const {
+        std::cout << "Data: " << data << std::endl;
+    }
+private:
+    int data;
+};
+
+int main() {
+    // 1. Unique pointer
+    std::unique_ptr<MyClass> uniquePtr(new MyClass(42));
+    uniquePtr->printData();
+
+    // 2. Shared pointer
+    std::shared_ptr<MyClass> sharedPtr1(new MyClass(100));
+    std::shared_ptr<MyClass> sharedPtr2 = sharedPtr1; // Shared ownership
+    sharedPtr1->printData();
+    sharedPtr2->printData();
+
+    // 3. Weak pointer
+    std::weak_ptr<MyClass> weakPtr = sharedPtr1;
+    if (auto sharedPtr3 = weakPtr.lock()) {
+        sharedPtr3->printData();
+    } else {
+        std::cout << "Weak pointer is expired" << std::endl;
+    }
+
+    // 4. Make unique
+    auto myObject = std::make_unique<MyClass>(200);
+    myObject->printData();
+
+    return 0;
+}
+```
+
+### Time and Date
+
+Time and date in C++ are managed using the `<chrono>` and `<ctime>` headers. The `<chrono>` header provides a high-precision clock and time duration, while the `<ctime>` header provides functions for working with time and date.
+
+- **Clocks**: Represent time points and durations.
+- **Time Points**: Specific points in time.
+- **Time Durations**: Differences between time points.
+- **Time Units**: Units of time, such as seconds, minutes, and hours.
+- **Time Zones**: Regions with the same standard time.
+
+```cpp
+#include <iostream>
+#include <chrono> // For time and date
+#include <ctime> // For C-style time functions
+
+int main() {
+	// 1. Clocks and time points
+	auto now = std::chrono::system_clock::now(); // Current time point
+	auto epoch = std::chrono::system_clock::time_point(); // Epoch time point
+
+	// 2. Time duration
+	auto duration = now - epoch; // Time duration between now and epoch
+	std::cout << "Duration since epoch: " << duration.count() << " ticks" << std::endl;
+
+	// 3. Time units
+	auto seconds = std::chrono::duration_cast<std::chrono::seconds>(duration);
+	std::cout << "Duration in seconds: " << seconds.count() << " seconds" << std::endl;
+
+	// 4. Time zones
+	std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
+	std::cout << "Current time: " << std::ctime(&currentTime);
+
+	return 0;
+}
+```
+
+### Random Number Generation
+
+Random number generation in C++ is used to generate random numbers for various applications, such as simulations, games, and statistical analysis. The `<random>` header in C++ provides classes and functions for generating random numbers using different distributions and engines.
+
+- **Random Number Engine**: A random number engine is a source of randomness that generates random numbers.
+- **Random Number Distribution**: A random number distribution is a function that maps random numbers from an engine to a specific range or distribution.
+- **Random Number Seed**: A seed is an initial value used to initialize the random number engine.
+- **Random Number Generation**: The process of generating random numbers using an engine and a distribution.
+
+```cpp
+#include <iostream>
+#include <random> // For random number generation
+
+int main() {
+	// 1. Random number engine
+	std::random_device rd; // Random device for seeding
+	std::mt19937 gen(rd()); // Mersenne Twister engine
+
+	// 2. Random number distribution
+	std::uniform_int_distribution<int> dist(1, 6); // Uniform distribution for dice roll
+
+	// 3. Generating random numbers
+	for (int i = 0; i < 5; ++i) {
+		int diceRoll = dist(gen); // Generate random number
+		std::cout << "Dice roll: " << diceRoll << std::endl;
+	}
+
+	return 0;
+}
+```
+
+
+## Regular Expressions
+
+Regular expressions (regex) in C++ provide a powerful way to search, match, and manipulate text using patterns. The `<regex>` header in C++ provides classes and functions for working with regular expressions.
+
+- **Regex Pattern**: A sequence of characters that defines a search pattern.
+- **Regex Match**: A successful match between a regex pattern and a text string.
+- **Regex Search**: Searching for a regex pattern in a text string.
+- **Regex Replace**: Replacing text based on a regex pattern.

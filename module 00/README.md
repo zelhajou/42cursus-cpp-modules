@@ -22,4 +22,58 @@ This exercise focuses on understanding how to handle command-line arguments in C
 
 This exercise is about creating a simple phone book application using classes. You'll learn about:
 
-- 
+- **Classes and objects**: Defining and using classes (`PhoneBook` and `Contact`).
+- **Member functions and variables**: Implementing functions to add and search contacts.
+- **Arrays**: Storing multiple contacts in an array.
+- **User input**: Getting input from the user to interact with the phone book.
+
+## Exercise 02: Account
+
+
+## Detailed Explanation of Each Topic:
+
+### Command-line arguments
+
+In C++, command-line arguments are handled using the parameters `argc` (argument count) and `argv` (argument vector) in the main function. `argc` indicates the number of arguments, and `argv` is an array of C-strings representing the arguments.
+
+For example:
+
+```cpp
+int main(int argc, char* argv[]) {
+	// Check the number of arguments
+	if (argc < 2) {
+		std::cout << "Usage: " << argv[0] << " <name1> <name2> ..." << std::endl;
+		return 1;
+	}
+
+	// Process the arguments
+	for (int i = 1; i < argc; ++i) {
+		std::cout << "Argument " << i << ": " << argv[i] << std::endl;
+	}
+
+	return 0;
+}
+```
+
+### String manipulation
+
+C++ provides functions for manipulating strings, such as `toupper` to convert characters to uppercase, which is available in the `<cctype>` library.
+
+For example:
+
+```cpp
+#include <iostream>
+#include <cctype>
+
+int main() {
+	std::string input = "hello, world!";
+	for (char& c : input) {
+		c = std::toupper(c);
+	}
+	std::cout << input << std::endl;
+	return 0;
+}
+```
+
+### Basic I/O
+

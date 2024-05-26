@@ -2,3 +2,4 @@ megaphone
 *.o
 .DS_Store
 .vscode/settings.json
+module 00/ex01/phonebook

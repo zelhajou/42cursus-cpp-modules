@@ -1,3 +1,4 @@
 megaphone
 *.o
 .DS_Store
+.vscode/settings.json

@@ -78,7 +78,7 @@ C++ is an extension of the C programming language and shares many features with 
         - [Access Modifiers](#access-modifiers)
         - [Member Functions](#member-functions)
         - [Constructors and Destructors](#constructors-and-destructors)
-        - [Copy Constructors](#copy-constructors)
+        - [Copy Constructors and Copy Assignment Operators](#copy-constructors-and-copy-assignment-operators)
   - [Rule of Zero, Three, and Five](#rule-of-zero-three-and-five)
   - [Encapsulation](#encapsulation)
     - [Access Modifiers](#access-modifiers)
@@ -1055,7 +1055,7 @@ Classes in C++ are used to create user-defined data types that encapsulate data 
 
 Object-oriented programming (OOP) is a programming paradigm that uses objects and classes to model real-world entities and concepts. It focuses on data abstraction, encapsulation, inheritance, and polymorphism to create modular and reusable code.
 
-### Basics Concepts
+### Basic Concepts
 
 - **Class**: A blueprint for creating objects.
 - **Object**: An instance of a class.
@@ -1221,7 +1221,7 @@ public:
 };
 ```
 
-#### Copy Constructor and Copy Assignment Operator
+#### Copy Constructors and Copy Assignment Operators
 
 - **Copy Constructor**: Constructor that initializes an object as a copy of another object.
 

@@ -32,6 +32,10 @@ This exercise is about creating a simple phone book application using classes. Y
 
 ## Detailed Explanation of Each Topic:
 
+- [Command-line arguments](#command-line-arguments)
+- [String manipulation](#string-manipulation)
+- [Basic I/O](#basic-io)
+
 ### Command-line arguments
 
 In C++, command-line arguments are handled using the parameters `argc` (argument count) and `argv` (argument vector) in the main function. `argc` indicates the number of arguments, and `argv` is an array of C-strings representing the arguments.
@@ -75,5 +79,31 @@ int main() {
 }
 ```
 
+- [string C++ examples](http://anaturb.net/C/string_exapm.htm)
+- [strings in C++](https://beginnersbook.com/2017/08/strings-in-c/)
+
 ### Basic I/O
+
+Input and output in C++ are handled using streams. std::cout is used for output, and `std::cin` for input. The `std::endl` manipulator is used to insert a newline character and flush the stream.
+
+For example:
+
+```cpp
+#include <iostream>
+
+int main() {
+	int number;
+	std::cout << "Enter a number: ";
+	std::cin >> number;
+	std::cout << "You entered: " << number << std::endl;
+	return 0;
+}
+```
+
+- [C++ I/O](https://www.geeksforgeeks.org/basic-input-output-c/)
+- [Stream IO and File IO](https://www3.ntu.edu.sg/home/ehchua/programming/cpp/cp10_IO.html)
+
+### Classes and objects
+
+A class is a blueprint for creating objects, encapsulating data, and functions that operate on that data. Objects are instances of classes.
 

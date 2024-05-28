@@ -6,12 +6,12 @@
 #    By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/26 17:06:14 by zelhajou          #+#    #+#              #
-#    Updated: 2024/05/26 17:17:45 by zelhajou         ###   ########.fr        #
+#    Updated: 2024/05/27 17:52:19 by zelhajou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
-SRCS = main.cpp
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

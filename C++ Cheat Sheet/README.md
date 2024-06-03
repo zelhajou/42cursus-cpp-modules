@@ -2,8 +2,6 @@
 
 C++ is a powerful and versatile programming language that is used to develop a wide range of software applications, from system software and device drivers to high-performance games and interactive websites. It combines the features of both procedural and object-oriented programming paradigms, making it a popular choice for software development.
 
-This cheat sheet provides an overview of the key concepts, syntax, and features of C++ programming. It covers topics such as data types, operators, control structures, functions, structures, classes, and object-oriented programming principles. Whether you are a beginner learning C++ for the first time or an experienced programmer looking for a quick reference, this cheat sheet will help you understand and use the essential elements of the C++ language.
-
 ## Introduction
 
 C++ is a general-purpose programming language that was developed by Bjarne Stroustrup in 1979 at Bell Labs. It is an extension of the C programming language and adds support for object-oriented programming, generic programming, and exception handling. C++ is widely used for developing system software, application software, device drivers, embedded software, and high-performance software applications.

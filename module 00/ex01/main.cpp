@@ -6,17 +6,26 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 17:13:33 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/05/27 17:57:31 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/03 12:19:16 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include "PhoneBook.hpp"
+#include "Contact.hpp"
+
+void welcome_message()
+{
+	std::cout << "***************************************" << std::endl;
+	std::cout << "*                                     *" << std::endl;
+	std::cout << "*    Welcome to the PhoneBook!        *" << std::endl;
+	std::cout << "*                                     *" << std::endl;
+	std::cout << "***************************************" << std::endl;
+}
 
 int main()
 {
-	PhoneBook phoneBook;
+	Contact c;
 	std::string command;
 
 	while (42)
@@ -27,9 +36,9 @@ int main()
 		if (command.empty())
 			break;
 		if (command == "ADD")
-		{
-			phoneBook.addContact();
-		}
+			c.fillContact();
+		else if (command == "DISPLAY")
+			c.displayContact();
 		else if (command == "SEARCH")
 			std::cout << "SEARCH command selected" << std::endl;
 		else if (command == "EXIT")

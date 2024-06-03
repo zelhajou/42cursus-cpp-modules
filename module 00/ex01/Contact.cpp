@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 16:03:59 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/05/28 16:11:43 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/03 12:18:00 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void Contact::fillContact()
 	std::cout << "Enter darkest secret: ";
 	std::getline(std::cin, darkestSecret);
 }
+
 
 void Contact::displayContact()
 {

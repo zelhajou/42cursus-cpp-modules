@@ -42,6 +42,12 @@ This exercise is about creating a simple phone book application using classes. Y
 - [`this` pointer](#this-pointer)
 - [Initialization list](#initialization-list)
 - [`const` member functions](#const-member-functions)
+- [Visibility modes](#visibility-modes)
+- [Class vs. Struct](#class-vs-struct)
+- [Accessors and Mutators](#accessors-and-mutators)
+- [Comparisons between objects](#comparisons-between-objects)
+- [Non-member attributes and Non-member functions](#non-member-attributes-and-non-member-functions)
+- [Pointers to members](#pointers-to-members)
 
 ### Namespaces
 

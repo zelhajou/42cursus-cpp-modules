@@ -6,45 +6,55 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 17:13:33 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/06/03 12:19:16 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/05 10:25:02 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
+#include <iomanip>
 
-void welcome_message()
+void phoneBookMenu()
 {
-	std::cout << "***************************************" << std::endl;
-	std::cout << "*                                     *" << std::endl;
-	std::cout << "*    Welcome to the PhoneBook!        *" << std::endl;
-	std::cout << "*                                     *" << std::endl;
-	std::cout << "***************************************" << std::endl;
+	std::cout << "**********************************************" << std::endl;
+	std::cout << "*                                            *" << std::endl;
+	std::cout << "*\033[1m\033[38;5;46m    Welcome to the PhoneBook Application    \033[0m*" << std::endl;
+	std::cout << "*                                            *" << std::endl;
+	std::cout << "**********************************************" << std::endl;
+	std::cout << "Menu:" << std::endl;
+	std::cout << "> \033[38;5;226mADD\033[0m    : Add a new contact" << std::endl;
+	std::cout << "> \033[38;5;226mSEARCH\033[0m : Search for a contact" << std::endl;
+	std::cout << "> \033[38;5;226mEXIT\033[0m   : Exit the PhoneBook" << std::endl;
+	std::cout << "**********************************************" << std::endl;
 }
 
 int main()
 {
-	Contact c;
-	std::string command;
+	std::string	command;
+	PhoneBook	phoneBook;
 
-	while (42)
+	phoneBookMenu();
+	while (true)
 	{
-		std::cout << "Enter a command: (ADD, SEARCH, EXIT)" << std::endl;
+		std::cout << "Please enter a command (ADD, SEARCH, EXIT): " << std::endl;
 		std::getline(std::cin, command);
 
-		if (command.empty())
+		if (std::cin.eof())
 			break;
 		if (command == "ADD")
-			c.fillContact();
-		else if (command == "DISPLAY")
-			c.displayContact();
+			phoneBook.addContact();
 		else if (command == "SEARCH")
-			std::cout << "SEARCH command selected" << std::endl;
+			phoneBook.searchContact();
 		else if (command == "EXIT")
 			break;
+		else if (command.empty())
+			continue;
 		else
 			std::cout << "Invalid command" << std::endl;
+		if (std::cin.eof())
+			break;
 	}
 	return (0);
 }

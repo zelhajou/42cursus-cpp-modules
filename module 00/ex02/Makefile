@@ -5,29 +5,25 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/26 17:06:14 by zelhajou          #+#    #+#              #
-#    Updated: 2024/06/04 10:53:24 by zelhajou         ###   ########.fr        #
+#    Created: 2024/06/05 10:34:45 by zelhajou          #+#    #+#              #
+#    Updated: 2024/06/05 10:59:00 by zelhajou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
-SRCS = main.cpp Contact.cpp PhoneBook.cpp
-OBJS = obj/main.o obj/Contact.o obj/PhoneBook.o
-CXX = c++
+NAME = bank
+SRCS = tests.cpp Account.cpp
+OBJS = $(SRCS:.cpp=.o)
+
+CXX = g++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
-
-obj/%.o: %.cpp
-	@mkdir -p obj
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)
-	rm -rf obj
 
 fclean: clean
 	rm -f $(NAME)

@@ -140,4 +140,6 @@ std::cout << "Value of pointer: " << *stringPTR << std::endl;
 std::cout << "Value of reference: " << stringREF << std::endl;
 ```
 
+### File I/O
 
+File I/O in C++ involves reading from and writing to files using file streams. The `<fstream>` header provides classes like `std::ifstream` and `std::ofstream` for reading and writing files, respectively.

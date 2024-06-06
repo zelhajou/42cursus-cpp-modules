@@ -2,6 +2,26 @@
 
 This module introduces the basics of C++ programming. You'll learn about the syntax, data types, and control structures in C++. You'll also get familiar with the standard library and how to use it in your programs.
 
+## Summary of Concepts
+
+- **Namespaces**: Organizing code into logical groups to prevent naming conflicts.
+- **Command-line arguments**: Handling input given when the program is executed.
+- **Basic I/O**: Using streams for input and output operations.
+- **String manipulation**: Modifying strings using functions like `toupper`.
+- **File Structure**: Organizing code into header and source files.
+- **Classes and objects**: Defining classes to encapsulate data and functions.
+- **Constructors and destructors**: Special functions for initializing and cleaning up objects.
+- **Member functions and variables**: Functions and variables inside a class.
+- **`this` pointer**: Special pointer that points to the object itself.
+- **Initialization list**: Efficient way to initialize member variables in constructors.
+- **`const` member functions**: Functions that do not modify the object's state.
+- **Visibility modes**: Control access levels of class members.
+- **Class vs. Struct**: Differences between classes and structs in C++.
+- **Accessors and Mutators**: Getters and setters for private member variables.
+- **Comparisons between objects**: Comparing objects using operators.
+- **Non-member attributes and functions**: Variables and functions not part of a class.
+- **Pointers to members**: Storing the address of a member variable or function.
+
 ## Exercise 00: Megaphone
 
 **Topic**: Command-line arguments, basic input/output, string manipulation
@@ -28,6 +48,8 @@ This exercise is about creating a simple phone book application using classes. Y
 - **User input**: Getting input from the user to interact with the phone book.
 
 ## Exercise 02: Account
+
+**Topic**: Constructors, destructors, member functions, visibility modes
 
 ## Detailed Explanation of Each Topic
 

@@ -1,4 +1,5 @@
 *.o
+*.out
 .DS_Store
 .vscode/settings.json
 module 00/ex00/megaphone
@@ -7,3 +8,5 @@ module 00/ex02/bank
 module 01/ex00/zombie
 module 01/ex01/hordZombies
 module 01/ex02/brain
+module 01/ex03/attackOnZombie
+

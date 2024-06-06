@@ -33,11 +33,191 @@ You are creating a simple game where two humans, HumanA and HumanB, can attack e
 
 3. HumanB Class:
 	- Contains a `Weapon` object and a string `name` to store the human's name.
-	- Implement the following functions:
-		- `HumanB(const std::string& name, Weapon* weapon)`: Constructor that initializes the human's name and weapon using a pointer.
-		- `void setWeapon(Weapon* weapon)`: Sets the weapon of the human to the given weapon using a pointer.
-		- `void attack() const`: Prints an attack message using the human's name and weapon type.
+	- Can be assigned a weapon after being created.
+	- Implements an `attack()` method that uses the weapon to print an attack message, if the weapon is set.
 
+
+## Detailed Explanation
+
+**Weapon.hpp**:
+
+```cpp
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
+
+#include <string>
+
+class Weapon {
+private:
+	std::string type;
+
+public:
+	Weapon(const std::string &type);
+	const std::string &getType() const;
+	void setType(const std::string &type);
+};
+
+#endif
+```
+
+- `Constructor`: Initializes the weapon with a type.
+- `getType()`: Returns the current type of the weapon.
+- `setType()`: Sets the type of the weapon.
+
+**Weapon.cpp**:
+
+```cpp
+#include "Weapon.hpp"
+
+Weapon::Weapon(const std::string &type) : type(type) {}
+
+const std::string &Weapon::getType() const {
+	return type;
+}
+
+void Weapon::setType(const std::string &type) {
+	this->type = type;
+}
+```
+
+**HumanA.hpp**:
+
+```cpp
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
+
+#include "Weapon.hpp"
+#include <string>
+#include <iostream>
+
+class HumanA {
+private:
+	std::string name;
+	const Weapon &weapon;
+
+public:
+	HumanA(const std::string &name, Weapon &weapon);
+	void attack() const;
+};
+
+#endif
+```
+
+- `Constructor`: Takes a name and a reference to a weapon. The reference ensures that HumanA always has a weapon.
+- `attack()`: Prints an attack message using the weapon.
+
+**HumanA.cpp**:
+
+```cpp
+#include "HumanA.hpp"
+
+HumanA::HumanA(const std::string &name, Weapon &weapon) : name(name), weapon(weapon) {}
+
+void HumanA::attack() const {
+	std::cout << name << " attacks with a " << weapon.getType() << "!" << std::endl;
+}
+```
+
+**HumanB.hpp**:
+
+```cpp
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
+
+#include "Weapon.hpp"
+#include <string>
+#include <iostream>
+
+class HumanB {
+private:
+	std::string name;
+	Weapon *weapon;
+
+public:
+	HumanB(const std::string &name);
+	void setWeapon(Weapon *weapon);
+	void attack() const;
+};
+
+#endif
+```
+
+- **Constructor**: Takes a name and initializes the weapon pointer to `nullptr`, indicating that `HumanB` initially has no weapon.
+- **setWeapon()**: Allows assigning a weapon to `HumanB` after creation.
+- **attack()**: Prints an attack message using the weapon, if the weapon is set.
+
+**HumanB.cpp**:
+
+```cpp
+#include "HumanB.hpp"
+
+HumanB::HumanB(const std::string &name) : name(name), weapon(nullptr) {}
+
+void HumanB::setWeapon(Weapon *weapon) {
+	this->weapon = weapon;
+}
+
+void HumanB::attack() const {
+	if (weapon != nullptr) {
+		std::cout << name << " attacks with a " << weapon->getType() << "!" << std::endl;
+	} else {
+		std::cout << name << " attacks with bare hands!" << std::endl;
+	}
+}
+```
+
+**main.cpp**:
+
+```cpp
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+
+int main() {
+    Weapon club("crude spiked club");
+
+    HumanA bob("Bob", club);
+    bob.attack();
+    club.setType("some other type of club");
+    bob.attack();
+
+    HumanB jim("Jim");
+    jim.attack();
+    jim.setWeapon(club);
+    jim.attack();
+    club.setType("another type of club");
+    jim.attack();
+
+    return 0;
+}
+```
+
+**What Happens**:
+
+1. **Weapon Creation**:
+    - A `Weapon` object named `club` is created with the type "crude spiked club".
+
+2. **HumanA (Bob)**:
+    - `HumanA` object `bob` is created with the name "Bob" and the club weapon.
+    - Bob attacks with the club weapon.
+    - The weapon type is changed to "some other type of club".
+    - Bob attacks again, demonstrating that the weapon reference reflects the updated type.
+
+3. **HumanB (Jim)**:
+    - `HumanB` object `jim` is created with the name "Jim" and no initial weapon.
+    - Jim attempts to attack but has no weapon.
+    - Jim is assigned the `club` weapon and attacks with the updated weapon type.
+    - The weapon type is changed again to "another type of club".
+    - Jim attacks again, demonstrating that the weapon pointer reflects the updated type.
+
+**Key Points**:
+
+- **Class Composition**: `HumanA` and `HumanB` classes use the `Weapon` class to perform actions, showing how objects can be composed of other objects.
+
+- **References vs Pointers**:
+     - `HumanA` uses a reference to ensure that it always has a weapon.
+    - `HumanB` uses a pointer to allow dynamic assignment of a weapon.
+
+- **Dynamic Behavior**: Changing the weapon type affects both `HumanA` and `HumanB` because they reference the same `Weapon` object, demonstrating shared state.
 
 ## Questions to Ponder
 
@@ -90,41 +270,3 @@ int main() {
 ```
 
 In this example, two humans, `player1` and `player2`, are created with different weapons. The `attack()` function is called for each human, displaying the attack message with their name and weapon type. The weapon of `player2` is then changed to a sword, and the attack message is updated accordingly.
-
-## Detailed Breakdown with Code:
-
-### Weapon Class
-
-```cpp
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
-
-#include <string>
-
-class Weapon {
-public:
-	Weapon(const std::string &type); // Constructor takes a const reference to avoid copying the string
-	const std::string &getType() const; // Returns a const reference to the type string
-	void setType(const std::string &type); // Sets the type using a const reference
-
-private:
-	std::string type; // The actual type string is stored here
-};
-
-#endif
-```
-
-**Explanation**:
-
-- **Constructor**: `Weapon(const std::string &type)` uses a reference to the string to avoid the cost of copying a potentially large string object.
-- **Getter**: `const std::string &getType() const` returns a reference to the string, again avoiding a copy.
-- **Setter**: `void setType(const std::string &type)`  takes a reference to avoid copying the argument.
-
-
-
-2. **HumanA Class**:
-	```cpp
-	class HumanA {
-	private:
-		std::string name;
-		Weapon& weapon;

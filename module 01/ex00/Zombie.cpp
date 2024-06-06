@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 10:03:56 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/06/06 11:35:13 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/06 11:52:27 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ Zombie::~Zombie() {
 }
 
 void Zombie::announce() const {
-	std::cout << name << " BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 

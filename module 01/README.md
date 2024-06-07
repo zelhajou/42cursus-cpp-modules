@@ -7,6 +7,9 @@ This module covers various aspects of C++ including memory allocation, pointers 
 1. [Exercise 00: BraiiiiiiinnnzzzZ](#exercise-00-braiiiiiiinnnzzzz)
 2. [Exercise 01: Moar brainz!](#exercise-01-moar-brainz)
 3. [Exercise 02: HI THIS IS BRAIN](#exercise-02-hi-this-is-brain)
+4. [Exercise 03: Unnecessary violence](#exercise-03-unnecessary-violence)
+5. [Exercise 04: Sed is for losers](#exercise-04-sed-is-for-losers)
+6. [Exercise 05: Harl 2.0](#exercise-05-harl-20)
 
 
 ## Summary of Concepts

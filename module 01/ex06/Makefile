@@ -6,11 +6,11 @@
 #    By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 14:49:21 by zelhajou          #+#    #+#              #
-#    Updated: 2024/06/07 15:46:52 by zelhajou         ###   ########.fr        #
+#    Updated: 2024/06/07 20:46:44 by zelhajou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = harl
+NAME = harlFilter
 SRCS = main.cpp Harl.cpp
 OBJS = obj/main.o obj/Harl.o
 CXX = c++

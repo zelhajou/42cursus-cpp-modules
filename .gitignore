@@ -9,4 +9,7 @@ module 01/ex00/zombie
 module 01/ex01/hordZombies
 module 01/ex02/brain
 module 01/ex03/attackOnZombie
-
+module 01/ex04/Makefile.replace
+module 01/ex04/sed_is_for_loosers
+module 01/ex04/hello.replace
+module 01/ex04/hello

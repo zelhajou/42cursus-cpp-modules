@@ -142,4 +142,21 @@ std::cout << "Value of reference: " << stringREF << std::endl;
 
 ### File I/O
 
-File I/O in C++ involves reading from and writing to files using file streams. The `<fstream>` header provides classes like `std::ifstream` and `std::ofstream` for reading and writing files, respectively.
+File I/O in C++ involves reading from and writing to files using file streams. The `ifstream` class is used for reading from files, and the `ofstream` class is used for writing to files.
+
+In the `Sed is for losers` example, a program reads from a file, replaces occurrences of a string `s1` with `s2`, and writes the result to a new file.
+
+
+```cpp
+#include <fstream> 
+#include <iostream> 
+#include <string> 
+
+std::ifstream input("input.txt");
+std::ofstream output("output.txt");
+
+std::string line;
+while (std::getline(input, line)) {
+	output << line << std::endl;
+}
+```

@@ -163,3 +163,42 @@ while (std::getline(input, line)) {
 	output << line << std::endl;
 }
 ```
+
+### String Manipulation
+
+String manipulation involves modifying strings using various operations such as concatenation, substring extraction, and search and replace. C++ provides a rich set of string functions to perform these operations.
+
+In the `Sed is for losers` example, the `replace_string()` function replaces occurrences of a substring `s1` with another substring `s2` in a given string.
+
+```cpp
+void replace_string(std::string &str, const std::string &s1, const std::string &s2) {
+	size_t start_pos = 0;
+	while ((start_pos = str.find(s1, start_pos)) != std::string::npos) {
+		str.erase(start_pos, s1.length());
+		str.insert(start_pos, s2);
+		start_pos += s2.length();
+	}
+}
+```
+
+### Switch Statement
+
+The switch statement in C++ is used for multi-way branching based on the value of an expression. It provides an alternative to using multiple if-else statements for handling different cases.
+
+In the `Harl filter` example, a switch statement is used to filter Harl’s complaints based on a given level, displaying messages from the specified level and higher.
+
+```cpp
+std::string level = "INFO";
+switch (level) {
+	case "DEBUG":
+		std::cout << "DEBUG: This is a debug message." << std::endl;
+	case "INFO":
+		std::cout << "INFO: This is an info message." << std::endl;
+	case "WARNING":
+		std::cout << "WARNING: This is a warning message." << std::endl;
+	case "ERROR":
+		std::cout << "ERROR: This is an error message." << std::endl;
+	default:
+		std::cout << "Invalid level." << std::endl;
+}
+```

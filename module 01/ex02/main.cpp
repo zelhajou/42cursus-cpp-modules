@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 15:22:12 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/06/06 15:43:54 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/08 10:59:22 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 
 	std::string* stringPTR = &brain;
 	std::string &stringREF = brain;
-
+	
 	std::cout << "Address of brain: " << &brain << std::endl;
 	std::cout << "Address held by stringPTR: " << stringPTR << std::endl;
 	std::cout << "Address held by stringREF: " << &stringREF << std::endl;

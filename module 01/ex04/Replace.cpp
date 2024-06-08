@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 12:22:20 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/06/07 13:19:06 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/08 14:08:33 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,41 @@ Replace::Replace(const std::string &filename, const std::string &s1, const std::
 bool Replace::process()
 {
 	if (s1.empty())
-		return false;
+	{
+		return (false);
+	}
 	
 	std::ifstream	ifs(filename);
 	if (!ifs.is_open())
 	{
-		std::cerr << "Error creating file: " << filename << std::endl;
-		return false;
+		std::cerr << "Error opening file: " << filename << std::endl;
+		return (false);
 	}
-
+	
 	std::string		outputFilename = filename + ".replace";
 	std::ofstream	ofs(outputFilename);
 	if (!ofs.is_open())
 	{
 		std::cerr << "Error creating file: " << outputFilename << std::endl;
 		ifs.close();
-		return false;
+		return (false);
 	}
 
+	std::string		content;
 	std::string		line;
 	while (std::getline(ifs, line))
 	{
-		replace_string(line, s1, s2);
-		ofs << line << std::endl;
+        content += line + "\n";
 	}
 
 	ifs.close();
+
+	replace_string(content, s1, s2);
+
+	ofs << content;
 	ofs.close();
-	return true;
+	
+	return (true);
 }
 
 void Replace::replace_string(std::string &str, const std::string &s1, const std::string &s2)

@@ -1,6 +1,6 @@
 # Module 01
 
-This module covers various aspects of C++ including memory allocation, pointers to members, references, and the switch statement. Here’s a detailed explanation of each exercise:
+This module covers various aspects of C++ including memory allocation, pointers to members, references, and the switch statement.
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@ This module covers various aspects of C++ including memory allocation, pointers 
 4. [Exercise 03: Unnecessary violence](#exercise-03-unnecessary-violence)
 5. [Exercise 04: Sed is for losers](#exercise-04-sed-is-for-losers)
 6. [Exercise 05: Harl 2.0](#exercise-05-harl-20)
-
+7. [Exercise 06: Harl filter](#exercise-06-harl-filter)
 
 ## Summary of Concepts
 
@@ -88,6 +88,7 @@ Output: Print the memory addresses and values of the string variable, pointer, a
 
 - Switch Statement: Implement a program that filters Harl’s complaints based on a given level, displaying messages from the specified level and higher.
 - Log Levels: Use a switch statement to handle different levels and ensure the program responds appropriately to each.
+
 
 ## Detailed Explanation of Each Topic
 

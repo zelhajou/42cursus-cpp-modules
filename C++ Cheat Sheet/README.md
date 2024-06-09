@@ -93,6 +93,7 @@ C++ is an extension of the C programming language and shares many features with 
     - [Function Overloading](#function-overloading)
     - [Function Overriding](#function-overriding)
     - [Virtual Functions](#virtual-functions)
+	- [Operator Overloading](#operator-overloading)
   - [Abstraction](#abstraction)
 - [Pointers and Reference](#pointers-and-reference)
 - [Memory Model](#memory-model)
@@ -1835,6 +1836,141 @@ output:
 Dog barks...
 Cat meows...
 ```
+
+#### Operator Overloading
+
+Operator overloading in C++ allows you to define custom behavior for operators when they are used with user-defined types. It enables you to use operators such as `+`, `-`, `*`, `/`, `==`, `!=`, `<<`, `>>`, etc., with objects of your classes.
+
+##### Overloading Binary Operators
+
+Binary operators are operators that require two operands. You can overload binary operators by defining a member function or a global function that takes two arguments.
+
+```cpp
+class Complex {
+public:
+	double real;
+	double imag;
+
+	Complex operator+(const Complex& other) {
+		Complex result;
+		result.real = real + other.real;
+		result.imag = imag + other.imag;
+		return result;
+	}
+};
+
+Complex a = {1.0, 2.0};
+Complex b = {3.0, 4.0};
+Complex c = a + b;
+```
+
+##### Overloading Unary Operators
+
+Unary operators are operators that require only one operand. You can overload unary operators by defining a member function or a global function that takes one argument.
+
+```cpp
+class Complex {
+public:
+	double real;
+	double imag;
+
+	Complex operator-() {
+		Complex result;
+		result.real = -real;
+		result.imag = -imag;
+		return result;
+	}
+};
+
+Complex a = {1.0, 2.0};
+Complex b = -a;
+```
+
+##### Overloading Comparison Operators
+
+Comparison operators are operators that compare two values. You can overload comparison operators by defining a member function or a global function that takes two arguments.
+
+```cpp
+class Complex {
+public:
+	double real;
+	double imag;
+
+	bool operator==(const Complex& other) {
+		return real == other.real && imag == other.imag;
+	}
+};
+
+Complex a = {1.0, 2.0};
+Complex b = {1.0, 2.0};
+
+if (a == b) {
+	std::cout << "Equal" << std::endl;
+}
+```
+
+##### Overloading Stream Operators
+
+Stream operators are operators used for input and output operations. You can overload stream operators by defining a member function or a global function that takes a stream object as an argument.
+
+```cpp
+class Complex {
+public:
+	double real;
+	double imag;
+
+	friend std::ostream& operator<<(std::ostream& os, const Complex& c) {
+		os << c.real << " + " << c.imag << "i";
+		return os;
+	}
+};
+
+Complex c = {1.0, 2.0};
+std::cout << c << std::endl;
+```
+
+### Polymorphism with Pointers and References
+
+Polymorphism in C++ can be achieved using pointers and references to base class objects. This allows you to call virtual functions on objects of derived classes through pointers or references to the base class.
+
+```cpp
+class Animal {
+public:
+	virtual void speak() {
+		std::cout << "Animal speaks..." << std::endl;
+	}
+};
+
+class Dog : public Animal {
+public:
+	void speak() override {
+		std::cout << "Dog barks..." << std::endl;
+	}
+};
+
+class Cat : public Animal {
+
+public:
+	void speak() override {
+		std::cout << "Cat meows..." << std::endl;
+	}
+};
+
+Animal* animal = new Dog();
+animal->speak();
+
+animal = new Cat();
+animal->speak();
+```
+
+output:
+
+```bash
+Dog barks...
+Cat meows...
+```
+
+
 
 ### Abstraction
 

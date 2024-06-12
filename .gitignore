@@ -13,3 +13,5 @@ module 01/ex04/Makefile.replace
 module 01/ex04/sed_is_for_loosers
 module 01/ex04/hello.replace
 module 01/ex04/hello
+module 02/ex00/fixed_point
+module 02/ex01/fixed_point

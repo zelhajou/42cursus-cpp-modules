@@ -4,21 +4,6 @@
 
 The objective of this exercise is to create a class in the Orthodox Canonical Form that represents a fixed-point number. You will implement a class with specific private and public members, including constructors, a destructor, and member functions, following the orthodox canonical form.
 
-## Turn-in Directory
-
-```
-ex00/
-```
-
-## Files to turn in
-
-```bash
-Makefile
-main.cpp
-Fixed.hpp
-Fixed.cpp
-```
-
 ## Description
 
 In this exercise, you will create a `Fixed` class with the following specifications:

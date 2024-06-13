@@ -17,18 +17,6 @@ C++ Module 02 is designed to introduce and deepen your understanding of some of 
         - **Copy Assignment Operator**: Assigns the state of one object to another existing object.
         - **Destructor**: Cleans up resources when an object is destroyed.
 
-## Exercise 00: My First Class in Orthodox Canonical Form
-
-The objective of this exercise is to create a class in the Orthodox Canonical Form that represents a fixed-point number. You will implement a class with specific private and public members, including constructors, a destructor, and member functions, following the orthodox canonical form.
-
-## Exercise 01: Ad-hoc Polymorphism
-
-The objective of this exercise is to implement a templated function that returns the minimum value between two arguments. You will create a function that works with different data types and demonstrates ad-hoc polymorphism in C++.
-
-## Exercise 02: Operator Overloading
-
-The objective of this exercise is to implement a class that represents a fixed-point number and overloads the `+`, `-`, `*`, `/`, and `<<` operators. You will define the behavior of these operators for your custom class, allowing you to perform arithmetic operations and output the fixed-point number using the stream insertion operator.
-
 ## Understanding Fixed-Point Numbers
 
 In this module, you will work with fixed-point numbers, A fixed-point number is a way of representing fractional numbers (numbers with decimal points) using integers. It is particularly useful in environments where floating-point arithmetic is either too slow or unavailable, such as in embedded systems, digital signal processing, and certain types of financial calculations. Fixed-point numbers are often used to represent currency values, percentages, and other quantities that require precise decimal precision.
@@ -62,7 +50,9 @@ Here's how you can represent `0.25` in binary:
 5. Continue the process until you reach the desired precision:
    - `0.25` in binary: `0.01`
 
-or
+Therefore, `0.25` in binary is `0.01`. This binary value is stored in the fractional part of the fixed-point number.
+
+another way to convert `0.25` to binary is to convert the decimal value to a fraction and then convert the fraction to binary. Here's how you can do it:
 
 1. Write the decimal value as a fraction:
    - `0.25 = 1/4`
@@ -73,9 +63,19 @@ Therefore, `0.25` in binary is `0.01`. In the fixed-point representation, this b
 
 In an 8-bit fixed-point number with 4 fractional bits, `0.25` would be represented as `0.0100`. for the fractional part, where each bit represents 1/2, 1/4, 1/8, 1/16 represents. Therefore, in the 4-bit fractional part `0100`:
 
-- The first bit (0) represents 1/2 (0.5)
-- The second bit (1) represents 1/4 (0.25)
-- The third bit (0) represents 1/8 (0.125)
-- The fourth bit (0) represents 1/16 (0.0625)
+- The first bit (0) represents 1/2 (0.5) or 2^-1
+- The second bit (1) represents 1/4 (0.25) or 2^-2
+- The third bit (0) represents 1/8 (0.125) or 2^-3
+- The fourth bit (0) represents 1/16 (0.0625) or 2^-4
 
 When combined with the integer part `0101` (5), the fixed-point number `5.25` is represented as `0101.0100`.
+
+## Exercises
+
+This module includes the following exercises to help you practice and apply the concepts covered:
+
+1. **Exercise 01: Towards a more useful fixed-point number class**
+   - In this exercise, you will extend the `Fixed` class from Exercise 00 to make it more functional. You will add constructors for integer and floating-point inputs, and methods to convert the fixed-point value back to these types. Additionally, you will overload the insertion (`<<`) operator to allow for easy printing of the fixed-point values.
+
+2. **Exercise 02: Implementing a fixed-point number class with arithmetic operations**
+   - In this exercise, you will implement arithmetic operations for the `Fixed` class, including addition, subtraction, multiplication, and division. You will also add comparison operators to compare fixed-point numbers and test the arithmetic operations with various inputs.

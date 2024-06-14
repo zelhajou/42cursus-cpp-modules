@@ -79,3 +79,6 @@ This module includes the following exercises to help you practice and apply the 
 
 2. **Exercise 02: Implementing a fixed-point number class with arithmetic operations**
    - In this exercise, you will implement arithmetic operations for the `Fixed` class, including addition, subtraction, multiplication, and division. You will also add comparison operators to compare fixed-point numbers and test the arithmetic operations with various inputs.
+
+3. **Exercise 03: BSP**
+   - In this exercise, you will implement Binary Space Partitioning (BSP) to create a simple 2D game engine. You will create a BSP tree to partition a 2D space and implement functions to insert and query objects in the space. This exercise will test your understanding of tree data structures and spatial partitioning algorithms.

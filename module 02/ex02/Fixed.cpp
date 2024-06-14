@@ -6,39 +6,32 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 17:24:54 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/06/13 18:33:58 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/14 14:07:37 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <cmath>
 
-Fixed::Fixed() : _fixedPointValue(0)
-{
-	std::cout << "Default constructor called" << std::endl;
-}
+Fixed::Fixed() : _fixedPointValue(0) { }
 
 Fixed::Fixed(const int intVal)
 {
-	std::cout << "Int constructor called" << std::endl;
 	_fixedPointValue = intVal << _fractionalBits;
 }
 
 Fixed::Fixed(const float floatVal)
 {
-	std::cout << "Float constructor called" << std::endl;
 	_fixedPointValue = roundf(floatVal * (1 << _fractionalBits));
 }
 
 Fixed::Fixed(const Fixed &other)
 {
-	std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		this->_fixedPointValue = other.getRawBits();
@@ -46,10 +39,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 	return *this;
 }
 
-Fixed::~Fixed()
-{
-	std::cout << "Destructor called" << std::endl;
-}
+Fixed::~Fixed() {}
 
 int		Fixed::getRawBits(void) const
 {
@@ -119,26 +109,42 @@ Fixed Fixed::operator/(const Fixed& other) const {
     return result;
 }
 
-Fixed& Fixed::operator++() { // Prefix increment
+Fixed& Fixed::operator++() {
     ++_fixedPointValue;
     return *this;
 }
 
-Fixed Fixed::operator++(int) { // Postfix increment
+Fixed Fixed::operator++(int) {
 	Fixed tmp(*this);
 	++_fixedPointValue;
 	return tmp;
 }
 
-Fixed& Fixed::operator--() { // Prefix decrement
+Fixed& Fixed::operator--() {
 	--_fixedPointValue;
 	return *this;
 }
 
-Fixed Fixed::operator--(int) { // Postfix decrement
+Fixed Fixed::operator--(int) {
 	Fixed tmp(*this);
 	--_fixedPointValue;
 	return tmp;
+}
+
+Fixed& Fixed::min(Fixed& a, Fixed& b) {
+	return (a < b) ? a : b;
+}
+
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b) {
+	return (a < b) ? a : b;
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b) {
+	return (a > b) ? a : b;
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b) {
+	return (a > b) ? a : b;
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed)

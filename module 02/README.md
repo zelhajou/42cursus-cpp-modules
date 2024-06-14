@@ -52,7 +52,7 @@ Here's how you can represent `0.25` in binary:
 
 Therefore, `0.25` in binary is `0.01`. This binary value is stored in the fractional part of the fixed-point number.
 
-another way to convert `0.25` to binary is to convert the decimal value to a fraction and then convert the fraction to binary. Here's how you can do it:
+Another way to convert `0.25` to binary is to convert the decimal value to a fraction and then convert the fraction to binary. Here's how you can do it:
 
 1. Write the decimal value as a fraction:
    - `0.25 = 1/4`

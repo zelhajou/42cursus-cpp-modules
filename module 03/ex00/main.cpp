@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 20:31:21 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/06/15 10:33:54 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/15 15:08:04 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 int main() {
     ClapTrap claptrap("CL4P-TP");
 
-    claptrap.attack("Buzz");
+    claptrap.attack("Moulinex");
     claptrap.takeDamage(3);
     claptrap.beRepaired(5);
-    claptrap.attack("Dynamo");
+    claptrap.attack("Moulinex Beta");
     claptrap.takeDamage(12);
-    claptrap.attack("Butter0001");
-
+    claptrap.attack("Moulinex 2.0");
     return 0;
 }

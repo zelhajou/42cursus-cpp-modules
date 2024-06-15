@@ -1797,6 +1797,13 @@ animal = new Cat();
 animal->speak();
 ```
 
+output:
+
+```bash
+Dog barks...
+Cat meows...
+```
+
 #### Virtual Functions
 
 Virtual functions in C++ are functions that are declared in a base class and can be overridden in derived classes. They allow you to achieve runtime polymorphism by calling the appropriate function based on the object's actual type.

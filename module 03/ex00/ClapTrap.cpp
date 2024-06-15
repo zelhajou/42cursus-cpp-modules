@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 19:37:39 by zelhajou          #+#    #+#             */
-/*   Updated: 2024/06/14 20:40:00 by zelhajou         ###   ########.fr       */
+/*   Updated: 2024/06/15 10:30:34 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ ClapTrap::~ClapTrap()
 ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 {
 	std::cout << "ClapTrap Assignation operator called" << std::endl;
+	if (this == &src)
+		return *this;
 	this->_name = src._name;
 	this->_hitPoints = src._hitPoints;
 	this->_energyPoints = src._energyPoints;

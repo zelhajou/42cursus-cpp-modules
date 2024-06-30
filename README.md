@@ -42,7 +42,7 @@ This repository contains the source code for the 42 Cpp modules. Each module is 
 | 04 | [Exercise 00](./module%2004/ex00/): Polymorphism               | Implementing polymorphism in classes | ✅ Done |
 | 04 | [Exercise 01](./module%2004/ex01/):  I don’t want to set the world on fire               | Implementing deep copies and managing dynamic memory | ✅ Done |
 | 04 | [Exercise 02](./module%2004/ex02/):  Abstract class               | Implementing abstract classes to prevent instantiation of base classes | ✅ Done |
-| 04 | [Exercise 03](./module%2004/ex03/):  Interface & recap           | Implementing interfaces and ensuring understanding of module concepts | ❌ Not Started |
+| 04 | [Exercise 03]():  Interface & recap           | Implementing interfaces and ensuring understanding of module concepts | ❌ Not Started |
 
 
 ## Rules

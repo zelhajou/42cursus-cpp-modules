@@ -2,42 +2,6 @@
 
 C++ is a powerful and versatile programming language that is used to develop a wide range of software applications, from system software and device drivers to high-performance games and interactive websites. It combines the features of both procedural and object-oriented programming paradigms, making it a popular choice for software development.
 
-## Introduction
-
-C++ is a general-purpose programming language that was developed by Bjarne Stroustrup in 1979 at Bell Labs. It is an extension of the C programming language and adds support for object-oriented programming, generic programming, and exception handling. C++ is widely used for developing system software, application software, device drivers, embedded software, and high-performance software applications.
-
-### Key Features of C++
-
-- **Object-Oriented Programming**: C++ supports object-oriented programming (OOP) concepts such as classes, objects, inheritance, polymorphism, and encapsulation.
-
-- **Generic Programming**: C++ provides support for generic programming through templates, allowing you to write generic algorithms and data structures.
-
-- **Standard Library**: C++ includes a rich standard library that provides a wide range of functions and classes for common programming tasks.
-
-- **Performance**: C++ is known for its high performance and efficiency, making it suitable for low-level programming and performance-critical applications.
-
-- **Portability**: C++ code can be compiled and run on a wide range of platforms, including Windows, macOS, Linux, and embedded systems.
-
-- **Compatibility with C**: C++ is compatible with C code, allowing you to use existing C libraries and code in C++ programs.
-
-- **Memory Management**: C++ provides manual memory management through features such as pointers, dynamic memory allocation, and deallocation.
-
-- **Exception Handling**: C++ supports exception handling to manage runtime errors and abnormal conditions that may occur during program execution.
-
-- **Multi-Paradigm Language**: C++ supports multiple programming paradigms, including procedural programming, object-oriented programming, and generic programming.
-
-### C++ vs. C
-
-C++ is an extension of the C programming language and shares many features with C. However, there are some key differences between the two languages that set them apart.
-
-| **C++** | **C** |
-| --- | --- |
-| C++ is a high-level programming language that supports object-oriented programming, generic programming, and procedural programming paradigms. | C is a procedural programming language that is widely used for system programming, embedded programming, and low-level programming. |
-| C++ is a superset of C, meaning that most C programs can be compiled using a C++ compiler. | C++ is a superset of C, meaning that most C programs can be compiled using a C++ compiler. |
-| C++ introduces new features such as classes, objects, inheritance, polymorphism, and templates for generic programming. | C does not support object-oriented programming features such as classes, objects, and inheritance. |
-| C++ provides a rich standard library that includes containers, algorithms, input/output streams, and other utilities. | C provides a standard library with basic functions for input/output, string manipulation, and memory management. |
-| C++ supports exception handling to manage runtime errors and abnormal conditions that may occur during program execution. | C does not provide built-in support for exception handling, making error handling more challenging. |
-| C++ is known for its high performance and efficiency, making it suitable for performance-critical applications. | C is known for its simplicity and portability, making it suitable for system programming and embedded systems. |
 
 ## Table of Contents
 
@@ -107,7 +71,7 @@ C++ is an extension of the C programming language and shares many features with 
     - [Shared Pointer](#shared-pointer)
     - [Weak Pointer](#weak-pointer)
     - [RAII (Resource Acquisition Is Initialization)](#raii-resource-acquisition-is-initialization)
-- [standard library](#standard-library)
+- [Standard library](#standard-library)
   - [Input and Output](#input-and-output)
   - [File I/O](#file-io)
   - [Strings](#strings)
@@ -187,6 +151,43 @@ C++ is an extension of the C programming language and shares many features with 
 - [Standard Versions](#standard-versions)
 - [languge Concepts](#languge-concepts)
 - [References](#references)
+
+## Introduction
+
+C++ is a general-purpose programming language that was developed by Bjarne Stroustrup in 1979 at Bell Labs. It is an extension of the C programming language and adds support for object-oriented programming, generic programming, and exception handling. C++ is widely used for developing system software, application software, device drivers, embedded software, and high-performance software applications.
+
+### Key Features of C++
+
+- **Object-Oriented Programming**: C++ supports object-oriented programming (OOP) concepts such as classes, objects, inheritance, polymorphism, and encapsulation.
+
+- **Generic Programming**: C++ provides support for generic programming through templates, allowing you to write generic algorithms and data structures.
+
+- **Standard Library**: C++ includes a rich standard library that provides a wide range of functions and classes for common programming tasks.
+
+- **Performance**: C++ is known for its high performance and efficiency, making it suitable for low-level programming and performance-critical applications.
+
+- **Portability**: C++ code can be compiled and run on a wide range of platforms, including Windows, macOS, Linux, and embedded systems.
+
+- **Compatibility with C**: C++ is compatible with C code, allowing you to use existing C libraries and code in C++ programs.
+
+- **Memory Management**: C++ provides manual memory management through features such as pointers, dynamic memory allocation, and deallocation.
+
+- **Exception Handling**: C++ supports exception handling to manage runtime errors and abnormal conditions that may occur during program execution.
+
+- **Multi-Paradigm Language**: C++ supports multiple programming paradigms, including procedural programming, object-oriented programming, and generic programming.
+
+### C++ vs. C
+
+C++ is an extension of the C programming language and shares many features with C. However, there are some key differences between the two languages that set them apart.
+
+| **C++** | **C** |
+| --- | --- |
+| C++ is a high-level programming language that supports object-oriented programming, generic programming, and procedural programming paradigms. | C is a procedural programming language that is widely used for system programming, embedded programming, and low-level programming. |
+| C++ is a superset of C, meaning that most C programs can be compiled using a C++ compiler. | C++ is a superset of C, meaning that most C programs can be compiled using a C++ compiler. |
+| C++ introduces new features such as classes, objects, inheritance, polymorphism, and templates for generic programming. | C does not support object-oriented programming features such as classes, objects, and inheritance. |
+| C++ provides a rich standard library that includes containers, algorithms, input/output streams, and other utilities. | C provides a standard library with basic functions for input/output, string manipulation, and memory management. |
+| C++ supports exception handling to manage runtime errors and abnormal conditions that may occur during program execution. | C does not provide built-in support for exception handling, making error handling more challenging. |
+| C++ is known for its high performance and efficiency, making it suitable for performance-critical applications. | C is known for its simplicity and portability, making it suitable for system programming and embedded systems. |
 
 ## Installation and Setup
 

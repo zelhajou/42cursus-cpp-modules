@@ -6,11 +6,11 @@ This repository contains the source code for the 42 Cpp modules. Each module is 
 
 | #  | Module           | Introduction          | Topics Covered                                | Language | Status      | Comments                   |
 |----|------------------|-----------------------|-----------------------------------------------|----------|-------------|----------------------------|
-| 00 | [CPP Module 00](./module%2000/) | Introduction to C++ | Namespaces, classes, member functions, stdio streams, initialization lists, static, const | C++      | ✅ 80 | Basic C++ concepts        |
-| 01 | [CPP Module 01](./module%2001/) | Memory allocation, pointers | Memory allocation, pointers to members, references, switch statement | C++      | ✅ 100| Intermediate concepts     |
-| 02 | [CPP Module 02](./module%2002/) | Ad-hoc polymorphism, operator overloading | Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form | C++      | ✅ 80 | Advanced concepts         |
-| 03 | [CPP Module 03](./module%2003/) | Inheritance and Encapsulation | Inheritance, constructors and destructors chaining, class hierarchies, access specifiers, special member functions | C++      | ✅ 80 | Inheritance and encapsulation concepts |
-| 04| [CPP Module 04](./module%2004/) | Polymorphism, Abstract classes | Abstract classes	Polymorphism, abstract classes, interfaces, pure virtual functions | C++ | ✅ 80 | Polymorphism and abstract concepts |
+| 00 | [Module 00](./module%2000/) | Introduction to C++ | Namespaces, classes, member functions, stdio streams, initialization lists, static, const | C++      | ✅ 80 | Basic C++ concepts        |
+| 01 | [Module 01](./module%2001/) | Memory allocation, pointers | Memory allocation, pointers to members, references, switch statement | C++      | ✅ 100| Intermediate concepts     |
+| 02 | [Module 02](./module%2002/) | Ad-hoc polymorphism, operator overloading | Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form | C++      | ✅ 80 | Advanced concepts         |
+| 03 | [Module 03](./module%2003/) | Inheritance and Encapsulation | Inheritance, constructors and destructors chaining, class hierarchies, access specifiers, special member functions | C++      | ✅ 80 | Inheritance and encapsulation concepts |
+| 04| [Module 04](./module%2004/) | Polymorphism, Abstract classes | Abstract classes	Polymorphism, abstract classes, interfaces, pure virtual functions | C++ | ✅ 80 | Polymorphism and abstract concepts |
 
 
 ## Exercises Overview

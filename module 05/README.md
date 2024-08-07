@@ -29,3 +29,7 @@ This module focuses on enhancing your understanding of C++ programming through a
 - **Goal**: Implement an `Intern` class with the capability to create forms based on given input.
 - **Key Concepts**: Factory pattern, dynamic memory allocation, polymorphism.
 - **Description**: The `Intern` class does not have any attributes but has a crucial function, `makeForm()`, which takes the name of a form and a target and returns a pointer to the corresponding form object. This exercise emphasizes dynamic creation of objects and understanding of the factory design pattern.
+
+## Resources
+
+- [Polymorphic Exceptions In C++](https://www.geeksforgeeks.org/polymorphic-exceptions-in-cpp/)

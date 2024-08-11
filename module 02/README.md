@@ -76,6 +76,25 @@ When combined with the integer part `0101` (5), the fixed-point number `5.25` is
 
 ## Floating point
 
+![floating-point-weird](https://github.com/user-attachments/assets/b53c506a-1551-4387-a031-e3258edc2650)
+![float-gaps](https://github.com/user-attachments/assets/1151fb2f-021b-4698-b3f1-4958b2437cbe)
+![science-floating-point](https://github.com/user-attachments/assets/98830177-9322-4575-8e43-96279979e017)
+![floating-point-representation](https://github.com/user-attachments/assets/c44003fc-08b2-475a-8022-16165bedae0e)
+![the-bits](https://github.com/user-attachments/assets/c8a59722-6055-4c43-a0c7-104d8452971e)
+
+![nan](https://github.com/user-attachments/assets/51d29454-5681-4140-9748-b978c1eb7a5e)
+
+
+![printing-floats](https://github.com/user-attachments/assets/b63443ec-7af4-4739-8d2d-70c0f85f926a)
+
+![floating-point-math](https://github.com/user-attachments/assets/c8b54880-00b8-40b3-ac0e-1bba6f0385b6)
+
+
+![fixed-point](https://github.com/user-attachments/assets/95ef4e6e-8b51-4473-a108-bc46b1ebeed8)
+
+![floating-point-alternatives](https://github.com/user-attachments/assets/c3deafb5-b1a8-49cd-9409-51b87808878c)
+
+
 ## Exercises
 
 This module includes the following exercises to help you practice and apply the concepts covered:

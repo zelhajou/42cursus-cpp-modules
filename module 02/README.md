@@ -74,6 +74,8 @@ In an 8-bit fixed-point number with 4 fractional bits, `0.25` would be represent
 
 When combined with the integer part `0101` (5), the fixed-point number `5.25` is represented as `0101.0100`.
 
+## Floating point
+
 ## Exercises
 
 This module includes the following exercises to help you practice and apply the concepts covered:

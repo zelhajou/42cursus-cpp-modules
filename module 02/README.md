@@ -19,6 +19,10 @@ C++ Module 02 is designed to introduce and deepen your understanding of some of 
 
 ## Understanding Fixed-Point Numbers
 
+![fixed-point](https://github.com/user-attachments/assets/95ef4e6e-8b51-4473-a108-bc46b1ebeed8)
+
+
+
 In this module, you will work with fixed-point numbers, A fixed-point number is a way of representing fractional numbers (numbers with decimal points) using integers. It is particularly useful in environments where floating-point arithmetic is either too slow or unavailable, such as in embedded systems, digital signal processing, and certain types of financial calculations. Fixed-point numbers are often used to represent currency values, percentages, and other quantities that require precise decimal precision.
 
 In a fixed-point number, a certain number of bits are reserved for the fractional part of the number, while the remaining bits represent the integer part. For example, in an 8-bit fixed-point number with 4 fractional bits, the format would be as follows:

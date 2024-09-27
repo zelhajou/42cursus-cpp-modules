@@ -19,7 +19,7 @@ This repository contains the source code for the 42 Cpp modules. Each module is 
 |-----|----------------------|-----------------------------------------------|--------------|
 | [00](./module%2000/)  | [Exercise 00](./module%2000/ex00/): Megaphone                       | Implement a simple program to repeat input in uppercase | ✅ Done |
 | [00](./module%2000/)  | [Exercise 01](./module%2000/ex01/): My Awesome PhoneBook            | Create a simple phonebook using classes and object-oriented programming | ✅ Done |
-| [00](./module%2000/) | [Exercise 02](): The Job Of Your Dreams          | Recreate a lost file for a banking application | ❌ Not Started |
+| [00](./module%2000/) | [Exercise 02](): The Job Of Your Dreams <sup>(Optional)<sup>          | Recreate a lost file for a banking application |  ⏭ Skipped |
 |  |  |  |  |
 | [01](./module%2001/) | [Exercise 00](./module%2001/ex00/): BraiiiiiiinnnzzzZ               | Introduction to memory allocation and class implementation | ✅ Done |
 | [01](./module%2001/) | [Exercise 01](./module%2001/ex01/): Moar brainz!                    | More practice with memory allocation and pointers | ✅ Done |
@@ -32,17 +32,17 @@ This repository contains the source code for the 42 Cpp modules. Each module is 
 | [02](./module%2002/) | [Exercise 00](./module%2002/ex00/): My First Class in Orthodox Canonical Form | Implementing a class in canonical form | ✅ Done |
 | [02](./module%2002/) | [Exercise 01](./module%2002/ex01/): Towards a more useful fixed-point number class | Enhancing the fixed-point number class | ✅ Done |
 | [02](./module%2002/) | [Exercise 02](./module%2002/ex02/): Now we're talking               | Implementing advanced features in the fixed-point class | ✅ Done |
-| [02](./module%2002/) | [Exercise 03](): BSP                             | Implementing Binary Space Partitioning | ❌ Not Started |
+| [02](./module%2002/) | [Exercise 03](): BSP <sup>(Optional)<sup>                            | Implementing Binary Space Partitioning |  ⏭ Skipped |
 |  |   |  |  |
 | [03](./module%2003/) | [Exercise 00](./module%2003/ex00/): Aaaaand... OPEN!               | Implementing a basic class with specific attributes and functions | ✅ Done |
 | [03](./module%2003/) | [Exercise 01](./module%2003/ex01/): Serena, my love!               | Creating a derived class with specific constructors and functions | ✅ Done |
 | [03](./module%2003/) | [Exercise 02](./module%2003/ex02/): Repetitive work               | Implementing another derived class with specific attributes and functions | ✅ Done |
-| [03](./module%2003/) | [Exercise 03](): Now it’s weird!               | Creating a complex class that inherits from multiple classes | ❌ Not Started |
+| [03](./module%2003/) | [Exercise 03](): Now it’s weird! <sup>(Optional)<sup>            | Creating a complex class that inherits from multiple classes |  ⏭ Skipped |
 |  |   |  |  |
 | [04](./module%2004/) | [Exercise 00](./module%2004/ex00/): Polymorphism               | Implementing polymorphism in classes | ✅ Done |
 | [04](./module%2004/) | [Exercise 01](./module%2004/ex01/):  I don’t want to set the world on fire               | Implementing deep copies and managing dynamic memory | ✅ Done |
 | [04](./module%2004/) | [Exercise 02](./module%2004/ex02/):  Abstract class               | Implementing abstract classes to prevent instantiation of base classes | ✅ Done |
-| [04](./module%2004/) | [Exercise 03]():  Interface & recap           | Implementing interfaces and ensuring understanding of module concepts | ❌ Not Started |
+| [04](./module%2004/) | [Exercise 03]():  Interface & recap <sup>(Optional)<sup>          | Implementing interfaces and ensuring understanding of module concepts |  ⏭ Skipped |
 
 
 ## Rules

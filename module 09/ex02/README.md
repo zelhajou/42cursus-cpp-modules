@@ -196,3 +196,5 @@ In our implementation, we use the STL's `std::lower_bound` function which perfor
 To better understand the Ford-Johnson algorithm, my visualization tool can help you see how the elements are paired, compared, and inserted in each step. You can interact with the tool to see the algorithm in action!
 
 [PmergeMe Visualization](https://pmergevis.vercel.app/)
+
+<img width="1713" alt="Screen Shot 2025-03-10 at 1 41 55 AM" src="https://github.com/user-attachments/assets/263b2878-a8ee-477e-a3d2-3a6ebab4c970" />

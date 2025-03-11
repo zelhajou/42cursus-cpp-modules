@@ -190,3 +190,9 @@ The Ford-Johnson algorithm is known for:
 - Having a slightly higher overhead for large collections compared to other O(n log n) algorithms like quicksort
 
 In our implementation, we use the STL's `std::lower_bound` function which performs binary search with O(log n) complexity, making the insertion process highly efficient.
+
+## **Visualization Tool**
+
+To better understand the Ford-Johnson algorithm, my visualization tool can help you see how the elements are paired, compared, and inserted in each step. You can interact with the tool to see the algorithm in action!
+
+[PmergeMe Visualization](https://pmergevis.vercel.app/)
